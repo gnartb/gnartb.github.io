@@ -1,16 +1,50 @@
 ---
+// Component Imports
+import Header from "../components/Header.astro";
 
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Trang Bui</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body>
-		<h1>Astro</h1>
+
+	<body class="mx-auto max-w-2xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph">
+		<Header />
+		<container class="min-h-screen space-y-4">
+			<p>
+				Passionate about solving complex problems, my goal is to create
+				products that provide value for both the Business and Users.
+			</p>
+			<p>
+				Previously working as a <strong>Product Design Lead</strong> at Validus Capital,
+				building Digital Lending products.
+			</p>
+			<div>
+				<div>
+					To see how I define problems and come up with solution, read
+					the case studies below
+				</div>
+				<div>
+					<h5>Investment application</h5>
+					<p>
+						Redesign mobile Investor mobile app with more features
+						for better experience
+					</p>
+				</div>
+			</div>
+		</container>
 	</body>
 </html>

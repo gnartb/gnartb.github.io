@@ -1,0 +1,14 @@
+---
+import HeaderItem from "./HeaderItem.astro";
+---
+
+
+<header class="flex items-center pb-4 md:pb-8">
+	<h1 class="text-md whitespace-nowrap font-bold md:text-lg">Trang Bui</h1>
+	
+	<nav class="flex grow items-center justify-end gap-1 font-sans text-sm md:gap-4">
+		<HeaderItem headmenu="about"></HeaderItem>
+		<HeaderItem headmenu="works"></HeaderItem>
+		<HeaderItem headmenu="things I learned"></HeaderItem>
+	</nav>
+</header>

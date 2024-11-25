@@ -1,5 +1,5 @@
 {
-  "name": "eccentric-escape",
+  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,7 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/tailwind": "^5.1.2",
+    "@types/canvas-confetti": "^1.6.4",
     "astro": "^4.16.13",
+    "autoprefixer": "^10.4.20",
+    "canvas-confetti": "^1.9.3",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "@astrojs/check": "^0.9.4",
     "typescript": "^5.6.3"
   }
