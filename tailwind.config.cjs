@@ -5,33 +5,59 @@ module.exports = {
 	theme: {
 		extend: {
 			colors:{
-				bodyColor: colors.gray[950],
-				subColor: colors.gray[800],
-				h1Color: colors.gray[950],
-				h2Color: colors.gray[950]
+				bgColor: colors.zinc[900],
+				bodyColor: colors.slate[400],
+				subColor: colors.slate[600],
+				sectionTitle: colors.slate[600],
+				h1Color: colors.slate[900],
+				h2Color: colors.slate[900],
+				urlColor: colors.slate[600],
 			},
 			fontFamily:{
-				bodyFont: 'Inter, san-serif',
+				bodyFont: 'Be Vietnam Pro, san-serif',
+				headLineFont: 'Suranna',
+				urlFont: 'Space Grotesk',
 			},
 			fontSize:{
 				// apply for general body text
 				bodyFontSize: '14px',
 				subFontSize: '12px',
+				urlFontSize: '14px',
 				
-			},
-			
+			}
+			}
 		},
-	},
 	plugins: [
 		function ({addUtilities, theme}) {
 			addUtilities({
 				'.bodyParagraph': {
-					color: colors.bodyColor,
 					fontFamily: theme('fontFamily.bodyFont'),
 					fontSize: theme('fontSize.bodyFontSize'),
-					fontWeight: theme('fontWeight.light')
+					fontWeight: theme('fontWeight.light'),
+					color: theme('colors.bodyColor'),
+				},
+				'.bodyLink':{
+					borderBottomWidth: '1px',
+					borderColor: colors.zinc[700],
 
-				}
+				},
+				'.bodyLink:hover':{
+					borderBottomWidth: '1px',
+					borderColor: colors.zinc[300],
+
+				},
+
+				'.subText':{
+					color: theme('colors.subColor'),
+					fontSize: theme('fontSize.subFontSize'),
+				},
+				'.urlText':{
+					color: theme('colors.urlColor'),
+					fontSize: theme('fontSize.urlFontSize'),
+					fontFamily: theme('fontFamily.urlFont'),
+					fontWeight: '300',
+				},
+			
 			})
 		}
 	]

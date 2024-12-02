@@ -1,0 +1,43 @@
+---
+// Component Imports
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeadBase from "../components/HeadBase.astro";
+---
+
+<html lang="en">
+	<HeadBase />
+	<body
+		class="mx-auto min-h-screen max-w-xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph bg-zinc-900"
+	>
+		<container class="flex flex-col gap-20">
+			<Header />
+			<content class="flex flex-col gap-8">
+				
+				<div class=" flex flex-col gap-2">
+					<p class="urlText">/about</p>
+					<p class="text-4xl font-bold">Me in 30s</p>
+				</div>
+				<img class="max-h-svh" src="/images/" />
+				<div class="flex flex-col gap-4">
+					<p>
+						My name is Trang and I am Product Designer with passionate about solving complex problems. Currently based in Ho Chi Minh.
+					</p>
+					<p>
+						I previously worked at Validus Capital, as a Product
+						Design Lead, creating lending platform for Investor and
+						SMEs across Singapore, Thailand, and Vietnam markets.
+					</p>
+					<p>
+						In my spare time, I love spending my time crafting by
+						hand, traveling, watching movie or learn something new.
+						Read more about <a class="bodyLink" href="/now"
+							>what I'm doing now</a
+						>
+					</p>
+				</div>
+			</content>
+			<Footer />
+		</container>
+	</body>
+</html>

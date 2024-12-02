@@ -1,0 +1,24 @@
+---
+interface Props {
+    postTitle?: string;
+    url?: string;
+    postDescription?: string;
+    date?: string ;
+}
+const { postTitle, url, postDescription, date } = Astro.props;
+---
+
+<div class="flex flex-col">
+    <ul class="flex flex-col gap-1 py-4">
+        <li class=" text-subColor">
+            {date}
+        </li>
+        <li>
+            <a href={url} class="bodyLink">{postTitle}</a>
+        </li>
+        <li class="text-subColor">
+            {postDescription}
+        </li>
+        
+    </ul>
+</div>

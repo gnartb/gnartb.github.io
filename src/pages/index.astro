@@ -1,50 +1,98 @@
 ---
 // Component Imports
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeadBase from "../components/HeadBase.astro";
+import Post from "../components/post.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Trang Bui</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+	<HeadBase />
+	<body
+		class="mx-auto max-w-xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph bg-zinc-900"
+	>
+		<container class="flex flex-col gap-20">
+			<Header />
+			<content class="flex flex-col min-h-screen gap-20">
+				<!-- introduction -->
+				<div class="flex flex-col gap-8">
+					<div class="flex flex-col gap-3">
+						<div class="urlText">
+							/
+						</div>
+						<p>
+							Passionate about solving complex problems. Previously working as a <strong
+							>Product Design Lead</strong
+						>
+						at Validus Capital, building Digital Lending products.
+						</p>
+					</div>
+					<ul class="flex flex-col gap-1">
+						<li><a class="bodyLink" href="/about">/about</a></li>
+						<li><a class="bodyLink" href="/now">/now</a></li>
+						<li><a class="bodyLink" href="/connect">/connect</a></li>
+					</ul>
+				</div>
+				<!-- case studies -->
+				<div class="flex flex-col gap-3">
+					<!-- section title -->
+					<div class="flex flex-col gap-3">
+						<p
+							class="uppercase font-bold text-xs text-sectionTitle"
+						>
+							Case Studies
+						</p>
+						<p>
+							See how I define problems and come up with solution,
+							read case studies below
+						</p>
+					</div>
+					<!-- case study block -->
+					<div class="flex flex-col">
+						<Post
+							postTitle="Investment application"
+							postDescription="Redesign mobile Investor mobile app with more features for better experience"
+							url="/about"
+						/>
+						<Post
+							postTitle="Simplifying the long onboarding process"
+							postDescription="Less steps for Customer and reduce manual works for Internal Team"
+							url="/about"
+						/>
+					</div>
+				</div>
 
-	<body class="mx-auto max-w-2xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph">
-		<Header />
-		<container class="min-h-screen space-y-4">
-			<p>
-				Passionate about solving complex problems, my goal is to create
-				products that provide value for both the Business and Users.
-			</p>
-			<p>
-				Previously working as a <strong>Product Design Lead</strong> at Validus Capital,
-				building Digital Lending products.
-			</p>
-			<div>
-				<div>
-					To see how I define problems and come up with solution, read
-					the case studies below
+				<!-- side projects -->
+				<div class="flex flex-col gap-3">
+					<!-- section title -->
+					<div class="flex flex-col gap-2">
+						<p
+							class="uppercase font-bold text-xs text-sectionTitle"
+						>
+							When I'm not working
+						</p>
+					</div>
+					<!-- side project block -->
+					<div>
+						<a href="" class="bodyLink">#100daysofdoodle</a> to boost
+						my creativity and help me reduces stress
+					</div>
+					<div>
+						<a href="" class="bodyLink">Creating this site</a>
+					</div>
+					<div>
+						<a href="" class="bodyLink"
+							>Doing handmade and growing my plants</a
+						>
+					</div>
+					
 				</div>
-				<div>
-					<h5>Investment application</h5>
-					<p>
-						Redesign mobile Investor mobile app with more features
-						for better experience
-					</p>
-				</div>
-			</div>
+				<!-- contact -->
+			</content>
+			<Footer />
 		</container>
 	</body>
 </html>

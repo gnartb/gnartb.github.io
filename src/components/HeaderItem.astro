@@ -1,6 +1,7 @@
 ---
 interface Props {
     headmenu: string;
+<<<<<<< HEAD
     href: string;
 }
 const { headmenu, href } = Astro.props;
@@ -9,5 +10,16 @@ const { headmenu, href } = Astro.props;
 <a
     class="inline-flex rounded-sm p-2 transition-[background-color] hover:bg-gray-100 active:bg-gray-200"
     href={href}
+=======
+    url: string;
+}
+const { headmenu, url } = Astro.props;
+---
+
+<a
+    class="inline-flex transition-[background-color]  hover:bg-gray-100 active:bg-gray-200"
+    href={url}
+>>>>>>> fc418ea (commit)
     >{headmenu}
 </a>
+

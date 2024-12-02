@@ -1,0 +1,27 @@
+---
+// Component Imports
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeadBase from "../components/HeadBase.astro";
+---
+
+<html lang="en">
+	<HeadBase />
+	<body
+		class="mx-auto min-h-screen max-w-xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph bg-zinc-900"
+	>
+		<container class="flex flex-col gap-20">
+			<Header />
+			<content class="flex flex-col gap-8">
+				<img class="max-h-svh" src="/images/" />
+				<p class="text-2xl font-bold">About</p>
+				<div class="flex flex-col gap-4 ">
+					<a href="">linkedin</a>
+                    <a href="">read.cv</a>
+                    <a href="">pinterest</a>
+				</div>
+			</content>
+			<Footer />
+		</container>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+---
+// Component Imports
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeadBase from "../components/HeadBase.astro";
+import Post from "../components/post.astro";
+---
+
+<html lang="en">
+    <HeadBase />
+    <body
+        class="mx-auto min-h-screen max-w-xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph bg-zinc-900"
+    >
+        <container class="flex flex-col gap-20">
+            <Header />
+            <content class="flex flex-col gap-8">
+                <div>
+                    Random things I learn today
+                </div>
+                <Post
+                    postTitle="Investment application"
+                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
+                    url="/about"
+                    date="20/11/2024"
+                />
+                <Post
+                    postTitle="Investment application"
+                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
+                    url="/about"
+                />
+                <Post
+                    postTitle="Investment application"
+                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
+                    url="/about"
+                />
+                <Post
+                    postTitle="Investment application"
+                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
+                    url="/about"
+                />
+                <Post
+                    postTitle="Investment application"
+                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
+                    url="/about"
+                />
+            </content>
+            <Footer />
+        </container>
+    </body>
+</html>
