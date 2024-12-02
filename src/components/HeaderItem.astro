@@ -1,12 +1,13 @@
 ---
 interface Props {
     headmenu: string;
+    href: string;
 }
-const { headmenu } = Astro.props;
+const { headmenu, href } = Astro.props;
 ---
 
 <a
     class="inline-flex rounded-sm p-2 transition-[background-color] hover:bg-gray-100 active:bg-gray-200"
-    href="/"
+    href={href}
     >{headmenu}
 </a>

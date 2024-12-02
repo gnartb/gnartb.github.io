@@ -1,0 +1,367 @@
+---
+// Component Imports
+import Header from "../components/Header.astro";
+import BulletNumber from "../components/BulletNumber.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Trang Bui</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="flex flex-col mx-auto max-w-2xl text-gray-900 md:pt-6 gap-10">
+		<Header />
+		<!-- Start: Title -->
+		<div class="text-center">
+			<h1 class="text-4xl">Investor mobile revamp</h1>
+			<p class="text-xs text-gray-600">
+				Monitor portfolios, view facilities, and make investments on the
+				go
+			</p>
+		</div>
+		<!-- End: Title -->
+
+		<!--  Start: Main Image -->
+		<figure class="relative w-full h-auto rounded-lg">
+			<img src="/images/sw-singapore.png" alt="" />
+			<figcaption class="mt-2 text-xs text-center text-gray-600">
+				Random photo I took outside our office when I visited Singapore
+				for the User Interview
+			</figcaption>
+		</figure>
+		<!--  End: Main Image -->
+
+		<!-- Start: Content -->
+		<div class="flex flex-col gap-14">
+			<!-- Team -->
+			<h3><strong>Team</strong></h3>
+			<ul>
+				<li>
+					<a href="" class="underline">Chien Nguyen</a>
+					<a href="" class="underline">Susindran Buddha</a>
+					<>(Product Designer)</>
+				</li>
+				<li>
+					<a href="" class="underline">Keith Ong</a> Mobile Lead
+				</li>
+				<li>
+					<a href="" class="underline">Huyen Tran</a> Head of Product
+				</li>
+				<li>
+					<a href="" class="underline">Anupama</a> Product Manager
+				</li>
+			</ul>
+			<!-- Tool -->
+			<div class="grid grid-rows-2 grid-flow-col gap-2">
+				<div><strong>Role</strong></div>
+				<div>Product Design Lead, UX Designer</div>
+				<div><strong>Tool</strong></div>
+				<div>Figma</div>
+			</div>
+
+			<!-- Context Detail I -->
+			<div style="display: flex; flex-direction: column; gap: 1rem;">
+				<h2 class="text-3xl font-bold">I. Intro</h2>
+				<p>
+					Within a team consisting of the Product Manager and myself,
+					we reviewed the existing app by putting our review note and
+					user feedback on the screenshots taken from the mobile app.
+				</p>
+				<figure class="relative w-full h-auto rounded-lg">
+					<img
+						src="/images/project-img1.png"
+						alt="Example review of Live Facilities screen, where Investor can see all the loans that are listed in the marketplace"
+						class="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+					/>
+					<figcaption class="mt-2 text-xs text-center text-gray-600">
+						Example review of Live Facilities screen, where Investor
+						can see all the loans that are listed in the marketplace
+					</figcaption>
+				</figure>
+			</div>
+
+			<!-- Context Detail IV -->
+			<div style="display: flex; flex-direction: column; gap: 1rem;">
+				<h2 class="text-3xl font-bold">IV. Understand User needs</h2>
+				<p>
+					With the help of the Investor Relations team (the team that
+					manages the communication between the company and
+					Investors), about 10–12 Investors who actively used the
+					platform and the app, accepted our invitation to join the
+					User Study.
+				</p>
+				<p>
+					We combined a few methods for this research including
+					Usability Testing and Qualitative Interview. The goal is to
+					verify our draft design solutions and uncover any new
+					problems.
+				</p>
+				<figure class="relative w-full h-auto rounded-lg">
+					<img
+						src="/images/project-img2.png"
+						class="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+					/>
+					<figcaption class="mt-2 text-xs text-center text-gray-600">
+						Observation notes during the interview are captured in a
+						document
+					</figcaption>
+				</figure>
+				<p class="text-center">---</p>
+				<p class="text-center">
+					<strong>Key insights from the Study</strong>
+				</p>
+				<p>
+					Upon finishing the User Research, we realized that there
+					were more problems than initially defined. The insights
+					obtained from this activity were invaluable, not only for us
+					to understand and empathize with our Users (the Investors),
+					but also helped other teams improve their services.
+				</p>
+				<p>
+					The key problems that affected investor's experience on our
+					platform were:
+				</p>
+
+				<!-- Problem IV .1 -->
+				<div>
+					<BulletNumber
+						number="1"
+						text="Lack of visual, confused wording"
+					/>
+					<p class="text-gray-600 mb-4">
+						Customers found it easier to navigate around the app
+						with the new design compared to the existing one;
+						however, the new interface has not yet captivated them.
+					</p>
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+						<div
+							class="bg-purple-100 text-purple-800 p-3 rounded-md text-sm"
+						>
+							"Much clearer, nicer view compared to previous"
+						</div>
+						<div
+							class="bg-purple-100 text-purple-800 p-3 rounded-md text-sm"
+						>
+							"Not so difficult to navigate"
+						</div>
+						<div
+							class="bg-purple-100 text-purple-800 p-3 rounded-md text-sm"
+						>
+							"Like the color and fonts, but would be better if
+							there's more visuals"
+						</div>
+					</div>
+					<p class="text-gray-600">
+						For some investors, even though they have been with
+						Validus for years and use the web/app quite often, they
+						still have questions and are confused about the wording
+						or definition we use for the labels.
+					</p>
+				</div>
+
+				<!-- Problem IV .2 -->
+				<div>
+					<BulletNumber
+						number="2"
+						text="Missing information, features & instruction"
+					/>
+					<p class="text-gray-600 mb-4">
+						Although we already incorporated numerous new features
+						into the wireframe prototype, during the User Research,
+						investors still could not find information that was
+						important to them:
+					</p>
+					<ul class="list-disc list-inside space-y-2 text-gray-600">
+						<li>
+							Ability to see more details about newly listed
+							facilities and the borrower before they decide to
+							make a fund.
+						</li>
+						<li>Ability to check the portfolio performance.</li>
+						<li>
+							Ability to search and manage funded facilities
+							easier.
+						</li>
+						<li>
+							A clear repayment schedule so they can see when and
+							how much money they will receive.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Context Detail VI -->
+			<div style="display: flex; flex-direction: column; gap: 1rem;">
+				<h2 class="text-3xl font-bold">VI. Build the new app</h2>
+				<!-- Problem VI.1 -->
+				<div class="gap: 1rem;">
+					<BulletNumber number="1" text="Revamp the user interface" />
+					<p class="text-gray-600 mb-4">
+						The old design looks outdated or no longer reflects
+						Validus's brand. Therefore, we decide to create an
+						updated design that give a fresh look to the app and
+						help improve user engagement.
+					</p>
+					<p class="text-gray-600 mb-4">
+						At that time we started to develop 3 products (mobile
+						app, investor platform, borrower platform) for total 3
+						markets (include Singapore, Vietnam, Thailand) at the
+						same time. To set a standard design, maintain the
+						consistency and manage it at scale, we decided to create
+						a Design System along with the app designs. The Product
+						Design team also expanded with the addition of two new
+						members.
+					</p>
+					<p class="text-gray-600 mb-4">
+						We took preference from other banking and finance apps
+						on the market and created a mood board for inspiration.
+						Our Investors' age group was 35–55 years old and
+						majority of them were in the banking & financing
+						profession. Therefore, UI direction should be focused on
+						making it more clean and clear, readable, and easy to
+						use.
+					</p>
+					<p class="text-gray-600 mb-4">
+						The improvement focused on:
+					</p>
+					<ul
+						class="list-disc list-inside space-y-2 text-gray-600 mb-4"
+					>
+						<li>
+							<strong>UI elements:</strong> Build and set a standards
+							for using UI components
+						</li>
+						<li>
+							<strong>Icons, illustration:</strong> Create a library
+							for icons and illustration that can be updated and extended
+							easily.
+						</li>
+						<li>
+							<strong>Copy writting:</strong> there was feedback from
+							the User Research that the copy was not intuitive for
+							users to understand. Hence we went through the copywriting
+							of each label, make sure it's meaningful and help Investor
+							clearly understand what is it about. We also add tooltip
+							or description alongside special labels to avoid the
+							confusion.
+						</li>
+					</ul>
+
+					<!-- Card Comparison Section -->
+					<div class="grid md:grid-cols-3 gap-6 items-end">
+						<!-- 1st Improvement Card -->
+						<div class="flex flex-col ">
+							<img
+								src="/images/compare-1.png"
+								alt="Card Design 1"
+								class="mb-4 rounded-md"
+							/>
+							<h3
+								class="text-lg font-semibold text-gray-800 mb-2 text-center"
+							>
+								❌ 1st improvement
+							</h3>
+							<ul
+								class="list-disc list-inside space-y-2 text-gray-600"
+							>
+								<li>
+									Added image to make the facility more
+									catchy, but the card is too long and takes a
+									lot of space on mobile screens.
+								</li>
+								<li>
+									Card would be very long and take lot of
+									space on the mobile screen.
+								</li>
+							</ul>
+							<p class="text-red-500 font-semibold">Issue:</p>
+							<p>
+								Card is too long and occupies too much space on
+								mobile.
+							</p>
+						</div>
+
+						<!-- 2nd Improvement Card -->
+						<div class="flex flex-col">
+							<img
+								src="/images/compare-2.png"
+								alt="Card Design 2"
+								class="mb-4 rounded-md"
+							/>
+							<h3
+								class="text-lg font-semibold text-gray-800 mb-2 text-center"
+							>
+								❌ 2nd improvement
+							</h3>
+							<ul
+								class="list-disc list-inside space-y-2 text-gray-600"
+							>
+								<li>
+									Moved the text out of the photo to make it
+									readable
+								</li>
+								<li>Reduced the photo height</li>
+								<li>
+									Change the style of displaying facility
+									details
+								</li>
+							</ul>
+							<p class="text-red-500 font-semibold">Issue:</p>
+							<p>
+								Card still long and listing style seem a bit
+								difficult to scan the information
+							</p>
+						</div>
+
+						<!-- Final Card -->
+						<div class="flex flex-col">
+							<img
+								src="/images/compare-3.png"
+								alt="Card Design 3"
+								class="mb-4 rounded-md"
+							/>
+							<h3
+								class="text-lg font-semibold text-gray-800 mb-2 text-center"
+							>
+								✅ Final
+							</h3>
+							<ul
+								class="list-disc list-inside space-y-2 text-gray-600"
+							>
+								<li>
+									Decided to remove the image as it doesn't
+									really represent for anything that relevant
+									to Borrower.
+								</li>
+								<li>
+									Re-pick and re-arrange the most important
+									information of the facility
+								</li>
+								<li>
+									Change the progress bar style so Investor
+									can see the information faster
+								</li>
+
+								<li>
+									Move "View details" button to the left side
+									so it looks more visible
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- End: Content -->
+	</body>
+</html>
