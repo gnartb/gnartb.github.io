@@ -6,8 +6,8 @@ module.exports = {
 		extend: {
 			colors:{
 				bgColor: colors.zinc[900],
-				bodyColor: colors.slate[400],
-				subColor: colors.slate[600],
+				bodyColor: colors.slate[300],
+				subColor: colors.slate[400],
 				sectionTitle: colors.slate[600],
 				h1Color: colors.slate[900],
 				h2Color: colors.slate[900],
@@ -39,12 +39,15 @@ module.exports = {
 				'.bodyLink':{
 					borderBottomWidth: '1px',
 					borderColor: colors.zinc[700],
+					// transition: 'all 0.3s ease',
 
 				},
 				'.bodyLink:hover':{
 					borderBottomWidth: '1px',
 					borderColor: colors.zinc[300],
-
+					// color: colors.emerald[600],
+					'background-color': colors.lime[400],
+					color: colors.black,
 				},
 
 				'.subText':{
@@ -56,6 +59,12 @@ module.exports = {
 					fontSize: theme('fontSize.urlFontSize'),
 					fontFamily: theme('fontFamily.urlFont'),
 					fontWeight: '300',
+				},
+				'.sectionTitle': {
+					fontFamily: theme('fontFamily.urlFont'),
+					fontSize: theme('fontSize.bodyFontSize'),
+					fontWeight: theme('fontWeight.light'),
+					color: theme('colors.sectionTitle'),
 				},
 			
 			})
