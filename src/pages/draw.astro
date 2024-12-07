@@ -2,26 +2,14 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getImages } from '../utils/getImages.js';
+const imagePaths = getImages();
+
 ---
 <BaseLayout>
-			<content class="flex flex-col gap-20">
-				<div class="flex flex-col gap-4">
-					<p class="urlText">/now</p>
-					<p class="text-4xl font-headLineFont">
-						What I'm doing now
-					</p>
-					<p class="subText">Last update on 30 Nov 2024</p>
-				</div>
-				<div>
-					inspired by <a class="bodyLink" href="https://sive.rs/"
-						>Derek Siver's</a
-					> and his <a class="bodyLink" href="https://sive.rs/now2"
-						>now page</a
-					> , this page is a summary of what's going on with my life. If
-					you have your own site, you can make one too.
-				</div>
-				<div>
-					@ Chiang Mai, Thai Lan.
-				</div>
-			</content>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+		{imagePaths.map((src) => (
+		  <img src={src} alt="Dynamic Image" class="w-full h-auto rounded-lg shadow-md" />
+		))}
+	  </div>
+	  
 </BaseLayout>
