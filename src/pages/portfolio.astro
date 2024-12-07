@@ -3,7 +3,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
-import Post from "../components/Post.astro";
+import DetailComp from "../components/DetailComp.astro";
 import WorkExperience from "../components/WorkExperience.astro";
 ---
 
@@ -21,27 +21,27 @@ import WorkExperience from "../components/WorkExperience.astro";
                 <div class="flex flex-col gap-3">
                     <p class="sectionTitle">.projects</p>
                     <div class="flex flex-col gap-8">
-                        <Post
+                        <DetailComp
                         postTitle="Digital Lending web platforms"
                         postDescription="P2P platforms for Investor and SMEs across multiple markets"
                         url=""
                         />
-                        <Post
+                        <DetailComp
                         postTitle="Investor Mobile Application"
                         postDescription="Browse live facilities available for investing and mange investments"
                         url=""
                         />
-                        <Post
+                        <DetailComp
                         postTitle="DHF"
                         postDescription="Farm diary management and inventory tracking"
                         url="https://www.dhfplatforms.com/"
                         />
-                        <Post
+                        <DetailComp
                         postTitle="Snafu Records"
                         postDescription="Portal & Website"
                         url="https://www.snafurecords.com/"
                         />
-                        <Post
+                        <DetailComp
                         postTitle="BackCountry Navigator"
                         postDescription="Outdoor navigation app that helps outdoor adventurers to find their way through the wilderness 🌳"
                         url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
@@ -52,12 +52,12 @@ import WorkExperience from "../components/WorkExperience.astro";
                 <div id="caseStudies" class="flex flex-col gap-3">
                     <p class="sectionTitle">.case studies</p>
                     <div class="flex flex-col gap-8">
-                        <Post
+                        <DetailComp
                         postTitle="Investment application"
                         postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                        url="/about"
+                        url="/portfolio/onboarding"
                         />
-                        <Post
+                        <DetailComp
                         postTitle="Simplifying the long onboarding process"
                         postDescription="Less steps for Customer and reduce manual works for Internal Team"
                         url="/about"

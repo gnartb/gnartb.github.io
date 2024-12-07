@@ -3,7 +3,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
-import Post from "../components/Post.astro";
+import DetailComp from "../components/DetailComp.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -80,33 +80,26 @@ import Post from "../components/Post.astro";
 					<div class="flex flex-col gap-2">
 						<p class="sectionTitle">.this site</p>
 						<p>
-							This site is handcoded by me
-							<a href="/portfolio#caseStudies" class="bodyLink">case studies</a> will give you a better ideas of how I
-							tackle design challenges and deliver solutions.
+							Made by me with Astro and Tailwind, hosted on Github. I listed <a href="/thissite" class="bodyLink">here</a> some resources that I learned to build and deploy this site in 2 weeks.
 						</p>
 					</div>
 
 					<!-- links-->
-					<div class="flex flex-row gap-2">
-							<a href="" class="bodyLink"></a> · 
-							<a href="" class="bodyLink"> Read CV</a> · 
-							<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a> · 
-							<a href="" class="bodyLink"> Linked in</a>
-					</div>
+					
 				</div>
 				<!-- section-connect -->
 				<div class="flex flex-col gap-3">
 					<!-- section title -->
 					<div class="flex flex-col gap-2">
 						<p class="sectionTitle">.connect</p>
+						<p>If you've got a project or want to work together, my inbox is open.</p>
 					</div>
 
 					<!-- connect links-->
 					<div class="flex flex-row gap-2">
-							<a href="" class="bodyLink"> Linked in</a> · 
-							<a href="" class="bodyLink"> Read CV</a> · 
-							<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a> · 
-							<a href="" class="bodyLink"> Linked in</a>
+							<a href="" class="bodyLink"> Linked in</a><span class="text-xs opacity-30">·</span> 
+							<a href="" class="bodyLink"> Read CV</a><span class="text-xs opacity-30">·</span> 
+							<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a>
 					</div>
 				</div>
 			</content>

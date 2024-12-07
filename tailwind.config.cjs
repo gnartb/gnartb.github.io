@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+	darkMode: 'class',
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,css}'],
 	theme: {
 		extend: {
@@ -33,7 +34,7 @@ module.exports = {
 				'.bodyParagraph': {
 					fontFamily: theme('fontFamily.bodyFont'),
 					fontSize: theme('fontSize.bodyFontSize'),
-					fontWeight: theme('fontWeight.light'),
+					fontWeight: theme('fontWeight.extralight'),
 					color: theme('colors.bodyColor'),
 				},
 				'.bodyLink':{
