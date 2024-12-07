@@ -1,15 +1,14 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import DetailComp from "../components/DetailComp.astro";
-
+import { getImages } from '../utils/getImages.js';
 ---
 <BaseLayout>
 			<content class="flex flex-col gap-20">
 				<div class="flex flex-col gap-4">
-					<p class="urlText">/this site</p>
+					<p class="urlText">/now</p>
 					<p class="text-4xl font-headLineFont">
-						About this simple site
+						What I'm doing now
 					</p>
 					<p class="subText">Last update on 30 Nov 2024</p>
 				</div>

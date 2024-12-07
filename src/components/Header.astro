@@ -4,11 +4,9 @@ import HeaderItem from "./HeaderItem.astro";
 
 
 <header class="flex items-center">
-	<a href="/" class="text-md whitespace-nowrap font-bold md:text-lg">tb</a>
-	
-	<!-- <nav class="flex grow items-center justify-end gap-1 font-sans text-sm md:gap-4">
-		<HeaderItem headmenu="about"></HeaderItem>
-		<HeaderItem headmenu="works"></HeaderItem>
-		<HeaderItem headmenu="things I learned"></HeaderItem>
-	</nav> -->
+	<a href="/" class="text-md whitespace-nowrap font-bold md:text-xl">tb</a>
+	<nav class="flex grow items-center justify-end gap-1 font-sans text-sm md:gap-8">
+		<HeaderItem headmenu="/works" url="/portfolio"></HeaderItem>
+		<HeaderItem headmenu="/things I learn" url="/til"></HeaderItem>
+	</nav>
 </header>

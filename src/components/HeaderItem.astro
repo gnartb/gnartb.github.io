@@ -1,13 +1,13 @@
 ---
 interface Props {
-    headmenu: string;
-    url: string;
+    headmenu?: string;
+    url?: string;
 }
 const { headmenu, url } = Astro.props;
 ---
 
 <a
-    class="inline-flex bodyLink"
+    class="inline-flex menuText"
     href={url}
     >{headmenu}
 </a>

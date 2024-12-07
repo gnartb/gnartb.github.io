@@ -1,9 +1,5 @@
 ---
 // Component Imports
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import HeadBase from "../components/HeadBase.astro";
-import DetailComp from "../components/DetailComp.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -53,48 +49,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<!-- project block -->
 		<div class="flex flex-col gap-2">
 			<div>
-				<a href="/thissite" class="bodyLink"> Building this site</a>
+				<a href="/thissite" class="bodyLink"> Build this site</a>
 			</div>
 			<div>
-				<a href="/draw" class="bodyLink"> Drawings</a>
+				<a href="/draw" class="bodyLink"> Draw</a>
 			</div>
 			<div>
-				<a href="" class="bodyLink">#100daysofdoodle</a> to boost my creativity
-				and help me reduces stress
+				<a href="" class="bodyLink">Doodle</a>
 			</div>
 			<div>
-				Doing handmade stuffs and <a
+				<a
 					href="https://www.pinterest.com/gnartb88/me-my-garden/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="bodyLink">growing my plants</a
+					class="bodyLink">Grow my plants</a
+				>
+			</div>
+			<div>
+				<a href="" class="bodyLink">Travel</a>
+			</div>
+			<div>
+				<a
+					href="https://www.imdb.com/user/ur14268874"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="bodyLink">Watch Movie</a
 				>
 			</div>
 		</div>
 	</div>
 
-	<!-- section-what you can do -->
-	<div class="flex flex-col gap-3">
-		<!-- section title -->
-		<div class="flex flex-col gap-2">
-			<p class="sectionTitle">.this site</p>
-			<p>
-				This site is handcoded by me
-				<a href="/portfolio#caseStudies" class="bodyLink"
-					>case studies</a
-				> will give you a better ideas of how I tackle design challenges
-				and deliver solutions.
-			</p>
-		</div>
-
-		<!-- links-->
-		<div class="flex flex-row gap-2">
-			<a href="" class="bodyLink"></a> ·
-			<a href="" class="bodyLink"> Read CV</a> ·
-			<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a> ·
-			<a href="" class="bodyLink"> Linked in</a>
-		</div>
-	</div>
 	<!-- section-connect -->
 	<div class="flex flex-col gap-3">
 		<!-- section title -->
@@ -102,46 +86,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<p class="sectionTitle">.connect</p>
 		</div>
 
-
-				<!-- section-what you can do -->
-				<div class="flex flex-col gap-3">
-					<!-- section title -->
-					<div class="flex flex-col gap-2">
-						<p class="sectionTitle">.this site</p>
-						<p>
-							Made by me with Astro and Tailwind, hosted on Github. I listed <a href="/thissite" class="bodyLink">here</a> some resources that I learned to build and deploy this site in 2 weeks.
-						</p>
-					</div>
-
-					<!-- links-->
-					
-				</div>
-				<!-- section-connect -->
-				<div class="flex flex-col gap-3">
-					<!-- section title -->
-					<div class="flex flex-col gap-2">
-						<p class="sectionTitle">.connect</p>
-						<p>If you've got a project or want to work together, my inbox is open.</p>
-					</div>
-
-					<!-- connect links-->
-					<div class="flex flex-row gap-2">
-							<a href="" class="bodyLink"> Linked in</a><span class="text-xs opacity-30">·</span> 
-							<a href="" class="bodyLink"> Read CV</a><span class="text-xs opacity-30">·</span> 
-							<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a>
-					</div>
-				</div>
-			</content>
-			<Footer />
-		</container>
-	</body>
-</html>
 		<!-- connect links-->
 		<div class="flex flex-row gap-2">
-			<a href="" class="bodyLink"> Linked in</a> ·
-			<a href="" class="bodyLink"> Read CV</a> ·
-			<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a> ·
-			<a href="" class="bodyLink"> Linked in</a>
+			<a href="" class="bodyLink"> Linked in</a><span
+				class="text-xs opacity-30">·</span
+			>
+			<a href="" class="bodyLink"> Read CV</a><span
+				class="text-xs opacity-30">·</span
+			>
+			<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a>
 		</div>
 	</div>
 </BaseLayout>

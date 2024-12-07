@@ -1,7 +1,6 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	darkMode: 'class',
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,css}'],
 	theme: {
 		extend: {
@@ -28,6 +27,7 @@ module.exports = {
 			}
 			}
 		},
+	darkmode: 'class',
 	plugins: [
 		function ({addUtilities, theme}) {
 			addUtilities({
@@ -46,7 +46,17 @@ module.exports = {
 				'.bodyLink:hover':{
 					borderBottomWidth: '1px',
 					borderColor: colors.zinc[300],
-					// color: colors.emerald[600],
+					'background-color': colors.lime[400],
+					color: colors.black,
+				},
+
+				'.menuText':{
+					fontFamily: theme('fontFamily.urlFont'),
+					color: theme('colors.subColor'),
+
+
+				},
+				'.menuText:hover':{
 					'background-color': colors.lime[400],
 					color: colors.black,
 				},

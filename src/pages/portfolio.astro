@@ -1,17 +1,10 @@
 ---
 // Component Imports
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import HeadBase from "../components/HeadBase.astro";
 import DetailComp from "../components/DetailComp.astro";
 import WorkExperience from "../components/WorkExperience.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-
-<html lang="en">
-    <HeadBase />
-    <body class="mx-auto max-w-xl p-6 pt-4 md:pt-6 bodyParagraph bg-zinc-900">
-        <container class="flex flex-col gap-20">
-            <Header />
+<BaseLayout>
             <content class="flex flex-col min-h-screen gap-20">
                 <div class="flex flex-col gap-4">
                     <p class="urlText">/works</p>
@@ -55,12 +48,12 @@ import WorkExperience from "../components/WorkExperience.astro";
                         <DetailComp
                         postTitle="Investment application"
                         postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                        url="/portfolio/onboarding"
+                        url="https://trang.framer.website/investorappg"
                         />
                         <DetailComp
                         postTitle="Simplifying the long onboarding process"
                         postDescription="Less steps for Customer and reduce manual works for Internal Team"
-                        url="/about"
+                        url="https://trang.framer.website/onboarding"
                         />
                     </div>
                 </div>
@@ -90,7 +83,4 @@ import WorkExperience from "../components/WorkExperience.astro";
                     </div>
                 </div>
             </content>
-            <Footer />
-        </container>
-    </body>
-</html>
+</BaseLayout>

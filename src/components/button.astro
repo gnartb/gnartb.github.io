@@ -1,0 +1,11 @@
+---
+interface Props {
+    btnLabel?: string;
+    btnUrl?: string;
+}
+const { btnLabel, btnUrl } = Astro.props;
+---
+
+<a href="{btnUrl}">
+    {btnLabel}
+</a>

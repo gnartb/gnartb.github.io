@@ -1,53 +1,42 @@
 ---
 // Component Imports
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import HeadBase from "../components/HeadBase.astro";
-import Post from "../components/Post.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DetailComp from "../components/DetailComp.astro";    
 ---
 
-<html lang="en">
-    <HeadBase />
-    <body
-        class="mx-auto min-h-screen max-w-xl p-6 pt-4 text-bodyColor md:pt-6 bodyParagraph bg-zinc-900"
-    >
-        <container class="flex flex-col gap-20">
-            <Header />
-            <content class="flex flex-col gap-20">
-                <div class="flex flex-col gap-4">
-                    <p class="urlText">/til</p>
-                    <p class="text-4xl font-headLineFont">
-						Random things I learn today
-					</p>
-                </div>
-                <Post
-                    postTitle="Investment application"
-                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                    url="/about"
-                    date="20/11/2024"
-                />
-                <Post
-                    postTitle="Investment application"
-                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                    url="/about"
-                />
-                <Post
-                    postTitle="Investment application"
-                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                    url="/about"
-                />
-                <Post
-                    postTitle="Investment application"
-                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                    url="/about"
-                />
-                <Post
-                    postTitle="Investment application"
-                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                    url="/about"
-                />
-            </content>
-            <Footer />
-        </container>
-    </body>
-</html>
+<BaseLayout>
+    <content class="flex flex-col gap-20">
+        <div class="flex flex-col gap-4">
+            <p class="urlText">/til</p>
+            <p class="text-4xl font-headLineFont">
+                Random things I learn today
+            </p>
+        </div>
+        <DetailComp
+            postTitle="Investment application"
+            postDescription="Redesign mobile Investor mobile app with more features for better experience"
+            url="/about"
+            date="20/11/2024"
+        />
+        <DetailComp
+            postTitle="Investment application"
+            postDescription="Redesign mobile Investor mobile app with more features for better experience"
+            url="/about"
+        />
+        <DetailComp
+            postTitle="Investment application"
+            postDescription="Redesign mobile Investor mobile app with more features for better experience"
+            url="/about"
+        />
+        <DetailComp
+            postTitle="Investment application"
+            postDescription="Redesign mobile Investor mobile app with more features for better experience"
+            url="/about"
+        />
+        <DetailComp
+            postTitle="Investment application"
+            postDescription="Redesign mobile Investor mobile app with more features for better experience"
+            url="/about"
+        />
+    </content>
+</BaseLayout>
