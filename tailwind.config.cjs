@@ -8,10 +8,9 @@ module.exports = {
 				bgColor: colors.zinc[950],
 				bodyColor: colors.zinc[200],
 				subColor: colors.slate[300],
-				sectionTitle: colors.slate[400],
-				h1Color: colors.slate[900],
-				h2Color: colors.slate[900],
-				urlColor: colors.slate[500],
+				subParagraphColor: colors.slate[400],
+				sectionTitle: colors.slate[500],
+				urlColor: colors.slate[400],
 			},
 			fontFamily: {
 				bodyFont: 'Be Vietnam Pro, san-serif',
@@ -42,6 +41,13 @@ module.exports = {
 					fontSize: theme('fontSize.bodyFontSize'),
 					fontWeight: theme('fontWeight.extralight'),
 					color: theme('colors.bodyColor'),
+					lineHeight: '22.4px',
+				},
+				'.subParagraph': {
+					fontFamily: theme('fontFamily.bodyFont'),
+					fontSize: theme('fontSize.bodyFontSize'),
+					fontWeight: theme('fontWeight.extralight'),
+					color: theme('colors.subParagraphColor'),
 					lineHeight: '22.4px',
 				},
 				'.bodyBold': {

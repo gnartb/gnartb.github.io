@@ -9,15 +9,14 @@ import WorkExperience from "../components/WorkExperience.astro";
 <BaseLayout>
 	<!-- section-introduction -->
 	<div class="flex flex-col gap-sectionContentGap">
-		<div class="urlText">🚀</div>
-		<div class="text-3xl font-headLineFont">
+		<div class="text-xl">🚀</div>
+		<div class="text-3xl font-headLineFont flex flex-col gap-4">
 			<p>Product Designer who curious about how things work and why.</p>
 			<p>Always learning something.</p>
 		</div>
-		<div class="flex flex-col gap-linkGap">
+		<div class="flex flex-col gap-linkGap pt-3">
 			<div><a class="bodyLink" href="/about">/about me</a></div>
 			<div><a class="bodyLink" href="/now">/now</a></div>
-			<div><a class="bodyLink" href="/following">/imfollowing</a></div>
 		</div>
 	</div>
 
@@ -87,14 +86,28 @@ import WorkExperience from "../components/WorkExperience.astro";
 		<p class="sectionTitle">.connect</p>
 
 		<!-- connect links-->
-		<div class="flex flex-row gap-2">
-			<a href="" class="bodyLink"> Linked in</a><span
-				class="text-xs opacity-30">·</span
+		<div class="flex flex-row gap-2 items-center">
+			<a
+				href="https://www.linkedin.com/in/thuytrangbui/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="bodyLink">Linked in</a
 			>
-			<a href="" class="bodyLink"> Read CV</a><span
-				class="text-xs opacity-30">·</span
+			<span class="text-xs opacity-30">·</span>
+			<a
+				href="https://read.cv/trang"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="bodyLink"
 			>
-			<a href="https://bento.me/trang-bui" class="bodyLink"> Bento</a>
+				Read CV</a
+			><span class="text-xs opacity-30">·</span>
+			<a
+				href="https://dribbble.com/trangbui"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="bodyLink">Dribbble</a
+			>
 		</div>
 	</div>
 </BaseLayout>
