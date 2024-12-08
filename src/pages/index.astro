@@ -8,24 +8,21 @@ import WorkExperience from "../components/WorkExperience.astro";
 
 <BaseLayout>
 	<!-- section-introduction -->
-	<div class="flex flex-col gap-8">
-		<div class="flex flex-col gap-6">
-			<div class="urlText">/</div>
-			<p class="text-2xl font-headLineFont">Product Designer who always curious about how things work and why.</p>
-			<div class="flex flex-col gap-2">
-				<div><a class="bodyLink" href="/about">/about me</a></div>
-				<div><a class="bodyLink" href="/now">/now</a></div>
-			</div>
+	<div class="flex flex-col gap-sectionContentGap">
+		<div class="urlText">🚀</div>
+		<div class="text-3xl font-headLineFont">
+			<p>Product Designer who curious about how things work and why.</p>
+			<p>Always learning something.</p>
 		</div>
-		<!-- <ul class="flex flex-col gap-1">
-						<li><a class="bodyLink" href="/about">/about</a></li>
-						<li><a class="bodyLink" href="/now">/now</a></li>
-						<li><a class="bodyLink" href="/connect">/connect</a></li>
-					</ul> -->
+		<div class="flex flex-col gap-linkGap">
+			<div><a class="bodyLink" href="/about">/about me</a></div>
+			<div><a class="bodyLink" href="/now">/now</a></div>
+			<div><a class="bodyLink" href="/following">/imfollowing</a></div>
+		</div>
 	</div>
 
 	<!-- section-case studies -->
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
 		<p class="sectionTitle">.what I do</p>
 		<p>
@@ -36,24 +33,23 @@ import WorkExperience from "../components/WorkExperience.astro";
 		</p>
 	</div>
 
-	 <!-- work experience -->
-	 <div class="flex flex-col gap-4">
+	<!-- work experience -->
+	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
 		<p class="sectionTitle">.where I've worked</p>
 		<p>
-			I have been designing for 8+ years, spending most of my time at startups and delivering products for global markets.
+			I have been designing for 8+ years, spending most of my time at
+			startups and delivering products for global markets.
 		</p>
 	</div>
 
 	<!-- section-side projects -->
-	<div class="flex flex-col gap-3">
+	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
-		<div class="flex flex-col gap-2">
-			<p class="sectionTitle">.when I'm not working</p>
-		</div>
+		<p class="sectionTitle">.when I'm not working</p>
 
 		<!-- project block -->
-		<div class="flex flex-col gap-2">
+		<div class="flex flex-col gap-linkGap">
 			<div>
 				<a href="/thissite" class="bodyLink"> Build this site</a>
 			</div>
@@ -86,11 +82,9 @@ import WorkExperience from "../components/WorkExperience.astro";
 	</div>
 
 	<!-- section-connect -->
-	<div class="flex flex-col gap-3">
+	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
-		<div class="flex flex-col gap-2">
-			<p class="sectionTitle">.connect</p>
-		</div>
+		<p class="sectionTitle">.connect</p>
 
 		<!-- connect links-->
 		<div class="flex flex-row gap-2">

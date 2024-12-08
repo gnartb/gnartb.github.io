@@ -28,6 +28,8 @@ module.exports = {
 			gap: {
 				// apply for gap
 				paragraphGap: '22.4px',
+				linkGap: '4px',
+				sectionContentGap: '16px',
 			}
 		}
 	},

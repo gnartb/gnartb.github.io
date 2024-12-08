@@ -5,16 +5,16 @@ import DetailComp from "../components/DetailComp.astro";
 
 interface DailyLearn {
     frontmatter: {
-        postTitle: string;
-        postDescription: string;
-        date: string;
-        url?: string;
+        newPostTitle?: string;
+        newPostDescription?: string;
+        newDate: string;
+        newUrl?: string;
     };
     compiledContent: () => string;
 }
 // Function to Get all posts under folder content/til and sort by the date
 async function getDailyLearn(): Promise<DailyLearn[]> {
-    const companies = Object.values(
+    const tilPost = Object.values(
         await import.meta.glob("../content/til/*.md", { eager: true }),
     ) as DailyLearn[];
 
@@ -35,10 +35,10 @@ async function getDailyLearn(): Promise<DailyLearn[]> {
     ];
 
     // Sort the companies by the date in descending order
-    return companies.sort((a, b) => {
+    return tilPost.sort((a, b) => {
         // Extract the publish date from the frontmatter
-        const publishDateA = a.frontmatter.date; // Example: "08 Dec, 2024"
-        const publishDateB = b.frontmatter.date; // Example: "07 Nov, 2024"
+        const publishDateA = a.frontmatter.newDate; // Example: "08 Dec, 2024"
+        const publishDateB = b.frontmatter.newDate; // Example: "07 Nov, 2024"
 
         // Parse the date format: "DD MMM, YYYY"
         const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
@@ -65,7 +65,7 @@ const dailyLearnPosts = await getDailyLearn();
 ---
 
 <BaseLayout>
-    <div class="flex flex-col gap-4">
+    <!-- <div class="flex flex-col gap-4">
         <p class="urlText">/til</p>
         <p class="text-4xl font-headLineFont">Random things I learn today</p>
     </div>
@@ -80,15 +80,15 @@ const dailyLearnPosts = await getDailyLearn();
     postDescription=""
     url="https://read.cv/disco_lu/pixels-over-portfolios"
     date="06 Dec, 2024"
-/>
+/> -->
     
     {
         dailyLearnPosts.map((post) => (
         <DetailComp
-                postTitle={post.frontmatter.postTitle}
-                postDescription={post.frontmatter.postDescription}
-                url={post.frontmatter.url}
-                date={post.frontmatter.date}
+                postTitle={post.frontmatter.newPostTitle}
+                postDescription={post.frontmatter.newPostDescription}
+                url={post.frontmatter.newUrl}
+                date={post.frontmatter.newDate}
             />
         ))
     }
