@@ -2,6 +2,66 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DetailComp from "../components/DetailComp.astro";
+
+interface DailyLearn {
+    frontmatter: {
+        postTitle: string;
+        postDescription: string;
+        date: string;
+        url?: string;
+    };
+    compiledContent: () => string;
+}
+// Function to Get all posts under folder content/til and sort by the date
+async function getDailyLearn(): Promise<DailyLearn[]> {
+    const companies = Object.values(
+        await import.meta.glob("../content/til/*.md", { eager: true }),
+    ) as DailyLearn[];
+
+    // Month order to compare months
+    const monthOrder = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ];
+
+    // Sort the companies by the date in descending order
+    return companies.sort((a, b) => {
+        // Extract the publish date from the frontmatter
+        const publishDateA = a.frontmatter.date; // Example: "08 Dec, 2024"
+        const publishDateB = b.frontmatter.date; // Example: "07 Nov, 2024"
+
+        // Parse the date format: "DD MMM, YYYY"
+        const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
+        const [dayB, monthB, yearB] = publishDateB.replace(",", "").split(" ");
+
+        // Compare years first (in descending order)
+        if (yearA !== yearB) {
+            return parseInt(yearB) - parseInt(yearA); // Sort by year descending
+        }
+
+        // If years are equal, compare months (in descending order)
+        const monthDiff =
+            monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
+        if (monthDiff !== 0) {
+            return monthDiff; // Sort by month descending
+        }
+
+        // If months are also equal, compare days (in descending order)
+        return parseInt(dayB) - parseInt(dayA); // Sort by day descending
+    });
+}
+
+const dailyLearnPosts = await getDailyLearn();
 ---
 
 <BaseLayout>
@@ -22,4 +82,14 @@ import DetailComp from "../components/DetailComp.astro";
     date="06 Dec, 2024"
 />
     
+    {
+        dailyLearnPosts.map((post) => (
+        <DetailComp
+                postTitle={post.frontmatter.postTitle}
+                postDescription={post.frontmatter.postDescription}
+                url={post.frontmatter.url}
+                date={post.frontmatter.date}
+            />
+        ))
+    }
 </BaseLayout>
