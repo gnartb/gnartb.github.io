@@ -1,0 +1,22 @@
+---
+interface Props {
+    imageName?: string;
+    imageDesc?: string;
+    imageDate?: string;
+}
+const { imageDesc, imageName, imageDate } = Astro.props;
+---
+
+<div>
+    <div class="flex flex-col gap-2">
+        <p class="bodyBold">
+            {imageDate}
+        </p>
+        <p class="bodyParagraph">
+            {imageDesc}
+        </p>
+    </div>
+    <div class=" min-w-80 p-6">
+        <img src={imageName} alt="doodle" class="w-max h-auto rounded-lg shadow-md" />
+    </div>
+</div>

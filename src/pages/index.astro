@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
+import WorkExperience from "../components/WorkExperience.astro";
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -10,11 +11,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<div class="flex flex-col gap-8">
 		<div class="flex flex-col gap-6">
 			<div class="urlText">/</div>
-			<p>Product Designer who curious about how things work and why.</p>
-			<p>
-				Most recently, I worked at Validus Capital, where I led the
-				design for Digital Lending platforms for Investors and SMEs.
-			</p>
+			<p class="text-2xl font-headLineFont">Product Designer who always curious about how things work and why.</p>
 			<div class="flex flex-col gap-2">
 				<div><a class="bodyLink" href="/about">/about me</a></div>
 				<div><a class="bodyLink" href="/now">/now</a></div>
@@ -28,7 +25,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	</div>
 
 	<!-- section-case studies -->
-	<div class="flex flex-col gap-3">
+	<div class="flex flex-col gap-4">
 		<!-- section title -->
 		<p class="sectionTitle">.what I do</p>
 		<p>
@@ -36,6 +33,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<a href="/portfolio#caseStudies" class="bodyLink">case studies</a> will
 			give you a better ideas of how I tackle design challenges and deliver
 			solutions.
+		</p>
+	</div>
+
+	 <!-- work experience -->
+	 <div class="flex flex-col gap-4">
+		<!-- section title -->
+		<p class="sectionTitle">.where I've worked</p>
+		<p>
+			I have been designing for 8+ years, spending most of my time at startups and delivering products for global markets.
 		</p>
 	</div>
 
@@ -55,7 +61,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				<a href="/draw" class="bodyLink"> Draw</a>
 			</div>
 			<div>
-				<a href="" class="bodyLink">Doodle</a>
+				<a href="/doodle" class="bodyLink">Doodle</a>
 			</div>
 			<div>
 				<a
@@ -66,7 +72,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				>
 			</div>
 			<div>
-				<a href="" class="bodyLink">Travel</a>
+				<a href="/places" class="bodyLink">Travel</a>
 			</div>
 			<div>
 				<a

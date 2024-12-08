@@ -1,42 +1,19 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import DetailComp from "../components/DetailComp.astro";    
+import DetailComp from "../components/DetailComp.astro";
 ---
 
 <BaseLayout>
-    <content class="flex flex-col gap-20">
-        <div class="flex flex-col gap-4">
-            <p class="urlText">/til</p>
-            <p class="text-4xl font-headLineFont">
-                Random things I learn today
-            </p>
-        </div>
-        <DetailComp
-            postTitle="Investment application"
-            postDescription="Redesign mobile Investor mobile app with more features for better experience"
-            url="/about"
-            date="20/11/2024"
-        />
-        <DetailComp
-            postTitle="Investment application"
-            postDescription="Redesign mobile Investor mobile app with more features for better experience"
-            url="/about"
-        />
-        <DetailComp
-            postTitle="Investment application"
-            postDescription="Redesign mobile Investor mobile app with more features for better experience"
-            url="/about"
-        />
-        <DetailComp
-            postTitle="Investment application"
-            postDescription="Redesign mobile Investor mobile app with more features for better experience"
-            url="/about"
-        />
-        <DetailComp
-            postTitle="Investment application"
-            postDescription="Redesign mobile Investor mobile app with more features for better experience"
-            url="/about"
-        />
-    </content>
+    <div class="flex flex-col gap-4">
+        <p class="urlText">/til</p>
+        <p class="text-4xl font-headLineFont">Random things I learn today</p>
+    </div>
+    <DetailComp
+        postTitle="Pinterest Masonry Grid Layout"
+        postDescription="Display your photos/images in gallery, random height, with Tailwind CSS"
+        url="https://sabinbaniya.hashnode.dev/pinterest-masonry-grid-layout-with-tailwind-css-unsplash-api"
+        date="07 Dec, 2024"
+    />
+    
 </BaseLayout>

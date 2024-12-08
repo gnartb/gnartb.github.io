@@ -5,13 +5,13 @@ module.exports = {
 	theme: {
 		extend: {
 			colors:{
-				bgColor: colors.zinc[900],
-				bodyColor: colors.slate[300],
-				subColor: colors.slate[400],
-				sectionTitle: colors.slate[600],
+				bgColor: colors.zinc[950],
+				bodyColor: colors.zinc[200],
+				subColor: colors.slate[300],
+				sectionTitle: colors.slate[400],
 				h1Color: colors.slate[900],
 				h2Color: colors.slate[900],
-				urlColor: colors.slate[600],
+				urlColor: colors.slate[500],
 			},
 			fontFamily:{
 				bodyFont: 'Be Vietnam Pro, san-serif',
@@ -35,6 +35,12 @@ module.exports = {
 					fontFamily: theme('fontFamily.bodyFont'),
 					fontSize: theme('fontSize.bodyFontSize'),
 					fontWeight: theme('fontWeight.extralight'),
+					color: theme('colors.bodyColor'),
+				},
+				'.bodyBold': {
+					fontFamily: theme('fontFamily.bodyFont'),
+					fontSize: theme('fontSize.bodyFontSize'),
+					fontWeight: theme('fontWeight.bold'),
 					color: theme('colors.bodyColor'),
 				},
 				'.bodyLink':{

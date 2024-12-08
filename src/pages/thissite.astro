@@ -2,27 +2,19 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DetailComp from "../components/DetailComp.astro";
-
 ---
+
 <BaseLayout>
-			<content class="flex flex-col gap-20">
-				<div class="flex flex-col gap-4">
-					<p class="urlText">/this site</p>
-					<p class="text-4xl font-headLineFont">
-						About this simple site
-					</p>
-					<p class="subText">Last update on 30 Nov 2024</p>
-				</div>
-				<div>
-					inspired by <a class="bodyLink" href="https://sive.rs/"
-						>Derek Siver's</a
-					> and his <a class="bodyLink" href="https://sive.rs/now2"
-						>now page</a
-					> , this page is a summary of what's going on with my life. If
-					you have your own site, you can make one too.
-				</div>
-				<div>
-					@ Chiang Mai, Thai Lan.
-				</div>
-			</content>
+	<div class="flex flex-col gap-4">
+		<p class="urlText">/this site</p>
+		<p class="text-4xl font-headLineFont">How I build it</p>
+	</div>
+	<div>
+		This site may be a version 8th and definately not my last change. I've tried Notion, Webflow, Supersite, Framer and more... but always love the idead to build my self a personal sites from scratch. 
+		I have a little bit knowledge about HTML and CSS, just enough to be able working with developer only. And after running into DeadSimpleSite, I decided to dive in and wanted to build something similar for me. Simple, not too complicated for non-code designer.
+
+		This site built with Astro and Tailwind, hosted on github
+	
+	</div>
+	<div>@ Chiang Mai, Thai Lan.</div>
 </BaseLayout>
