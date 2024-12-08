@@ -2,6 +2,8 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DoodleImage from "../components/DoodleImage.astro";
+
+const doodleImagesPath = '/images/doodles';
 ---
 
 <BaseLayout>
@@ -34,7 +36,7 @@ import DoodleImage from "../components/DoodleImage.astro";
 		<!-- 100days -->
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d001.jpeg"
+				imageName={`${doodleImagesPath}/d001.jpeg`}
 				imageDate="Day 1"
 				imageDesc="After looking at some inspirations on Pinterest, I discovered that the easiest way to begin with is to create a simple square and start to fill in it with random lines and shapes. "
 			/>
@@ -50,63 +52,63 @@ import DoodleImage from "../components/DoodleImage.astro";
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d011.jpeg"
+				imageName={`${doodleImagesPath}/d011.jpeg`}
 				imageDate="Day 11"
 				imageDesc="Hollong seasons started in Saigon."
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d042.jpeg"
+				imageName={`${doodleImagesPath}/d042.jpeg`}
 				imageDate="Day 42"
 				imageDesc="I forgot almost everything I need when I travel ✈️"
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d044.jpeg"
+				imageName={`${doodleImagesPath}/d044.jpeg`}
 				imageDate="Day 44"
 				imageDesc="Me on my boyfriend on his work mission to identify expired products at his company's supermarket, supporting his colleague's project of tracking expired items in the inventory."
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d051.jpeg"
+				imageName={`${doodleImagesPath}/d051.jpeg`}
 				imageDate="Day 51"
 				imageDesc="Re-watch Dr Strange and my favourite quote from the movie."
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d058.jpeg"
+				imageName={`${doodleImagesPath}/d058.jpeg`}
 				imageDate="Day 58"
 				imageDesc="It's been a while since I've enjoyed a really good time loop series. If you haven't watched Dark (2017) yet, I highly recommend giving it a try."
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d068.jpeg"
+				imageName={`${doodleImagesPath}/d068.jpeg`}
 				imageDate="Day 68"
 				imageDesc="I used to showcase my works on Notion, but I later discovered that Framer is a great tool for building portfolios. So, I decided to learn it. This website is build with Framer."
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d078.jpeg"
+				imageName={`${doodleImagesPath}/d078.jpeg`}
 				imageDate="Day 78"
 				imageDesc="Sometime there are so many things on my plate and the deadline is tomorrow 🤯"
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d095.jpeg"
+				imageName={`${doodleImagesPath}/d095.jpeg`}
 				imageDate="Day 95"
 				imageDesc="My neighbor and I spontaneously took a one-day road trip to the Vietnam-Cambodia border by scooter. Exploring new places always makes me happy!"
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
 			<DoodleImage
-				imageName="images/doodles/d098.jpeg"
+				imageName={`${doodleImagesPath}/d098.jpeg`}
 				imageDate="Day 98"
 				imageDesc="My boyfriend asked me to join him in the 2023 Standard Chartered Marathon for the 21km race. I'd never run before, but I gave it a try. So we registered and started the training. My first training attemption was 2km! This was totally new and feel like its a small achievement for me  🏃‍♀️‍➡️ 🏅 "
 			/>
