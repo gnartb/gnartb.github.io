@@ -17,7 +17,8 @@ export function getImages(folderPath) {
     );
 
   });
-
+  // Remove the public path  /public/images/draw/ -> /images/draw/
+  const newFolderPath = folderPath.replace(/^\/public\//, '/')
   // Map the filtered filenames to their full path
-  return imageFiles.map((filename) => `${folderPath}/${filename}`);
+  return imageFiles.map((filename) => `${newFolderPath}/${filename}`);
 }
