@@ -14,9 +14,9 @@ const { companyName, roleTitle, roleDescription, fromTo } = Astro.props;
             {companyName}
         </div>
         <div class="flex flex-row items-center text-subColor gap-2">
-            <p>{roleTitle}</p>
+            <p>{roleTitle}
             <span class="text-xs opacity-80"> | </span>
-            <p>{fromTo}</p>
+            {fromTo}</p>
         </div>
         <p class="text-subParagraphColor">
             {roleDescription}
