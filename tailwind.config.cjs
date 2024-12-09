@@ -19,9 +19,9 @@ module.exports = {
 			},
 			fontSize: {
 				// apply for general body text
-				bodyFontSize: '14px',
-				subFontSize: '12px',
-				urlFontSize: '14px',
+				bodyFontSize: '15px',
+				subFontSize: '13px',
+				urlFontSize: '15px',
 
 			},
 			gap: {
