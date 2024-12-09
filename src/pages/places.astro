@@ -1,14 +1,19 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getImages } from '../utils/getImages.js';
-const imagePaths = getImages('public/images/places');
+import { getImages } from "../utils/getImages.js";
+const imagePaths = getImages("public/images/places");
 const imageMapping = {
-    "01.png": "",
-    "02.png": "",
-    "03.png": "",
-
-}
+  "01-2024-Bangkok.jpeg": "Bangkok Art and Culture Centre, Thailand",
+  "02-2024-Bangkok2.jpeg": "SeaLife Bangkok, Thailand",
+  "04-2023-Penang.jpeg": "Pennang, Malaysia",
+  "05-2023-Singapore.jpeg": "SC Marathon, Singapore",
+  "07-2023-Japan.jpeg": "Biei Shirahige Falls, Japan",
+  "08-2022-Tulan.jpeg": "Tu Lan Cave, Viet Nam",
+  "11-2021-dalat.jpeg": "Da Lat, Viet Nam",
+  "06-2022-Bali.jpeg": "Bali, Indonesia",
+  "09-2019-singapore.jpeg": "Mid Autum, Singapore"
+};
 console.log(imagePaths);
 // Normalize keys to lowercase mapping above
 const mappingDescription = Object.keys(imageMapping).reduce((acc, key) => {
@@ -21,22 +26,28 @@ function getDescriptionByKey(key) {
   const normalizedKey = key.toLowerCase();
   return mappingDescription[normalizedKey];
 }
-
-
 ---
-<BaseLayout>
-	<div class="flex flex-col gap-4">
-        <p class="urlText">/places</p>
-        <p class="text-4xl font-headLineFont">
-            Places I've been to
-        </p>
-    </div>
 
-	<div class="columns-2 mx-auto space-y-4">
-		{imagePaths.map((src) => (
-		  <img src={src} alt="draw with procreate" class="w-full h-auto rounded shadow-md border-slate-800 border" />
-          <p class="font-urlFont">{getDescriptionByKey(src.split('/').pop())}</p> 
-		))}
-	</div>
-	  
+<BaseLayout>
+  <div class="flex flex-col gap-4">
+    <p class="urlText">/places</p>
+    <p class="text-4xl font-headLineFont">Places I've been to</p>
+  </div>
+
+  <div class="columns-2 mx-auto space-y-8">
+    {
+      imagePaths.map((src) => (
+        <div class="flex flex-col gap-2">
+          <img
+            src={src}
+            alt="place"
+            class="w-full h-auto rounded shadow-md border-slate-800 border"
+          />
+          <p class="font-urlFont text-bodyFontSize text-right">
+            {getDescriptionByKey(src.split("/").pop())}
+          </p>
+        </div>
+      ))
+    }
+  </div>
 </BaseLayout>

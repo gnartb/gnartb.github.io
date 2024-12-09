@@ -9,22 +9,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<p class="text-4xl font-headLineFont">What I'm doing now</p>
 		<p class="subText">Last update on 30 Nov 2024</p>
 	</div>
-	<div class=" flex flex-col gap-paragraphGap">
-		<div>
+	<div class=" flex flex-col gap-24">
+		<ul class="bodyParagraph list-disc list-outside gap-2 flex flex-col">
+			<li>Taking a career break and will be back for work next year.</li>
+			<li>Learning to play ukulele.</li>
+			<li>Growing my plants.</li>
+			<li>Thinking about building my own small digital garden after reading <a class="bodyLink" href="https://maggieappleton.com/garden-history">A Brief History & Ethos of the Digital Garden</a> and <a class="bodyLink" href="https://tomcritchlow.com/wiki/">Tom Critchlow wikifolder.</a></li>
+		</ul>
+		<div class="border-t border-t-slate-800 border-dashed pt-4">
 			Inspired by <a class="bodyLink" href="https://sive.rs/"
 				>Derek Siver's</a
 			> and his <a class="bodyLink" href="https://sive.rs/now2"
 				>now page</a
-			> , this page is a summary of what's going on with my life. If you have
-			your own site, you can make one too.
+			>
 		</div>
-		<ul class="list-disc list-inside gap-2 flex flex-col">
-			<li>Taking a career break but will be back for work next year</li>
-			<li>
-				Start to documents things I find interesting on to this sites
-			</li>
-			<li>Learning to play ukulele</li>
-			<li>Growing my small garden</li>
-		</ul>
 	</div>
 </BaseLayout>

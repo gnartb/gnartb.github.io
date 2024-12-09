@@ -14,7 +14,10 @@ const { postTitle, url, postDescription, date } = Astro.props;
             {date}
         </li>
         <li>
-            <a href={url} class="bodyLink">{postTitle}</a>
+            <a 
+            target="_blank"
+            rel="noopener noreferrer"
+            href={url} class="bodyLink">{postTitle}</a>
         </li>
         <li class="text-subParagraphColor">
             {postDescription}
