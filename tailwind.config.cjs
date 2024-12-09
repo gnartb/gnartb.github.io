@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				bgColor: colors.zinc[900],
+				bgColor: colors.zinc[950],
 				bodyColor: colors.zinc[200],
 				subColor: colors.slate[300],
 				subParagraphColor: colors.slate[400],
