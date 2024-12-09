@@ -4,12 +4,17 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
 
+export interface Props {
+  pageTitle: string;
+}
+
+const { pageTitle } = Astro.props;
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <html lang="en">
-	<HeadBase />
+	<HeadBase pageTitle={pageTitle} />
 	<body id="top"
 		class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-bodyColor md:pt-16 bodyParagraph bg-bgColor flex flex-col min-h-screen"
 	>
