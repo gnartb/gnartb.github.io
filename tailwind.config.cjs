@@ -39,14 +39,14 @@ module.exports = {
 				'.bodyParagraph': {
 					fontFamily: theme('fontFamily.bodyFont'),
 					fontSize: theme('fontSize.bodyFontSize'),
-					fontWeight: theme('fontWeight.extralight'),
+					fontWeight: theme('fontWeight.light'),
 					color: theme('colors.bodyColor'),
 					lineHeight: '22.4px',
 				},
 				'.subParagraph': {
 					fontFamily: theme('fontFamily.bodyFont'),
 					fontSize: theme('fontSize.bodyFontSize'),
-					fontWeight: theme('fontWeight.extralight'),
+					fontWeight: theme('fontWeight.light'),
 					color: theme('colors.subParagraphColor'),
 					lineHeight: '22.4px',
 				},
