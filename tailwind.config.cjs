@@ -32,7 +32,6 @@ module.exports = {
 			}
 		}
 	},
-	darkmode: 'class',
 	plugins: [
 		function ({ addUtilities, theme }) {
 			addUtilities({
