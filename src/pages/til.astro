@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import DetailComp from "../components/DetailComp.astro";
+import projectDetail from "../components/projectDetail.astro";
 
 interface DailyLearn {
     frontmatter: {
@@ -73,7 +73,7 @@ const dailyLearnPosts = await getDailyLearn();
 
     {
         dailyLearnPosts.map((post) => (
-            <DetailComp
+            <projectDetail
                 postTitle={post.frontmatter.newPostTitle}
                 postDescription={post.frontmatter.newPostDescription}
                 url={post.frontmatter.newUrl}
