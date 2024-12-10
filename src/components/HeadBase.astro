@@ -1,9 +1,11 @@
 ---
 export interface Props {
     pageTitle: string;
+    pageDescription: string;
 }
 
 const { pageTitle } = Astro.props;
+const {pageDescription} = Astro.props;
 ---
 
 <head>
@@ -12,6 +14,7 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- google font -->
