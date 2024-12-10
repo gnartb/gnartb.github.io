@@ -1,8 +1,8 @@
 ---
 // Component Imports
-import projectDetail from "../components/projectDetail.astro";
 import WorkExperience from "../components/WorkExperience.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectInfo from "../components/ProjectInfo.astro";
 ---
 
 <BaseLayout pageTitle="Portfolio - Trang Bui" pageDescription="My portfolio">
@@ -10,31 +10,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p class="urlText">/works</p>
         <p class="text-4xl font-headLineFont">Works I've done</p>
     </div>
+
     <!-- projects -->
     <div class="flex flex-col gap-3">
         <p class="sectionTitle">.projects</p>
         <div class="flex flex-col gap-6">
-            <projectDetail
+            <ProjectInfo
                 postTitle="Digital Lending web platforms"
                 postDescription="P2P platforms for Investor and SMEs across multiple markets"
                 url="https://validus.sg/"
             />
-            <projectDetail
+            <ProjectInfo
                 postTitle="Investor Mobile Application"
                 postDescription="Browse live facilities available for investing and mange investments"
                 url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
             />
-            <projectDetail
+            <ProjectInfo
                 postTitle="DHF"
                 postDescription="Farm diary management and inventory tracking"
                 url="https://www.dhfplatforms.com/"
             />
-            <projectDetail
+            <ProjectInfo
                 postTitle="Snafu Records"
                 postDescription="Portal & Website"
                 url="https://www.snafurecords.com/"
             />
-            <projectDetail
+            <ProjectInfo
                 postTitle="BackCountry Navigator"
                 postDescription="Outdoor navigation app that helps outdoor adventurers to find their way through the wilderness."
                 url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
@@ -61,12 +62,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 later. Access to these case studies requires a password. Please contact me if you wish to
                 take a look at it.
             </p>
-            <projectDetail
+            <ProjectInfo
                 postTitle="Investment application"
                 postDescription="Redesign mobile Investor mobile app with more features for better experience"
                 url="https://trang.framer.website/investorapp"
             />
-            <projectDetail
+            <ProjectInfo
                 postTitle="Simplifying the long onboarding process"
                 postDescription="Less steps for Customer and reduce manual works for Internal Team"
                 url="https://trang.framer.website/onboarding"
