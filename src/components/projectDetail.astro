@@ -8,7 +8,6 @@ interface Props {
 const { postTitle, url, postDescription, date } = Astro.props;
 ---
 
-
     <ul class="flex flex-col gap-1">
         <li class=" text-subColor text-subFontSize font-urlFont">
             {date}
@@ -16,7 +15,6 @@ const { postTitle, url, postDescription, date } = Astro.props;
         <li>
             <a 
             target="_blank"
-            rel="noopener noreferrer"
             href={url} class="bodyLink">{postTitle}</a>
         </li>
         <li class="text-subParagraphColor">

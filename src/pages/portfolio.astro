@@ -1,6 +1,6 @@
 ---
 // Component Imports
-import DetailComp from "../components/DetailComp.astro";
+import projectDetail from "../components/projectDetail.astro";
 import WorkExperience from "../components/WorkExperience.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -14,27 +14,27 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="flex flex-col gap-3">
         <p class="sectionTitle">.projects</p>
         <div class="flex flex-col gap-6">
-            <DetailComp
+            <projectDetail
                 postTitle="Digital Lending web platforms"
                 postDescription="P2P platforms for Investor and SMEs across multiple markets"
                 url="https://validus.sg/"
             />
-            <DetailComp
+            <projectDetail
                 postTitle="Investor Mobile Application"
                 postDescription="Browse live facilities available for investing and mange investments"
                 url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
             />
-            <DetailComp
+            <projectDetail
                 postTitle="DHF"
                 postDescription="Farm diary management and inventory tracking"
                 url="https://www.dhfplatforms.com/"
             />
-            <DetailComp
+            <projectDetail
                 postTitle="Snafu Records"
                 postDescription="Portal & Website"
                 url="https://www.snafurecords.com/"
             />
-            <DetailComp
+            <projectDetail
                 postTitle="BackCountry Navigator"
                 postDescription="Outdoor navigation app that helps outdoor adventurers to find their way through the wilderness."
                 url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
@@ -44,7 +44,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <a
                     class="bodyLink"
                     target="_blank"
-                    rel="noopener noreferrer"
                     href="https://dribbble.com/trangbui"
                     >Dribbble
                 </a>
@@ -62,12 +61,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 later. Access to these case studies requires a password. Please contact me if you wish to
                 take a look at it.
             </p>
-            <DetailComp
+            <projectDetail
                 postTitle="Investment application"
                 postDescription="Redesign mobile Investor mobile app with more features for better experience"
                 url="https://trang.framer.website/investorapp"
             />
-            <DetailComp
+            <projectDetail
                 postTitle="Simplifying the long onboarding process"
                 postDescription="Less steps for Customer and reduce manual works for Internal Team"
                 url="https://trang.framer.website/onboarding"
@@ -101,7 +100,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 More detail at <a
                     class="bodyLink"
                     target="_blank"
-                    rel="noopener noreferrer"
                     href="https://read.cv/trang">read.cv/trang</a
                 >
             </p>
