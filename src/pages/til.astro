@@ -73,7 +73,7 @@ const dailyLearnPosts = await getDailyLearn();
 
     {
         dailyLearnPosts.map((post) => (
-            <ProjectInfo
+            <InfoList
                 postTitle={post.frontmatter.newPostTitle}
                 postDescription={post.frontmatter.newPostDescription}
                 url={post.frontmatter.newUrl}
