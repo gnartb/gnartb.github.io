@@ -6,15 +6,13 @@ import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
   pageTitle: string;
-  pageDescription: string;
 }
 
 const { pageTitle } = Astro.props;
-const {pageDescription} = Astro.props;
 ---
 
 <html lang="en">
-	<HeadBase pageTitle={pageTitle} pageDescription={pageDescription}/>
+	<HeadBase pageTitle={pageTitle}/>
 	<body id="top"
 		class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-bodyColor selection:bg-lime-400 selection:text-black md:pt-16 bodyParagraph bg-bgColor flex flex-col min-h-screen"
 	>
