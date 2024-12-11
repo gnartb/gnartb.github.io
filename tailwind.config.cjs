@@ -13,9 +13,9 @@ module.exports = {
 				urlColor: colors.slate[400],
 			},
 			fontFamily: {
-				bodyFont: 'Be Vietnam Pro, san-serif',
+				bodyFont: 'Geist, san-serif',
 				headLineFont: 'Suranna',
-				urlFont: 'Space Grotesk',
+				urlFont: 'Libre Franklin',
 			},
 			fontSize: {
 				// apply for general body text
@@ -38,7 +38,7 @@ module.exports = {
 				'.bodyParagraph': {
 					fontFamily: theme('fontFamily.bodyFont'),
 					fontSize: theme('fontSize.bodyFontSize'),
-					fontWeight: theme('fontWeight.light'),
+					fontWeight: theme('fontWeight.extralight'),
 					color: theme('colors.bodyColor'),
 					lineHeight: '22.4px',
 				},
