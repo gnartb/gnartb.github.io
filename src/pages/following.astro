@@ -1,7 +1,7 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectInfo from "../components/ProjectInfo.astro";
+import InfoList from "../components/InfoList.astro";
 ---
 
 <BaseLayout
@@ -15,17 +15,17 @@ import ProjectInfo from "../components/ProjectInfo.astro";
         </p>
     </div>
     <div class="flex flex-col gap-6">
-        <ProjectInfo
+        <InfoList
             postTitle="Milk, No Sugar"
             postDescription="Milk, No Sugar is a curated list of inspiring articles, photography, video and tales through the lens of Luis Luis Ouriach. He's currently a Desginer at Figma. I found his articles very informative."
             url="https://milknosugar.substack.com/"
         />
-        <ProjectInfo
+        <InfoList
             postTitle="Tiantian Xu"
             postDescription="Product Designer. She has a collection of really cool #100daysprojects that can inspire you to learn something new."
             url="https://medium.com/@tiantianxu"
         />
-        <ProjectInfo
+        <InfoList
             postTitle="People and Blogs"
             postDescription="Weekly newsletter series where interesting people talk about themselves and their blogs."
             url="https://peopleandblogs.com/"
