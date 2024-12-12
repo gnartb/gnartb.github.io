@@ -6,5 +6,5 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind(), sitemap()],
-    site: 'https://www.trangbui.me',
+    site: 'https://trangbui.me',
 });
