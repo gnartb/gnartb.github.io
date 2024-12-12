@@ -1,4 +1,3 @@
 User-agent: * 
-Disallow: /admin/ 
-Disallow: /private/ 
+Allow: /
 Sitemap: https://www.trangbui.me/sitemap-index.xml
