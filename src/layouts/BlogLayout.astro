@@ -1,17 +1,13 @@
 ---
 // Component Imports
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
   pageTitle: string;
-  urlText?: string;
-  pageHeadline?: string;
-  subText?: string;
+  blogTitle: string;
 }
 
-const { pageTitle, urlText, pageHeadline, subText } = Astro.props;
+const { pageTitle, blogTitle} = Astro.props;
 ---
 
 <html lang="en">
@@ -20,16 +16,11 @@ const { pageTitle, urlText, pageHeadline, subText } = Astro.props;
 		class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-bodyColor selection:bg-lime-400 selection:text-black md:pt-16 bodyParagraph bg-bgColor flex flex-col min-h-screen"
 	>
 		<container class="flex flex-grow flex-col gap-24">
-			<Header />
 			<content class="flex flex-grow flex-col gap-16">
-				<div class="flex flex-col gap-4">
-					<p class="urlText">/{urlText}</p>
-					<p class="text-4xl font-headLineFont">{pageHeadline}</p>
-					<p class="subText">{subText}</p>
-				</div>
+                <div><a class="bodyLink" href="/"> back</a></div>
+                <p class="text-4xl font-headLineFont">{blogTitle}</p>
 				<slot />
 			</content>
-			<Footer />
 		</container>
 	</body>
 </html>

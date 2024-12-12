@@ -23,15 +23,7 @@ function getDescriptionByKey(key) {
 
 
 ---
-<BaseLayout pageTitle="Draw - Trang Bui">
-	<div class="flex flex-col gap-4">
-        <p class="urlText">/draw</p>
-        <p class="text-4xl font-headLineFont">
-            Draws
-        </p>
-        <p class="subText">Tool used: paper, pencil, and Procreate</p>
-    </div>
-
+<BaseLayout pageTitle="Draw - Trang Bui" urlText="draw" pageHeadline="Draws">
 	<div class="columns-2 mx-auto space-y-4">
 		{imagePaths.map((src) => (
 		  <img src={src} alt="draw with procreate" class="w-full h-auto rounded shadow-md border-slate-800 border" />
