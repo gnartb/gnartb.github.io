@@ -3,24 +3,29 @@
 import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
-  pageTitle: string;
-  blogTitle: string;
+    pageTitle: string;
+    blogTitle: string;
+    headDescription: string;
 }
 
-const { pageTitle, blogTitle} = Astro.props;
+const { pageTitle, blogTitle, headDescription } = Astro.props;
 ---
 
 <html lang="en">
-	<HeadBase pageTitle={pageTitle}/>
-	<body id="top"
-		class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-bodyColor selection:bg-lime-400 selection:text-black md:pt-16 bodyParagraph bg-bgColor flex flex-col min-h-screen"
-	>
-		<container class="flex flex-grow flex-col gap-24">
-			<content class="flex flex-grow flex-col gap-16">
+    <HeadBase pageTitle={pageTitle} />
+    <body
+        id="top"
+        class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-dbodyColor selection:bg-lime-400 md:pt-16 bg-aBgColor flex flex-col min-h-screen"
+    >
+        <container class="flex flex-col gap-24">
+            <content class="flex flex-col gap-16">
                 <div><a class="bodyLink" href="/"> back</a></div>
-                <p class="text-4xl font-headLineFont">{blogTitle}</p>
-				<slot />
-			</content>
-		</container>
-	</body>
+                <div class="flex flex-grow flex-col gap-2">
+                    <p class="text-xl articleHead">{blogTitle}</p>
+                    <p class="articleSubParagraph">{headDescription}</p>
+                </div>
+                <slot />
+            </content>
+        </container>
+    </body>
 </html>

@@ -17,14 +17,14 @@ const { pageTitle, urlText, pageHeadline, subText } = Astro.props;
 <html lang="en">
 	<HeadBase pageTitle={pageTitle}/>
 	<body id="top"
-		class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-bodyColor selection:bg-lime-400 selection:text-black md:pt-16 bodyParagraph bg-bgColor flex flex-col min-h-screen"
+		class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left selection:bg-lime-400 selection:text-black md:pt-16 bodyParagraph bg-bgColor flex flex-col min-h-screen"
 	>
 		<container class="flex flex-grow flex-col gap-24">
 			<Header />
 			<content class="flex flex-grow flex-col gap-16">
 				<div class="flex flex-col gap-4">
 					<p class="urlText">/{urlText}</p>
-					<p class="text-4xl font-headLineFont">{pageHeadline}</p>
+					<p class="text-2xl font-">{pageHeadline}</p>
 					<p class="subText">{subText}</p>
 				</div>
 				<slot />

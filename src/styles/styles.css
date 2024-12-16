@@ -1,0 +1,8 @@
+
+.textHlight {
+  text-decoration: underline;
+  text-decoration-color: lime;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.5em;
+  text-underline-offset: -0.25em;
+}
