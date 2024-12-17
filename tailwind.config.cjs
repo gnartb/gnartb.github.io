@@ -8,7 +8,6 @@ module.exports = {
 				bgColor: colors.zinc[950],
 				bodyColor: colors.zinc[200],
 				subColor: colors.slate[300],
-				subParagraphColor: colors.slate[400],
 				sectionTitle: colors.slate[500],
 				urlColor: colors.slate[400],
 				// article
@@ -16,7 +15,6 @@ module.exports = {
 				dbodyColor: colors.zinc[900],
 				dparagraphColor: colors.zinc[800],
 				dsubColor: colors.slate[500],
-				dsubParagraphColor: colors.slate[500],
 			},
 			fontFamily: {
 				bodyFont: 'Geist, san-serif',
@@ -38,7 +36,9 @@ module.exports = {
 				articleBodyFontsize: '14px',
 				articleSubFontSize: '12px',
 				h1: '24px',
+				h2: '22px',
 				h5: '14px',
+				h6: '14px',
 
 			},
 			gap: {
@@ -66,9 +66,9 @@ module.exports = {
 				},
 				'.subParagraph': {
 					fontFamily: theme('fontFamily.bodyFont'),
-					fontSize: theme('fontSize.bodyFontSize'),
+					fontSize: theme('fontSize.subFontSize'),
 					fontWeight: theme('fontWeight.light'),
-					color: theme('colors.subParagraphColor'),
+					color: theme('colors.subColor'),
 					lineHeight: '22.4px',
 				},
 				'.bodyBold': {
@@ -144,9 +144,9 @@ module.exports = {
 
 				'.articleSubParagraph': {
 					fontFamily: theme('fontFamily.articleBodyFont'),
-					fontSize: theme('fontSize.articleBodyFontsize'),
+					fontSize: theme('fontSize.articleSubFontSize'),
 					fontWeight: theme('fontWeight.light'),
-					color: theme('colors.dsubParagraphColor'),
+					color: theme('colors.dsubColor'),
 					lineHeight: '22.4px',
 				},
 
@@ -154,8 +154,17 @@ module.exports = {
 					fontFamily: theme('fontFamily.articleBodyFont'),
 					fontSize: theme('fontSize.articleSubFontSize'),
 					fontWeight: theme('fontWeight.light'),
-					color: theme('colors.dsubParagraphColor'),
+					color: theme('colors.dsubColor'),
 					lineHeight: '22.4px',
+				},
+
+				'.articleH2': {
+					fontFamily: theme('fontFamily.articleBodyFont'),
+					fontSize: theme('fontSize.h2'),
+					fontWeight: theme('fontWeight.light'),
+					color: theme('colors.dbodyColor'),
+					lineHeight: '22.4px',
+					textAlign: 'center',
 				},
 
 				'.articleH5': {
@@ -164,6 +173,16 @@ module.exports = {
 					fontWeight: theme('fontWeight.bold'),
 					color: theme('colors.dbodyColor'),
 					lineHeight: '22.4px',
+				},
+				
+				// use for tooltip text below image
+				'.articleH6': {
+					fontFamily: theme('fontFamily.articleBodyFont'),
+					fontSize: theme('fontSize.h6'),
+					fontWeight: theme('fontWeight.light'),
+					color: theme('colors.dsubColor'),
+					fontStyle: 'italic',
+					textAlign: 'center',
 				},
 
 
