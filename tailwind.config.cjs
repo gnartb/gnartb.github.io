@@ -17,7 +17,7 @@ module.exports = {
 				dsubColor: colors.slate[500],
 			},
 			fontFamily: {
-				bodyFont: 'Geist, san-serif',
+				bodyFont: 'Be Vietnam Pro, san-serif',
 				headLineFont: 'Suranna',
 				articleHeadlineFont: 'Geist, san-serif',
 				urlFont: 'Libre Franklin',
