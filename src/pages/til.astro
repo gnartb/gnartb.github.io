@@ -64,7 +64,12 @@ async function getDailyLearn(): Promise<DailyLearn[]> {
 const dailyLearnPosts = await getDailyLearn();
 ---
 
-<BaseLayout pageTitle="Things I learn - Trang Bui" urlText="til" pageHeadline="My ''Hermione's beaded bag''">
+<BaseLayout
+    pageTitle="Things I learn - Trang Bui"
+    urlText="/til"
+    pageHeadline="My ''Hermione's beaded bag''"
+    
+>
     {
         dailyLearnPosts.map((post) => (
             <InfoList
