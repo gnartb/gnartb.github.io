@@ -9,9 +9,10 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 >
     <!-- case studies content -->
     <div class="border-t border-dashed"></div>
-    <div class="flex flex-col gap-20">
+    <!-- Sec 1: Overview -->
+    <div class="flex flex-col gap-20 articleBodyParagraph">
         <!-- project overview -->
-        <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
+        <div class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Intro</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -48,7 +49,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         </div>
 
         <!-- problems -->
-        <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
+        <div class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Problems</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -69,7 +70,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         </div>
 
         <!-- solution -->
-        <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
+        <div class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Final Solution</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -106,7 +107,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         </div>
 
         <!-- deliver -->
-        <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
+        <div class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Key deliver</p>
             <ul class="flex flex-col gap-1 list-disc list-inside">
                 <li>Conducted User Research, collect User Feedback</li>
@@ -116,7 +117,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         </div>
 
         <!-- impact -->
-        <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
+        <div class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Impact</p>
             <p>
                 New app received good feedback from Customer, <span
@@ -134,42 +135,323 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
             </p>
         </div>
     </div>
-
     <div class="border-t border-dashed"></div>
-    <!-- review existing product -->
-    <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
-        <p class="articleH5">Review existing product</p>
-        <p>
-            Within a team consisting of the Product Manager and myself, we
-            reviewed the existing app by putting our review note and user
-            feedback on the screenshots taken from the mobile app.
-        </p>
-        <img src="" />
-        <p>
-            After the review, we listed down all the issues, put them into
-            groups, and see where we could improve the overall experience of the
-            app.
-        </p>
-        <p>
-            We did few brain storming sessions and quickly came up with some
-            concepts and ideas then spent next few days to create a prototype in
-            Figma that we will use it to test with our customer.
-        </p>
+    <!-- Sec 2: define problems -->
+    <div class="flex flex-col gap-20 articleBodyParagraph">
+        <div class="text-center uppercase">Define problems</div>
+        <!-- review existing product -->
+        <div class="flex flex-col gap-aSectionContentGap">
+            <p class="articleH5">Review existing product</p>
+            <div class="flex flex-col gap-paragraphGap">
+                <p>
+                    Within a team consisting of the Product Manager and myself,
+                    we reviewed the existing app by putting our review note and
+                    user feedback on the screenshots taken from the mobile app.
+                </p>
+                <img
+                    class="py-4"
+                    src="/src/pages/portfolio/images/investorapp/old-review.png"
+                />
+                <p>
+                    After the review, we listed down all the issues, put them
+                    into groups, and see where we could improve the overall
+                    experience of the app.
+                </p>
+                <p>
+                    We did few brain storming sessions and quickly came up with
+                    some concepts and ideas then spent next few days to create a
+                    prototype in Figma that we will use it to test with our
+                    customer.
+                </p>
+            </div>
+        </div>
+        <!-- user research -->
+        <div class="flex flex-col gap-aSectionContentGap">
+            <p class="articleH5">User research - Test ideas and solution</p>
+            <div class="flex flex-col gap-paragraphGap">
+                <p>
+                    We did few brain storming sessions and quickly came up with
+                    some concepts and ideas. To <span class="textHlight"
+                        >verify</span
+                    > our new design solutions, and deeply<span
+                        class="textHlight">understand deeply</span
+                    > our customer pain points and needs, we conducted a User Study
+                    with 12 Investors, who actively used the platform and the app,
+                    accepted our invitation to join the User Study.
+                </p>
+                <p>
+                    We combined a few methods for this research including<span
+                        class="textHlight">Usability Testing</span
+                    > and <span class="textHlight">Qualitative Interview</span>.
+                    The goal is to verify our draft design solutions and uncover
+                    any new problems.
+                </p>
+                <p>Rsearch plan</p>
+                <p class="text-center articleH7">Key insights from the Study</p>
+                <div class="flex flex-col gap-paragraphGap">
+                    <p>
+                        <span class="font-semibold">A. Lack of visual:</span> Customer
+                        found it easier to navigate around the app with new design,
+                        compared to the existing one, however, the new interface
+                        has not yet captivated them.
+                    </p>
+                    <div class="flex flex-col gap-2">
+                        <p>
+                            <span class="font-semibold"
+                                >B. Missing information, features & instruction:</span
+                            > Although we already incorporated numerous new features
+                            into the wireframe prototype, during the User Research,
+                            Investor still <span class="textHlight"
+                                >ask for few more features</span
+                            > that was <span class="textHlight">important</span>
+                            to them:
+                        </p>
+                        <ul
+                            class="flex flex-col gap-1 list-disc list-outside pl-3"
+                        >
+                            <li>
+                                Ability to see more details about on newly
+                                listed facilities and the borrower before they
+                                decide to make a fund.
+                            </li>
+                            <li>Ability to check the portfolio performance.</li>
+                            <li>
+                                Can search and manage funded facilities easier.
+                            </li>
+                            <li>
+                                A clear repayment schedule so they can see when
+                                and how much money they will receive.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="border-t border-dashed"></div>
+    <!-- Sec 3: build the app -->
+    <div class="flex flex-col gap-20 articleBodyParagraph">
+        <div class="text-center uppercase">Solutions for new app</div>
+        <!-- design system -->
+        <div class="flex flex-col gap-aSectionContentGap">
+            <p class="articleH5">Revamp the User Interface and Design System</p>
+            <div class="flex flex-col gap-paragraphGap">
+                <div class="flex flex-col gap-2">
+                    <p class="articleH7">Why need a Design System?</p>
+                    <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                        <li>
+                            The old design looks outdated or no longer reflects
+                            Validus's brand. Therefore, we decide to create an
+                            updated design that give a fresh look to the app and
+                            help improve user engagement.
+                        </li>
+                        <li>
+                            To set a standard design, maintain the consistency
+                            and manage it at scale for 3 products for total 3
+                            markets.
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="articleH7">The improvement focused on:</p>
+                    <ul class="flex flex-col gap-2 list-disc list-outside pl-3">
+                        <li>
+                            <span class="font-semibold">UI elements:</span> Build
+                            and set a standards for using UI components
+                        </li>
+                        <li>
+                            <span class="font-semibold"
+                                >Icons, illustration:</span
+                            > Create a library for icons and illustration that can
+                            be updated and extended easily.
+                        </li>
+                        <li>
+                            <span class="font-semibold">Copy writting:</span> there
+                            was feedback from the User Research that the copy was
+                            not intuitive for users to understand. Hence we went
+                            through the copywriting of each label, make sure it's
+                            meaningful and help Investor clearly understand what
+                            is it about. We also add tooltip or description alongside
+                            special labels to avoid the confusion.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- new features -->
+        <div class="flex flex-col gap-aSectionContentGap">
+            <p class="articleH5">Add more features</p>
+            <div class="flex flex-col gap-8">
+                <!-- feature 01 -->
+                <div class="flex flex-col gap-2">
+                    <p class="articleH7">01. Navigation</p>
+                    <p>
+                        The old menu grouped all facilities by status and placed
+                        them right in the main menu which wasn't
+                        well-structured. To help Investors access and mange all
+                        their portfolio faster, we moved all facilities into 1
+                        place and keep them group by status as the same before.
+                    </p>
+                    <img
+                        class="py-6"
+                        src="/src/pages/portfolio/images/investorapp/navigation.png"
+                    />
+                    <img
+                        class="py-6"
+                        src="/src/pages/portfolio/images/investorapp/navigation-2.png"
+                    />
+                </div>
+                <!-- feature 00 -->
+                <div class="flex flex-col gap-2">
+                    <p class="articleH7">02. Overview of the account</p>
+                    <p>
+                        Overview is a dashboard that Investor can quickly check
+                        their account summary and get notification.
+                    </p>
+                    <!-- problems -->
+                    <div class="flex flex-col gap-paragraphGap">
+                        <div>
+                            <p>
+                                <span class="font-semibold">Problems:</span>Account summary was presented in Snapshot in table style which
+                                <img class="py-4"
+                                    src="/src/pages/portfolio/images/investorapp/old-overview.png"
+                                />
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+                <!-- feature 01: facilities browsing -->
+                <div class="flex flex-col gap-2">
+                    <p class="articleH7">02. Facilities browsing</p>
+                    <p>
+                        Live Facilities is the place where Investors can view
+                        all listed facilities available for funding. The details
+                        on the facilities help them gain more information of the
+                        loan in order to reach an investment decision.
+                    </p>
+                    <div class="flex flex-col gap-paragraphGap">
+                        <!-- problems -->
+                        <div class="flex flex-col gap-paragraphGap"></div>
+                        <p>
+                            <span class="font-semibold">Problems: </span>At
+                            first, it only contains basic information which
+                            doesn't really help the Investors in determining the
+                            profile of the borrower.
+                            <img
+                                class="py-4"
+                                src="/src/pages/portfolio/images/investorapp/old-livefacilities.png"
+                            />
+                        </p>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex flex-row gap-3">
+                                <div
+                                    class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded"
+                                >
+                                    <p class="font-semibold">
+                                        1. Lack of facilities information.
+                                    </p>
+                                    <p>
+                                        Show only loan ID, requested fund, and
+                                        status of the loan and no indicator that
+                                        User can tap to see more details on next
+                                        page
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded"
+                                >
+                                    <p class="font-semibold">
+                                        2. Insured facility
+                                    </p>
+                                    <p>
+                                        Insured facilities were marked in yellow
+                                        which did not effectively convey a sense
+                                        of security and assurance.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row gap-3">
+                                <div
+                                    class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded"
+                                >
+                                    <p class="flex-1 font-semibold">
+                                        3. Facilities status
+                                    </p>
+                                    <p>
+                                        All in red which indicate an error.
+                                        Difficult to tell whats the different
+                                        between statuses of the loan
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded"
+                                >
+                                    <p class="font-semibold">
+                                        4. Facilities details
+                                    </p>
+                                    <p>
+                                        Facilities details didnt include enough
+                                        the borrower info
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- solution -->
+                    <div>
+                        <p>
+                            <span class="font-semibold">Design solution: </span>
+                            More information added in the front. Card design helps
+                            to display and organize details better.
+                            <img
+                                class="py-4"
+                                src="/src/pages/portfolio/images/investorapp/new-livefacilities.png"
+                            />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- feature 02: fund -->
+            <div class="flex flex-col gap-2">
+                <p class="articleH7">03. Fund a facility</p>
+                <p>
+                    In the existing flow, Investors can only fund by clicking
+                    the "Fund" button on the facility details. To encourage them
+                    to invest in the loan, we also placed a CTA right on the
+                    main page.
+                </p>
+                <p>
+                    The fund process was thus simplified and we also updated the
+                    UI to make it easier to use. All the steps remained the
+                    same.
+                </p>
+                <img
+                    class="py-4"
+                    src="/src/pages/portfolio/images/investorapp/fund.png"
+                />
+            </div>
 
-    <!-- user research -->
-    <div class="flex flex-col gap-aSectionContentGap articleBodyParagraph">
-        <p class="articleH5">User research - Test ideas and solution</p>
-        <p>
-            With the help of the Investor Relations team (the team that manages
-            the communication between the company and Investors), about 10-12
-            Investors who actively used the platform and the app, accepted our
-            invitation to join the User Study.
-        </p>
-        <p>
-            We combined a few methods for this research including Usability
-            Testing and Qualitative Interview. The goal is to verify our draft
-            design solutions and uncover any new problems.
-        </p>.
+            <!-- feature 04 -->
+            <div class="flex flex-col gap-2">
+                <p class="articleH7">
+                    05. Portofio management: Summary of upcoming repayments
+                </p>
+                <p>content</p>
+            </div>
+            <!-- feature 05 -->
+            <div class="flex flex-col gap-2">
+                <p class="articleH7">
+                    06.Portofio management: Search and filter
+                </p>
+                <p>content</p>
+            </div>
+            <!-- feature 06 -->
+            <div class="flex flex-col gap-2">
+                <p class="articleH7">
+                    07. Portofio management: Repayment schedule
+                </p>
+                <p>content</p>
+            </div>
+        </div>
     </div>
 </BlogLayout>

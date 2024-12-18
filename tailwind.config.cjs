@@ -13,7 +13,7 @@ module.exports = {
 				// article
 				aBgColor: colors.zinc[50],
 				dbodyColor: colors.zinc[900],
-				dparagraphColor: colors.zinc[800],
+				dparagraphColor: colors.zinc[700],
 				dsubColor: colors.slate[500],
 			},
 			fontFamily: {
@@ -37,8 +37,9 @@ module.exports = {
 				articleSubFontSize: '12px',
 				h1: '24px',
 				h2: '22px',
-				h5: '14px',
+				h5: '16px',
 				h6: '14px',
+				h7: '12px'
 
 			},
 			gap: {
@@ -49,7 +50,7 @@ module.exports = {
 
 				// apply for article
 				aSectionContentGap: '8px',
-				paragraphGap: '16px',
+				paragraphGap: '24px',
 
 			}
 		}
@@ -146,8 +147,8 @@ module.exports = {
 					fontFamily: theme('fontFamily.articleBodyFont'),
 					fontSize: theme('fontSize.articleSubFontSize'),
 					fontWeight: theme('fontWeight.light'),
-					color: theme('colors.dsubColor'),
-					lineHeight: '22.4px',
+					color: theme('colors.dColor'),
+					lineHeight: '18px',
 				},
 
 				'.aLabel': {
@@ -183,6 +184,13 @@ module.exports = {
 					color: theme('colors.dsubColor'),
 					fontStyle: 'italic',
 					textAlign: 'center',
+				},
+
+				'.articleH7': {
+					fontFamily: theme('fontFamily.articleBodyFont'),
+					fontSize: theme('fontSize.h7'),
+					fontWeight: theme('fontWeight.light'),
+					color: theme('colors.dsubColor'),
 				},
 
 
