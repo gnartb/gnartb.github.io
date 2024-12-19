@@ -14,7 +14,7 @@ module.exports = {
 				aBgColor: colors.zinc[50],
 				dbodyColor: colors.zinc[900],
 				dparagraphColor: colors.zinc[700],
-				dsubColor: colors.slate[500],
+				dsubColor: colors.slate[400],
 			},
 			fontFamily: {
 				bodyFont: 'Be Vietnam Pro, san-serif',
@@ -49,8 +49,8 @@ module.exports = {
 				sectionContentGap: '16px',
 
 				// apply for article
-				aSectionContentGap: '8px',
-				paragraphGap: '24px',
+				aSectionContentGap: '12px',
+				paragraphGap: '14px',
 
 			}
 		}
