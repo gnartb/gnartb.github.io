@@ -28,9 +28,9 @@ module.exports = {
 			},
 			fontSize: {
 				// apply for general body text
-				bodyFontSize: '15px',
-				subFontSize: '13px',
-				urlFontSize: '15px',
+				bodyFontSize: '14px',
+				subFontSize: '12px',
+				urlFontSize: '14px',
 				// use for coase studies
 				articleHead: '24px',
 				articleBodyFontsize: '14px',
