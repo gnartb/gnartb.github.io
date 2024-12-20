@@ -5,18 +5,19 @@ import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
 
 
-interface Props {
+export interface Props {
   pageTitle: string;
   urlText?: string;
   pageHeadline?: string;
   subText?: string;
+  canonicalLink?: string;
 }
 
-const { pageTitle, urlText, pageHeadline, subText, canonical } = Astro.props;
+const { pageTitle, urlText, pageHeadline, subText, canonicalLink } = Astro.props;
 ---
 
 <html lang="en">
-	<HeadBase pageTitle={pageTitle}/>
+	<HeadBase pageTitle={pageTitle} canonical={canonicalLink}/>
 	<body id="top"
 		class="mx-auto max-w-xl p-6 text-left selection:bg-lime-400 selection:text-black bodyParagraph bg-bgColor flex flex-col min-h-screen"
 	>
