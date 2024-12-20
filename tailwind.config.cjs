@@ -6,7 +6,7 @@ module.exports = {
 		extend: {
 			colors: {
 				bgColor: colors.zinc[950],
-				bodyColor: colors.zinc[200],
+				bodyColor: colors.zinc[300],
 				subColor: colors.slate[300],
 				sectionTitle: colors.slate[500],
 				urlColor: colors.slate[400],
