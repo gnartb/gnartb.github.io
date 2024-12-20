@@ -13,7 +13,7 @@ module.exports = {
 				// article
 				aBgColor: colors.zinc[50],
 				dbodyColor: colors.zinc[900],
-				dparagraphColor: colors.zinc[700],
+				dparagraphColor: colors.zinc[600],
 				dsubColor: colors.slate[400],
 			},
 			fontFamily: {

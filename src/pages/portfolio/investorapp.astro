@@ -23,8 +23,8 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                 </p>
                 <p>
                     <span class="textHlight">I led the design of this project</span> from doing research
-                    to designing and implementation.. Goal of this project is to improve navigation,
-                    and introduce modern, intuitive features for seamless investing on the go.
+                    to designing and implementation. Goal of this project is to improve navigation, and
+                    introduce modern, intuitive features for seamless investing on the go.
                 </p>
 
                 <div class="flex flex-row gap-6 pt-5">
@@ -288,8 +288,8 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                     </p>
                 </div>
 
-                <img src="/src/pages/portfolio/images/investorapp/navigation.png" />
-                <img src="/src/pages/portfolio/images/investorapp/navigation-2.png" />
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/navigation.png" />
+                <img class="pb-4" src="/src/pages/portfolio/images/investorapp/navigation-2.png" />
             </div>
         </div>
         <!-- feature 02 -->
@@ -304,9 +304,9 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                         icons conveyed misleading and incorrect messages.
                     </p>
                 </div>
-                <img src="/src/pages/portfolio/images/investorapp/old-overview.png" />
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/old-overview.png" />
                 <!-- Issue listing -->
-                <div class="flex flex-col gap-3 pb-3">
+                <div class="flex flex-col gap-3 pb-4">
                     <!-- Row 1 -->
                     <div class="flex flex-row gap-3">
                         <!-- card left -->
@@ -350,7 +350,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                         </li>
                     </ul>
                 </div>
-                <video class="h-full w-full rounded" autoplay loop>
+                <video class="h-full w-full rounded py-4" autoplay loop>
                     <source
                         src="/src/pages/portfolio/images/investorapp/overview.mp4"
                         type="video/mp4"
@@ -378,9 +378,12 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                             Investors in determining the profile of the borrower.
                         </p>
                     </div>
-                    <img src="/src/pages/portfolio/images/investorapp/old-livefacilities.png" />
+                    <img
+                        class="pt-4"
+                        src="/src/pages/portfolio/images/investorapp/old-livefacilities.png"
+                    />
                     <!-- Issue listing -->
-                    <div class="flex flex-col gap-3 pb-3">
+                    <div class="flex flex-col gap-3 pb-4">
                         <!-- Row 1 -->
                         <div class="flex flex-row gap-3">
                             <!-- card left -->
@@ -425,18 +428,58 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                             helps to display and organize details better.
                         </p>
                     </div>
-                    <img src="/src/pages/portfolio/images/investorapp/new-livefacilities.png" />
-                    <div class="flex flex-col gap-1">
-                        <div
-                            class="bg-green-100 rounded inlin p-1 text-green-800 articleSubParagraph"
-                        >
-                            ✓ Clear request loan amount and the remaining to invest.
+                    <img
+                        class="py-4"
+                        src="/src/pages/portfolio/images/investorapp/new-livefacilities.png"
+                    />
+
+                    <div class="flex flex-col gap-paragraphGap">
+                        <p>
+                            Investor can tap on "View details" to see more information about the
+                            loan, the borrower and their funding history with this borrower on the
+                            subsequence screen.
+                        </p>
+                    </div>
+                    <video class="h-full w-full rounded py-4" autoplay loop>
+                        <source
+                            src="/src/pages/portfolio/images/investorapp/facility-info.mp4"
+                            type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="flex flex-row gap-6">
+                        <!-- card left -->
+                        <div class="flex-1 articleSubParagraph">
+                            <div class="flex flex-col gap-1">
+                                <img
+                                    class="w-5 h-5"
+                                    src="/src/pages/portfolio/images/investorapp/icon-check.svg"
+                                />
+                                <p class="font-semibold">More data, better investment decision</p>
+
+                                <p>
+                                    Additional information requested by the investor during the
+                                    interview was incorporated into the design both on the front and
+                                    in the detail screen, helping the investor gain a better
+                                    understanding of the facilities.
+                                </p>
+                            </div>
                         </div>
-                        <div class="bg-green-100 rounded p-1 text-green-800 articleSubParagraph">
-                            ✓ Easy to tap on button to view more details.
-                        </div>
-                        <div class="bg-green-100 rounded p-1 text-green-800 articleSubParagraph">
-                            ✓ Facilities is now classified by label
+                        <!-- card right -->
+                        <div class="flex-1 articleSubParagraph">
+                            <div class="flex flex-col gap-1">
+                                <img
+                                    class="w-5 h-5"
+                                    src="/src/pages/portfolio/images/investorapp/icon-check.svg"
+                                />
+                                <p class="font-semibold">Intuitive interface</p>
+
+                                <p>
+                                    Investors now can see the requested loan amount, funding
+                                    progress, and other related information in the front. New design
+                                    was easier for them to understand and navigate around.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -444,18 +487,71 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         </div>
 
         <!-- feature 04: Fund -->
-        <div class="flex flex-col aSectionContentGap">
-            <p class="articleH5">Fund a facility</p>
+        <div class="flex flex-col gap-aSectionContentGap">
+            <p class="articleH5">Find funded facilities</p>
             <div class="flex flex-col gap-paragraphGap">
                 <!-- problems -->
                 <div class="flex flex-col gap-1">
                     <p class="articleH7">Problems:</p>
                     <p>
-                        In the existing flow, Investors can only fund by clicking the "Fund" button
-                        on the facility details. To encourage them to invest in the loan, we also
-                        placed a CTA right on the main page.
+                        Given the nature of the facilities being very short term (typically 1-3
+                        months maximum) and if the Users were very diversified in their investments,
+                        they would have multiple facilities, perhaps in the hundreds.
                     </p>
                 </div>
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/-old-portfolio.png" />
+                <!-- Issue listing -->
+                <div class="flex flex-col gap-3 pb-4">
+                    <!-- Row 1 -->
+                    <div class="flex flex-row gap-3">
+                        <!-- card left -->
+                        <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                            <p class="font-semibold">1. General issues</p>
+                            <p>
+                                Common issues can be seen as: visual hierarchy, color coding,
+                                alignment, interactivity... The Snapshot screen makes it challenging
+                                for investors to easily understand and capture their account
+                                summary.
+                            </p>
+                        </div>
+                        <!-- card right -->
+                        <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                            <p class="font-semibold">2. Misleading icons</p>
+                            <p>
+                                The icons used are typically universally recognized as collapse and
+                                expand symbols. However, in this context, the "plus" and "minus"
+                                icons were intended to represent money inflows and outflows for
+                                Investors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- solution -->
+                <div class="flex flex-col gap-1">
+                    <p class="articleH7">Design solution:</p>
+                    <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                        <li>
+                            Re-organize the information structure to enhance visual hierarchy and
+                            incorporating data visualization for better clarity and engagement.
+                        </li>
+                        <li>
+                            Add tooltip to explain some terms that may not be immediately understood
+                            by all Investors.
+                        </li>
+                        <li>
+                            Include a chart to visualize the portfolio allocation, and show more
+                            other data which requested by Investor to enable them see their
+                            portfolio diversification.
+                        </li>
+                    </ul>
+                </div>
+                <video class="h-full w-full rounded py-4" autoplay loop>
+                    <source
+                        src="/src/pages/portfolio/images/investorapp/overview.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
 
