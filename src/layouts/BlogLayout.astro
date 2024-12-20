@@ -6,13 +6,14 @@ export interface Props {
     pageTitle: string;
     blogTitle: string;
     headDescription: string;
+    canonical?: string;
 }
 
-const { pageTitle, blogTitle, headDescription } = Astro.props;
+const { pageTitle, blogTitle, headDescription, canonical } = Astro.props;
 ---
 
 <html lang="en">
-    <HeadBase pageTitle={pageTitle} />
+    <HeadBase pageTitle={pageTitle} canonical={canonical}/>
     <body
         id="top"
         class="mx-auto max-w-xl p-6 pt-16 pb-16 text-left text-dbodyColor selection:bg-lime-400 md:pt-16 bg-aBgColor flex flex-col min-h-screen"

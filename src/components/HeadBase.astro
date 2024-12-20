@@ -1,9 +1,10 @@
 ---
 export interface Props {
     pageTitle: string;
+    canonical?: string;
 }
 
-const { pageTitle } = Astro.props;
+const { pageTitle, canonical } = Astro.props;
 ---
 
 <head>
@@ -19,7 +20,7 @@ const { pageTitle } = Astro.props;
         content="UX and Product Designer based in Viet Nam. Curious about how things work and why they matter. Always learning something."
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <!-- <link rel="canonical" href="https://trangbui.me/"> -->
+    <link rel="canonical" href={canonical}>
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
