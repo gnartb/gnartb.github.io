@@ -85,15 +85,8 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
                 <div class="flex flex-col gap-2">
                     <p>
                         <span class="textHlight">Add essential features</span> to the app to enhance
-                        its functionality, make it more useful for customer:
+                        its functionality and provide more insights for Investor.
                     </p>
-                    <ul class="list-disc list-inside flex flex-col gap-1">
-                        <li>More details on the newly listed facilities</li>
-                        <li>Improving the fund process.</li>
-                        <li>Portfolio tracking with more details and repayment schedule</li>
-                        <li>Find funded facilities easier with search and filter</li>
-                        <li>New Overview page provide insight on the Portfolio performance</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -252,14 +245,13 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
         </div>
         <!-- new features -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Add more features</p>
-            <ul>
-                <li>
-                    More details on the newly listed facilities Improving the fund process.
-                    Portfolio tracking with more details and repayment schedule Find funded
-                    facilities easier with search and filter New Overview page provide insight on
-                    the Portfolio performance
-                </li>
+            <p class="articleH5">Key additional features</p>
+            <ul class="list-disc list-inside flex flex-col gap-1">
+                <li>More details on the newly listed facilities</li>
+                <li>Improving the fund process.</li>
+                <li>Portfolio tracking and repayment schedule</li>
+                <li>Find funded facilities easier with search and filter</li>
+                <li>New Overview page provide insight on the Portfolio performance</li>
             </ul>
         </div>
     </div>
@@ -488,70 +480,35 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 
         <!-- feature 04: Fund -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Find funded facilities</p>
+            <p class="articleH5">Fund process</p>
             <div class="flex flex-col gap-paragraphGap">
                 <!-- problems -->
                 <div class="flex flex-col gap-1">
                     <p class="articleH7">Problems:</p>
                     <p>
-                        Given the nature of the facilities being very short term (typically 1-3
-                        months maximum) and if the Users were very diversified in their investments,
-                        they would have multiple facilities, perhaps in the hundreds.
+                        In the current flow, investors can fund a facility only by tapping the
+                        'Fund' button on the facility details. After making a funding transaction, a
+                        notification (both success and failure) appears as a snackbar, which does
+                        not deliver an optimal user experience.
                     </p>
                 </div>
-                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/-old-portfolio.png" />
-                <!-- Issue listing -->
-                <div class="flex flex-col gap-3 pb-4">
-                    <!-- Row 1 -->
-                    <div class="flex flex-row gap-3">
-                        <!-- card left -->
-                        <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
-                            <p class="font-semibold">1. General issues</p>
-                            <p>
-                                Common issues can be seen as: visual hierarchy, color coding,
-                                alignment, interactivity... The Snapshot screen makes it challenging
-                                for investors to easily understand and capture their account
-                                summary.
-                            </p>
-                        </div>
-                        <!-- card right -->
-                        <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
-                            <p class="font-semibold">2. Misleading icons</p>
-                            <p>
-                                The icons used are typically universally recognized as collapse and
-                                expand symbols. However, in this context, the "plus" and "minus"
-                                icons were intended to represent money inflows and outflows for
-                                Investors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- solution -->
                 <div class="flex flex-col gap-1">
                     <p class="articleH7">Design solution:</p>
                     <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                        <li>Add another entry point to encourage Investor making the fund</li>
                         <li>
-                            Re-organize the information structure to enhance visual hierarchy and
-                            incorporating data visualization for better clarity and engagement.
-                        </li>
-                        <li>
-                            Add tooltip to explain some terms that may not be immediately understood
-                            by all Investors.
-                        </li>
-                        <li>
-                            Include a chart to visualize the portfolio allocation, and show more
-                            other data which requested by Investor to enable them see their
-                            portfolio diversification.
+                            Replace the snack bar notification by a full-screen confirmation screen
+                            to display detailed information.
                         </li>
                     </ul>
                 </div>
-                <video class="h-full w-full rounded py-4" autoplay loop>
-                    <source
-                        src="/src/pages/portfolio/images/investorapp/overview.mp4"
-                        type="video/mp4"
-                    />
-                    Your browser does not support the video tag.
-                </video>
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/old-fund-flow.png" />
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/fund.png" />
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/new-fund.png" />
+                <img class="pt-4" src="/src/pages/portfolio/images/investorapp/confirmation-screen.png" />
+
             </div>
         </div>
 
