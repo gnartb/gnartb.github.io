@@ -1,5 +1,14 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import TableContent from "../../components/TableContent.astro";
+
+const menuItems = [
+  { id: 'section1', name: 'Section 1' },
+  { id: 'section2', name: 'Section 2' },
+  { id: 'section3', name: 'Section 3' },
+  { id: 'section4', name: 'Section 4' },
+];
+
 ---
 
 <BlogLayout
@@ -8,6 +17,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
     headDescription="Validus Capital - 2022"
     canonicalLink="https://trangbui.me/portfolio/investorapp/"
 >
+    <TableContent items={menuItems} />
     <!-- case studies content -->
     <div class="border-t border-dashed"></div>
     <!-- Sec 1: Overview -->

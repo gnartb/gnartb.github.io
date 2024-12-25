@@ -1,0 +1,26 @@
+---
+interface MenuItem {
+  id: string;
+  name: string;
+}
+
+export interface Props {
+  items: MenuItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<aside class="w-1/4 hidden lg:block fixed top-0 left-0 h-screen bg-gray-100 p-4 overflow-auto">
+  <nav>
+    <ul class="space-y-2">
+      {items.map((item) => (
+        <li>
+          <a href={`#${item.id}`} class="text-blue-500 hover:underline">
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
