@@ -2,6 +2,7 @@
 interface MenuItem {
   id: string;
   name: string;
+  children?: MenuItem[]; // Optional children for nested menus
 }
 
 export interface Props {
@@ -15,12 +16,64 @@ const { items } = Astro.props;
   <nav>
     <ul class="space-y-2">
       {items.map((item) => (
-        <li>
-          <a href={`#${item.id}`} class=" hover:underline">
+        <li data-id={item.id} class="menu-item">
+          <a href={`#${item.id}`} class="hover:underline">
             {item.name}
           </a>
+          {item.children && (
+            <ul class="pl-4 space-y-1">
+              {item.children.map((child) => (
+                <li data-id={child.id} class="menu-item">
+                  <a href={`#${child.id}`} class="hover:underline">
+                    {child.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
       ))}
     </ul>
   </nav>
 </aside>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll(".menu-item");
+    const sections = Array.from(document.querySelectorAll("[id]")) as HTMLElement[]; // Select all elements with an ID
+    console.log(menuItems);
+    console.log(sections);
+
+    function onScroll() {
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 70; // Adjust for fixed header offset
+        const sectionHeight = section.offsetHeight;
+
+        menuItems.forEach((menuItem) => {
+          const id = menuItem.getAttribute("data-id");
+          if (id === section.id) {
+            if (
+              scrollPosition >= sectionTop &&
+              scrollPosition < sectionTop + sectionHeight
+            ) {
+              menuItem.classList.add("active");
+            } else {
+              menuItem.classList.remove("active");
+            }
+          }
+        });
+      });
+    }
+
+    window.addEventListener("scroll", onScroll);
+  });
+</script>
+
+<style>
+  .menu-item.active > a {
+    font-weight: bold;
+    color: var(--active-color, blue); /* Adjust to match your theme */
+  }
+</style>
