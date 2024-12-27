@@ -7,7 +7,14 @@ const menuItems = [
     { id: "problems", name: "Problems" },
     { id: "finalsolutions", name: "Final solutions" },
     { id: "keydeliver", name: "Key deliver" },
-    { id: "impact", name: "Impact" },
+    {
+        id: "impact",
+        name: "Impact",
+        children: [
+            { id: "impact1", name: "Impact 1" },
+            { id: "impact2", name: "Impact 2" },
+        ],
+    },
     { id: "Process", name: "Process" },
 ];
 ---
@@ -111,10 +118,10 @@ const menuItems = [
         </div>
 
         <!-- impact -->
-        <div id="impacy" class="flex flex-col gap-aSectionContentGap">
+        <div id="impact" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Impact</p>
             <div class="flex flex-col gap-paragraphGap">
-                <p>
+                <p id="impact1">
                     New app received good feedback from Customer, <span class="textHlight"
                         >improved their experience</span
                     > with Validus products. Now Investor can easily make fund for new facilities, search
@@ -123,7 +130,7 @@ const menuItems = [
                     > for our internal teams.
                 </p>
 
-                <p>
+                <p id="impact2">
                     The user study conducted during the app's rebuild provided valuable insights
                     into customer pain points and expectations, helped the company's management to
                     see <span class="textHlight">the importance of doing User Research</span>.
@@ -612,7 +619,9 @@ const menuItems = [
                         </p>
                         <img class="py-4" src="/src/images/investorapp/repayment-schedule.png" />
                         <p>
-                            For Overdue facilities, we added Collection notes section, to keep investors informed with updates from the Collection team regarding collection details
+                            For Overdue facilities, we added Collection notes section, to keep
+                            investors informed with updates from the Collection team regarding
+                            collection details
                         </p>
                         <img class="py-4" src="/src/images/investorapp/collection-note.png" />
                     </div>
