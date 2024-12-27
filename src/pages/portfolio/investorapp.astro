@@ -3,12 +3,13 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 import TableContent from "../../components/TableContent.astro";
 
 const menuItems = [
-  { id: 'section1', name: 'Section 1' },
-  { id: 'section2', name: 'Section 2' },
-  { id: 'section3', name: 'Section 3' },
-  { id: 'section4', name: 'Section 4' },
+    { id: "intro", name: "Intro" },
+    { id: "problems", name: "Problems" },
+    { id: "finalsolutions", name: "Final solutions" },
+    { id: "keydeliver", name: "Key deliver" },
+    { id: "impact", name: "Impact" },
+    { id: "Process", name: "Process" },
 ];
-
 ---
 
 <BlogLayout
@@ -19,11 +20,11 @@ const menuItems = [
 >
     <TableContent items={menuItems} />
     <!-- case studies content -->
-    <div class="border-t border-dashed"></div>
+    <!-- <div class="border-t border-dashed"></div> -->
     <!-- Sec 1: Overview -->
     <div class="flex flex-col gap-20">
-        <!-- project overview -->
-        <div class="flex flex-col gap-aSectionContentGap">
+        <!-- intro -->
+        <div id="intro" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Intro</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -33,8 +34,8 @@ const menuItems = [
                 </p>
                 <p>
                     <span class="textHlight">I led the design of this project</span> from doing research
-                    to designing and implementation. Goal of this project is to improve navigation, and
-                    introduce modern, intuitive features for seamless investing on the go.
+                    to designing and implementation. The app was improved the navigation with intuitive
+                    features for seamless investing on the go.
                 </p>
 
                 <div class="flex flex-row gap-6 pt-5">
@@ -57,7 +58,7 @@ const menuItems = [
         </div>
 
         <!-- problems -->
-        <div class="flex flex-col gap-aSectionContentGap">
+        <div id="problems" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Problems</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -82,7 +83,7 @@ const menuItems = [
         </div>
 
         <!-- solution -->
-        <div class="flex flex-col gap-aSectionContentGap">
+        <div id="finalsolutions" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Final Solution</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -102,7 +103,7 @@ const menuItems = [
         </div>
 
         <!-- deliver -->
-        <div class="flex flex-col gap-aSectionContentGap">
+        <div id="keydeliver" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Key deliver</p>
             <ul class="flex flex-col gap-1 list-disc list-inside">
                 <li>Conducted User Research, collect User Feedback</li>
@@ -112,7 +113,7 @@ const menuItems = [
         </div>
 
         <!-- impact -->
-        <div class="flex flex-col gap-aSectionContentGap">
+        <div id="impacy" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Impact</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -508,9 +509,9 @@ const menuItems = [
             <p class="articleH5">Portfolio Management</p>
             <div class="flex flex-col gap-paragraphGap">
                 <!-- problems -->
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 pb-4">
                     <p class="articleH7">Problems:</p>
-                    <div class="flex flex-col gap-paragraphGap pb-4">
+                    <div class="flex flex-col gap-paragraphGap">
                         <p>
                             Given the nature of the facilities being very short term (typically 1-3
                             months maximum) and if the Users were very diversified in their
@@ -537,17 +538,9 @@ const menuItems = [
                     </div>
                 </div>
 
-                <!-- solution -->
-                <div class="flex flex-col gap-1">
-                    <p class="articleH7">Design solution 1:</p>
-                    <p class="font-semibold text-dbodyColor">Summary</p>
-                    <!-- <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
-                        <li>Show quick summary of their portfolio.</li>
-                        <li>Create a search or filtering tools</li>
-                        <li>Add repayment schedule of each facility</li>
-                    </ul> -->
-
-                    <!-- solution 1 -->
+                <!-- solution 01 -->
+                <div class="flex flex-col gap-1 pb-4">
+                    <p class="articleH7">Design solution 1: Portfolio Summary</p>
                     <img class="py-4" src="/src/images/investorapp/portfolio-summary.png" />
                     <!-- cards -->
                     <div class="flex flex-row gap-6">
@@ -586,40 +579,46 @@ const menuItems = [
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- solution 2 -->
-                    <img class="py-8" src="/src/images/investorapp/search.png" />
-                    <!-- cards -->
-                    <div class="flex flex-row gap-6">
-                        <!-- card left -->
-                        <div class="flex-1 articleSubParagraph">
-                            <div class="flex flex-col gap-1">
-                                <div class="flex flex-row gap-2">
-                                    <img
-                                        class="w-5 h-5"
-                                        src="/src/images/investorapp/icon-01.svg"
-                                    />
-                                    <p class="font-semibold">Upcoming repayment</p>
-                                </div>
-                                <p>
-                                    Provide investors with a quick and clear update on their
-                                    expected returns, including the amount and due date. When they
-                                    expand the can see up to 5 months upcoming repayment.
-                                </p>
-                            </div>
-                        </div>
+                <!-- solution 02 -->
+                <div class="flex flex-col gap-1 pb-4">
+                    <p class="articleH7">Design solution 2: Search and Filter</p>
+                    <div class="flex flex-col gap-paragraphGap">
+                        <p>
+                            The search function and filters allow investors to quickly and easily
+                            zoom in on specific facilities to check for updates.
+                        </p>
+                        <p>
+                            Investors can search for facilities by entering any keyword or facility
+                            ID. They can use filters to narrow down results or combine both
+                            functions for a faster and more efficient search.
+                        </p>
+                    </div>
+                    <img class="py-4" src="/src/images/investorapp/search.png" />
+                    <video class="h-full w-full rounded py-4" autoplay loop>
+                        <source src="/src/images/investorapp/filter.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- solution 03 -->
+                <div class="flex flex-col gap-1 pb-4">
+                    <p class="articleH7">Design solution 3: Repayment Schedule</p>
+                    <div class="flex flex-col gap-paragraphGap">
+                        <p>
+                            One of the top User needs that we collected during the User Research was
+                            the ability to view a detailed repayment schedule after funding a
+                            facility. This would have provided them with the expected due date and
+                            amount due for each facility.
+                        </p>
+                        <img class="py-4" src="/src/images/investorapp/repayment-schedule.png" />
+                        <p>
+                            For Overdue facilities, we added Collection notes section, to keep investors informed with updates from the Collection team regarding collection details
+                        </p>
+                        <img class="py-4" src="/src/images/investorapp/collection-note.png" />
                     </div>
                 </div>
-            </div>
-            <!-- feature 06 -->
-            <div class="flex flex-col gap-2">
-                <p class="articleH7">06.Portofio management: Search and filter</p>
-                <p>content</p>
-            </div>
-            <!-- feature 07 -->
-            <div class="flex flex-col gap-2">
-                <p class="articleH7">07. Portofio management: Repayment schedule</p>
-                <p>content</p>
             </div>
         </div>
     </div>

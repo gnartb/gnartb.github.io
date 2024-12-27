@@ -20,7 +20,12 @@ const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
     >
         <container class="flex flex-col gap-24 articleBodyParagraph">
             <content class="flex flex-col gap-16">
-                <div><a class="bodyLink" href="/"> back</a></div>
+                <div class="w-7 h-7">
+                    <a class="group" href="/portfolio">
+                        <img class="w-7 h-7 group-hover:hidden " src="/back.svg">
+                        <img class="w-7 h-7 hidden group-hover:block" src="/back-hover.svg">
+                    </a>
+                </div>
                 <div class="flex flex-grow flex-col gap-2">
                     <p class="text-xl articleHead">{blogTitle}</p>
                     <p class="articleSubParagraph">{headDescription}</p>

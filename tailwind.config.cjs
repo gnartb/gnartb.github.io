@@ -32,7 +32,7 @@ module.exports = {
 				subFontSize: '12px',
 				urlFontSize: '14px',
 				// use for coase studies
-				articleHead: '24px',
+				articleHead: '20px',
 				articleBodyFontsize: '14px',
 				articleSubFontSize: '12px',
 				h1: '24px',
