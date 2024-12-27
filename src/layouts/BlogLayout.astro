@@ -4,8 +4,8 @@ import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
     pageTitle: string;
-    blogTitle: string;
-    headDescription: string;
+    blogTitle?: string;
+    headDescription?: string;
     canonicalLink?: string;
 }
 
@@ -26,10 +26,13 @@ const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
                         <img class="w-7 h-7 hidden group-hover:block" src="/back-hover.svg">
                     </a>
                 </div>
-                <div class="flex flex-grow flex-col gap-2">
-                    <p class="text-xl articleHead">{blogTitle}</p>
-                    <p class="articleSubParagraph">{headDescription}</p>
-                </div>
+                {(blogTitle || headDescription) && (
+                    <div class="flex flex-col gap-2">
+                      {blogTitle && <p class="text-xl articleHead">{blogTitle}</p>}
+                      {headDescription && <p class="articleSubParagraph">{headDescription}</p>}
+                    </div>
+                  )}
+                  
                 <slot />
             </content>
         </container>
