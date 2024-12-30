@@ -1,8 +1,9 @@
 
 .textHlight {
   text-decoration: underline;
-  text-decoration-color: #bef264;
+  text-decoration-color: #d9f99d;
   text-decoration-skip-ink: none;
   text-decoration-thickness: 0.5em;
   text-underline-offset: -0.20em;
+
 }

@@ -13,8 +13,10 @@ module.exports = {
 				// article
 				aBgColor: colors.zinc[50],
 				dbodyColor: colors.zinc[900],
-				dparagraphColor: colors.zinc[600],
+				dparagraphColor: colors.zinc[700],
 				dsubColor: colors.slate[400],
+				issue: colors.pink[700],
+				solution: colors.green[600]
 			},
 			fontFamily: {
 				bodyFont: 'Be Vietnam Pro, san-serif',
@@ -52,7 +54,8 @@ module.exports = {
 				aSectionContentGap: '12px',
 				paragraphGap: '14px',
 
-			}
+			},
+
 		}
 	},
 	plugins: [
@@ -192,6 +195,25 @@ module.exports = {
 					fontWeight: theme('fontWeight.light'),
 					color: theme('colors.dsubColor'),
 				},
+
+				'.articleSemibold': {
+					fontWeight: theme('fontWeight.semibold'),
+					color: theme('colors.dbodyColor'),
+				},
+
+				'.issue': {
+					fontWeight: theme('fontWeight.light'),
+					fontStyle: 'italic',
+					color: theme('colors.issue'),
+				},
+				'.solution': {
+					fontWeight: theme('fontWeight.semibold'),
+					// fontStyle: 'italic',
+					color: theme('colors.dbodyColor'),
+				},
+
+
+
 
 
 			})

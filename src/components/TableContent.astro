@@ -12,7 +12,7 @@ export interface Props {
 const { items } = Astro.props;
 ---
 
-<aside class="w-52 hidden lg:block fixed items-center top-16 right-4 p-6 overflow-auto text-dsubColor text-subFontSize">
+<aside class="w-52 hidden fixed lg:block items-center top-16 left pt-24 px-6 pb-6 text-dsubColor text-subFontSize">
   <nav>
     <ul class="space-y-2">
       {items.map((item) => (
@@ -73,8 +73,8 @@ const { items } = Astro.props;
 
 <style>
   .menu-item.active > a {
-    font-weight: bold;
-    color: var(--active-color, blue); /* Adjust to match your theme */
+    /* color: var(--active-color, blue); Adjust to match your theme */
+    @apply text-slate-950
   }
 </style>
 

@@ -23,13 +23,14 @@ const menuItems = [
     pageTitle="Investor App - Trang Bui"
     canonicalLink="https://trangbui.me/portfolio/investorapp/"
 >
-    <TableContent items={menuItems} />
     <!-- case studies content -->
     <!-- <div class="border-t border-dashed"></div> -->
     <!-- Sec 1: Overview -->
+    <div class="h-0 overflow-visible left-full sticky translate-x-full "><TableContent items={menuItems}/></div>
     <div class="flex flex-col gap-20">
         <!-- intro -->
         <div id="intro" class="flex flex-col gap-aSectionContentGap">
+            
             <p class="articleH5">Investor App Revamp</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
@@ -38,9 +39,23 @@ const menuItems = [
                     and Medium Enterprises - SMEs), and makes investments.
                 </p>
                 <p>
-                    <span class="textHlight">I led the design of this project</span> from doing research
-                    to designing and implementation. The app was improved the navigation with intuitive
-                    features for seamless investing on the go.
+                    <span class="articleSemibold">I led the design of this project</span> from doing
+                    research to designing and implementation. The app was improved the navigation with
+                    intuitive features for seamless investing on the go.
+                </p>
+                <p>
+                    New app received good feedback from Customer, <span class="textHlight"
+                        >improved their experience</span
+                    > with Validus products. Now Investor can easily make fund for new facilities, search
+                    their funds and keep track of the repayment. Therefore, <span class="textHlight"
+                        >reduce manual works</span
+                    > for our internal teams.
+                </p>
+
+                <p>
+                    The user study conducted during the app's rebuild provided valuable insights
+                    into customer pain points and expectations, helped the company's management to
+                    see <span class="textHlight">the importance of doing User Research</span>.
                 </p>
 
                 <div class="flex flex-row gap-6 pt-5">
@@ -68,22 +83,20 @@ const menuItems = [
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     High churn rate. Most of customer install the app but discontinue using it due
-                    to the <span class="textHlight">unfriendly interface</span> and <span
-                        class="textHlight">lack of essential functionalities</span
+                    to the <span class="issue">unfriendly interface</span> and <span class="issue"
+                        >lack of essential functionalities</span
                     > for them to browse new facilities, make funds, and track their portfolio effectively.
                 </p>
                 <p>
                     Whenever a new facility was listed on the market, either the Investor had to use
                     the web platform or request assistance from the Investor Relations Team to
-                    create a fund. This process <span class="textHlight"
-                        >required manual effort</span
-                    > from the internal team and caused <span class="textHlight">inconvenience</span
-                    > for investors.
+                    create a fund. This process <span class="issue">required manual effort</span> from
+                    the internal team and caused <span class="issue">inconvenience</span> for investors.
                 </p>
-                <div class="flex flex-col gap-4 py-4">
+                <!-- <div class="flex flex-col gap-4 py-4">
                     <img src="/src/images/investorapp/old-design.png" />
                     <p class="articleH6">Investor app, old interface</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -117,32 +130,32 @@ const menuItems = [
             </ul>
         </div>
 
-        <!-- impact -->
+        <!-- impact
         <div id="impact" class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Impact</p>
             <div class="flex flex-col gap-paragraphGap">
-                <p id="impact1">
-                    New app received good feedback from Customer, <span class="textHlight"
+                <p>
+                    New app received good feedback from Customer, <span class="articleSemibold"
                         >improved their experience</span
                     > with Validus products. Now Investor can easily make fund for new facilities, search
-                    their funds and keep track of the repayment. Therefore, <span class="textHlight"
+                    their funds and keep track of the repayment. Therefore, <span class="articleSemibold"
                         >reduce manual works</span
                     > for our internal teams.
                 </p>
 
-                <p id="impact2">
+                <p>
                     The user study conducted during the app's rebuild provided valuable insights
                     into customer pain points and expectations, helped the company's management to
-                    see <span class="textHlight">the importance of doing User Research</span>.
+                    see <span class="articleSemibold">the importance of doing User Research</span>.
                 </p>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="border-t border-dashed"></div>
     <!-- Sec 2: define problems -->
     <div class="flex flex-col gap-20">
-        <div class="text-center articleH7">Define problems</div>
+        <div class="text-center articleH7">Research, Define problems</div>
         <!-- review existing product -->
         <div class="flex flex-col gap-aSectionContentGap">
             <p class="articleH5">Review existing product</p>
@@ -166,36 +179,35 @@ const menuItems = [
                 <p>
                     We did few brain storming sessions and quickly came up with some concepts and
                     ideas. To verify our new design solutions, and deeply understand our customer
-                    pain points and needs, we conducted a User Study with <span
-                        class="font-semibold">12 Investors</span
-                    >, who most actively used the platform and the app, accepted our invitation to
-                    join the User Study.
+                    pain points and needs, we conducted a User Study with 12 Investors who most
+                    actively used the platform and the app, accepted our invitation to join the User
+                    Study.
                 </p>
+
                 <p>
                     We combined a few methods for this research including <span
                         class="font-semibold">Usability Testing</span
                     > and <span class="font-semibold">Qualitative Interview</span>. The goal is to
-                    <span class="textHlight"
-                        >verify our draft design solutions and uncover any new problems</span
-                    >.
+                    verify our draft design solutions and uncover any new problems.
                 </p>
-                <p>Rsearch plan</p>
-                <p class="text-center articleH7">Key insights from the Study</p>
+                <!-- <p>Rsearch plan</p> -->
+
+                <p>📌 Key insights from the Study:</p>
                 <div class="flex flex-col gap-paragraphGap">
                     <p>
                         <span class="font-semibold">A. Lack of visual:</span> Customer found it easier
                         to navigate around the app with new design, compared to the existing one, however,
-                        the <span class="textHlight">new interface has not yet engaged them</span>.
+                        the
+                        <span class="issue">new interface has not yet engaged them</span>.
                     </p>
                     <div class="flex flex-col gap-2">
                         <p>
                             <span class="font-semibold"
                                 >B. Missing information, features & instruction:</span
                             > Although we already incorporated numerous new features into the wireframe
-                            prototype, during the User Research, Investor still <span
-                                class="textHlight">ask for few more features</span
-                            > that was <span class="textHlight">important</span>
-                            to them:
+                            prototype, during the User Research, Investor still <span class="issue"
+                                >ask for few more features</span
+                            > that was important to them:
                         </p>
                         <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
                             <li>
@@ -228,8 +240,8 @@ const menuItems = [
                     <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
                         <li>
                             The old design looks outdated or no longer reflects Validus's brand.
-                            Therefore, we decide to create an updated design that give a fresh look
-                            to the app and help improve user engagement.
+                            Therefore, we decided to create an new design that give a fresh look to
+                            the app and help improve user engagement.
                         </li>
                         <li>
                             To set a standard design, maintain the consistency and manage it at
