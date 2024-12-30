@@ -48,7 +48,7 @@ const { items } = Astro.props;
       const scrollPosition = window.scrollY;
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 70; // Adjust for fixed header offset
+        const sectionTop = section.offsetTop - (window.innerHeight / 6) - 70; // Adjust for fixed header offset
         const sectionHeight = section.offsetHeight;
 
         menuItems.forEach((menuItem) => {
@@ -77,3 +77,28 @@ const { items } = Astro.props;
     color: var(--active-color, blue); /* Adjust to match your theme */
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const anchorLinks = document.querySelectorAll('a[href*="#"]');
+
+    anchorLinks.forEach(anchor => {
+      anchor.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substr(1); // Get the ID from href
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const targetOffset = targetElement.offsetTop; // Get the offset of the target element
+
+          // Scroll to the target element, adjusted to center it in the viewport
+          window.scrollTo({
+            top: targetOffset - (window.innerHeight / 6), // Adjust to keep target in the middle
+            behavior: 'smooth' // Optional: keeps the smooth scroll effect
+          });
+        }
+      });
+    });
+  });
+</script>
