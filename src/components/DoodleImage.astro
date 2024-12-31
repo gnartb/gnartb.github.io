@@ -9,14 +9,14 @@ const { imageDesc, imageName, imageDate } = Astro.props;
 
 <div>
     <div class="flex flex-col gap-2">
-        <p class="bodyBold">
+        <p class="font-semibold">
             {imageDate}
         </p>
-        <p class="bodyParagraph">
+        <p>
             {imageDesc}
         </p>
     </div>
-    <div class=" min-w-80 p-6">
+    <div class=" min-w-80 py-6">
         <img src={imageName} alt="doodle" class="w-max h-auto rounded-lg shadow-md" />
     </div>
 </div>

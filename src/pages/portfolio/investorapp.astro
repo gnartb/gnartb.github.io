@@ -26,12 +26,11 @@ const menuItems = [
     <!-- case studies content -->
     <!-- <div class="border-t border-dashed"></div> -->
     <!-- Sec 1: Overview -->
-    <TableContent items={menuItems}/>
+    <!-- <TableContent items={menuItems}/> -->
     <div class="flex flex-col gap-20">
         <!-- intro -->
         <div id="intro" class="flex flex-col gap-aSectionContentGap">
-            
-            <p class="articleH5">Investor App Revamp</p>
+            <p class="text-xl font-semibold my-2">Investor App Revamp</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     Validus Investor is a mobile application for accredited and institutional
@@ -39,36 +38,22 @@ const menuItems = [
                     and Medium Enterprises - SMEs), and makes investments.
                 </p>
                 <p>
-                    <span class="articleSemibold">I led the design of this project</span> from doing
-                    research to designing and implementation. The app was improved the navigation with
-                    intuitive features for seamless investing on the go.
-                </p>
-                <p>
-                    New app received good feedback from Customer, <span class="textHlight"
-                        >improved their experience</span
-                    > with Validus products. Now Investor can easily make fund for new facilities, search
-                    their funds and keep track of the repayment. Therefore, <span class="textHlight"
-                        >reduce manual works</span
-                    > for our internal teams.
-                </p>
-
-                <p>
-                    The user study conducted during the app's rebuild provided valuable insights
-                    into customer pain points and expectations, helped the company's management to
-                    see <span class="textHlight">the importance of doing User Research</span>.
+                    <span class="font-semibold">I led the design of this project</span> from doing research
+                    to designing and implementation. The app was improved the navigation with intuitive
+                    features for seamless investing on the go.
                 </p>
 
                 <div class="flex flex-row gap-6 pt-5">
                     <div class="flex-1">
-                        <p class="aLabel">Role</p>
+                        <p class="typo-subtlest text-light-subtlest">Role</p>
                         <p>Lead Designer</p>
                     </div>
                     <div class="flex-1">
-                        <p class="aLabel">Duration</p>
+                        <p class="typo-subtlest text-light-subtlest">Duration</p>
                         <p>6 months</p>
                     </div>
                     <div class="flex-1">
-                        <p class="aLabel">Market</p>
+                        <p class="typo-subtlest text-light-subtlest">Market</p>
                         <p>Singapore</p>
                     </div>
                 </div>
@@ -79,19 +64,20 @@ const menuItems = [
 
         <!-- problems -->
         <div id="problems" class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Problems</p>
+            <p class="typo-heading-medium">Problems</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     High churn rate. Most of customer install the app but discontinue using it due
-                    to the <span class="issue">unfriendly interface</span> and <span class="issue"
-                        >lack of essential functionalities</span
+                    to the <span class="typo-red">unfriendly interface</span> and <span
+                        class="typo-red">lack of essential functionalities</span
                     > for them to browse new facilities, make funds, and track their portfolio effectively.
                 </p>
                 <p>
                     Whenever a new facility was listed on the market, either the Investor had to use
                     the web platform or request assistance from the Investor Relations Team to
-                    create a fund. This process <span class="issue">required manual effort</span> from
-                    the internal team and caused <span class="issue">inconvenience</span> for investors.
+                    create a fund. This process <span class="typo-red">required manual effort</span>
+                    from the internal team and caused <span class="typo-red">inconvenience</span> for
+                    investors.
                 </p>
                 <!-- <div class="flex flex-col gap-4 py-4">
                     <img src="/src/images/investorapp/old-design.png" />
@@ -102,7 +88,7 @@ const menuItems = [
 
         <!-- solution -->
         <div id="finalsolutions" class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Final Solution</p>
+            <p class="typo-heading-medium">Final Solution</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     Refresh the app by <span class="textHlight"
@@ -122,7 +108,7 @@ const menuItems = [
 
         <!-- deliver -->
         <div id="keydeliver" class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Key deliver</p>
+            <p class="typo-heading-medium">Key deliver</p>
             <ul class="flex flex-col gap-1 list-disc list-inside">
                 <li>Conducted User Research, collect User Feedback</li>
                 <li>Released Investor App version 2</li>
@@ -130,15 +116,14 @@ const menuItems = [
             </ul>
         </div>
 
-        <!-- impact
         <div id="impact" class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Impact</p>
+            <p class="typo-heading-medium">Impact</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
-                    New app received good feedback from Customer, <span class="articleSemibold"
+                    New app received good feedback from Customer, <span class="textHlight"
                         >improved their experience</span
                     > with Validus products. Now Investor can easily make fund for new facilities, search
-                    their funds and keep track of the repayment. Therefore, <span class="articleSemibold"
+                    their funds and keep track of the repayment. Therefore, <span class="textHlight"
                         >reduce manual works</span
                     > for our internal teams.
                 </p>
@@ -146,19 +131,19 @@ const menuItems = [
                 <p>
                     The user study conducted during the app's rebuild provided valuable insights
                     into customer pain points and expectations, helped the company's management to
-                    see <span class="articleSemibold">the importance of doing User Research</span>.
+                    see <span class="textHlight">the importance of doing User Research</span>.
                 </p>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div class="border-t border-dashed"></div>
     <!-- Sec 2: define problems -->
     <div class="flex flex-col gap-20">
-        <div class="text-center articleH7">Research, Define problems</div>
+        <div class="text-center typo-subtlest text-light-subtlest">Research, Define problems</div>
         <!-- review existing product -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Review existing product</p>
+            <p class="typo-heading-medium">Review existing product</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     Within a team consisting of the Product Manager and myself, we reviewed the
@@ -174,7 +159,7 @@ const menuItems = [
         </div>
         <!-- user research -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">User research - Test ideas and solution</p>
+            <p class="typo-heading-medium">User research - Test ideas and solution</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     We did few brain storming sessions and quickly came up with some concepts and
@@ -192,21 +177,21 @@ const menuItems = [
                 </p>
                 <!-- <p>Rsearch plan</p> -->
 
-                <p>📌 Key insights from the Study:</p>
+                <p class="mt-12 textHlight">📌 Key insights from the Study</p>
                 <div class="flex flex-col gap-paragraphGap">
                     <p>
                         <span class="font-semibold">A. Lack of visual:</span> Customer found it easier
                         to navigate around the app with new design, compared to the existing one, however,
                         the
-                        <span class="issue">new interface has not yet engaged them</span>.
+                        <span class="typo-red">new interface has not yet engaged them</span>.
                     </p>
                     <div class="flex flex-col gap-2">
                         <p>
                             <span class="font-semibold"
                                 >B. Missing information, features & instruction:</span
                             > Although we already incorporated numerous new features into the wireframe
-                            prototype, during the User Research, Investor still <span class="issue"
-                                >ask for few more features</span
+                            prototype, during the User Research, Investor still <span
+                                class="typo-red">ask for few more features</span
                             > that was important to them:
                         </p>
                         <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
@@ -230,13 +215,13 @@ const menuItems = [
     <div class="border-t border-dashed"></div>
     <!-- Sec 3: build the app -->
     <div class="flex flex-col gap-20">
-        <div class="articleH7 text-center">Solutions for new app</div>
+        <div class="typo-subtlest text-light-subtlest text-center">Solutions</div>
         <!-- design system -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Revamp the User Interface and Design System</p>
+            <p class="typo-heading-medium">Revamp the User Interface and Design System</p>
             <div class="flex flex-col gap-paragraphGap">
                 <div class="flex flex-col gap-2">
-                    <p class="articleH7">Why need a Design System?</p>
+                    <p class="typo-subtlest text-light-subtlest">Why need a Design System?</p>
                     <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
                         <li>
                             The old design looks outdated or no longer reflects Validus's brand.
@@ -250,7 +235,7 @@ const menuItems = [
                     </ul>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <p class="articleH7">The focuses:</p>
+                    <p class="typo-subtlest text-light-subtlest">The focuses:</p>
                     <ul class="flex flex-col gap-2 list-disc list-outside pl-3">
                         <li>
                             <span class="font-semibold">UI componens:</span> Build scalable components
@@ -273,7 +258,7 @@ const menuItems = [
         </div>
         <!-- new features -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Key additional features</p>
+            <p class="typo-heading-medium">Key additional features</p>
             <ul class="list-disc list-inside flex flex-col gap-1">
                 <li>More details on the newly listed facilities</li>
                 <li>Improving the fund process.</li>
@@ -287,20 +272,20 @@ const menuItems = [
     <div class="border-t border-dashed"></div>
     <!-- Sec 4: Feature details -->
     <div class="flex flex-col gap-20">
-        <p class="articleH7 text-center">Feature details</p>
+        <p class="typo-subtlest text-light-subtlest text-center">Feature details</p>
         <!-- feature 01 -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Navigation</p>
+            <p class="typo-heading-medium">Navigation</p>
             <div class="flex flex-col gap-paragraphGap">
                 <div class="flex flex-col gap-1">
-                    <p class="articleH7">Problems:</p>
+                    <p class="typo-subtlest text-light-subtlest">Problems:</p>
                     <p>
                         The old menu grouped all facilities by status and placed them right in the
                         main menu which wasn't well-structured.
                     </p>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <p class="articleH7">Design solution:</p>
+                    <p class="typo-subtlest text-light-subtlest">Design solution:</p>
                     <p>
                         To help Investors access and mange all their portfolio faster, we moved all
                         facilities into 1 place and keep them group by status as the same before to
@@ -314,23 +299,23 @@ const menuItems = [
         </div>
         <!-- feature 02 -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Overview of the account</p>
+            <p class="typo-heading-medium">Overview of the account</p>
             <div class="flex flex-col gap-paragraphGap">
                 <!-- problems -->
                 <div class="flex flex-col gap-1">
-                    <p class="articleH7">Problems:</p>
+                    <p class="typo-subtlest text-light-subtlest">Problems:</p>
                     <p>
                         Account summary was presented as Snapshot, in table style with the use of
                         icons conveyed misleading and incorrect messages.
                     </p>
                 </div>
                 <img class="pt-4" src="/src/images/investorapp/old-overview.png" />
-                <!-- Issue listing -->
+                <!-- typo-red listing -->
                 <div class="flex flex-col gap-3 pb-4">
                     <!-- Row 1 -->
-                    <div class="flex flex-row gap-3">
+                    <div class="flex flex-row gap-3 text-subtlest">
                         <!-- card left -->
-                        <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                        <div class="flex-1 p-4 bg-pink-100 rounded">
                             <p class="font-semibold">1. General issues</p>
                             <p>
                                 Common issues can be seen as: visual hierarchy, color coding,
@@ -340,7 +325,7 @@ const menuItems = [
                             </p>
                         </div>
                         <!-- card right -->
-                        <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                        <div class="flex-1 p-4 bg-pink-100 rounded">
                             <p class="font-semibold">2. Misleading icons</p>
                             <p>
                                 The icons used are typically universally recognized as collapse and
@@ -353,7 +338,7 @@ const menuItems = [
                 </div>
                 <!-- solution -->
                 <div class="flex flex-col gap-1">
-                    <p class="articleH7">Design solution:</p>
+                    <p class="typo-subtlest text-light-subtlest">Design solution:</p>
                     <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
                         <li>
                             Re-organize the information structure to enhance visual hierarchy and
@@ -378,7 +363,7 @@ const menuItems = [
         </div>
         <!-- feature 03: facilities browsing -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Facilities browsing</p>
+            <p class="typo-heading-medium">Facilities browsing</p>
             <div class="flex flex-col gap-paragraphGap">
                 <p>
                     Live Facilities is the place where Investors can view all listed facilities
@@ -389,19 +374,19 @@ const menuItems = [
                 <!-- problems -->
                 <div class="flex flex-col gap-paragraphGap">
                     <div class="flex flex-col gap-1">
-                        <p class="articleH7">Problems:</p>
+                        <p class="typo-subtlest text-light-subtlest">Problems:</p>
                         <p>
                             A facility only showed basic information which doesn't really help the
                             Investors in determining the profile of the borrower.
                         </p>
                     </div>
                     <img class="pt-4" src="/src/images/investorapp/old-livefacilities.png" />
-                    <!-- Issue listing -->
-                    <div class="flex flex-col gap-3 pb-4">
+                    <!-- typo-red listing -->
+                    <div class="flex flex-col gap-3 pb-4 text-subtlest">
                         <!-- Row 1 -->
                         <div class="flex flex-row gap-3">
                             <!-- card left -->
-                            <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                            <div class="flex-1 h p-4 bg-pink-100 rounded">
                                 <p class="font-semibold">1. Lack of facilities information.</p>
                                 <p>
                                     Display only the loan ID, requested fund, and status, with no
@@ -409,7 +394,7 @@ const menuItems = [
                                 </p>
                             </div>
                             <!-- card right -->
-                            <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                            <div class="flex-1 p-4 bg-pink-100 rounded">
                                 <p class="font-semibold">2. Insured facility</p>
                                 <p>
                                     Insured facilities were marked in yellow which did not
@@ -420,7 +405,7 @@ const menuItems = [
                         <!-- Row 2 -->
                         <div class="flex flex-row gap-3">
                             <!-- Card left -->
-                            <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                            <div class="flex-1 p-4 bg-pink-100 rounded">
                                 <p class="flex-1 font-semibold">3. Facilities status</p>
                                 <p>
                                     Are shown in red, making it difficult to distinguish between the
@@ -428,7 +413,7 @@ const menuItems = [
                                 </p>
                             </div>
                             <!-- Card right -->
-                            <div class="flex-1 articleSubParagraph p-4 bg-pink-100 rounded">
+                            <div class="flex-1 p-4 bg-pink-100 rounded">
                                 <p class="font-semibold">4. Facilities details</p>
                                 <p>Did not include enough information about the borrower</p>
                             </div>
@@ -436,7 +421,7 @@ const menuItems = [
                     </div>
                     <!-- solution -->
                     <div class="flex flex-col gap-1">
-                        <p class="articleH7">Design solution:</p>
+                        <p class="typo-subtlest text-light-subtlest">Design solution:</p>
                         <p>
                             More information about the facility added in the front. Card design
                             helps to display and organize details better.
@@ -455,9 +440,9 @@ const menuItems = [
                         <source src="/src/images/investorapp/facility-info.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <div class="flex flex-row gap-6">
+                    <div class="flex flex-row gap-6 text-subtlest">
                         <!-- card left -->
-                        <div class="flex-1 articleSubParagraph">
+                        <div class="flex-1">
                             <div class="flex flex-col gap-1">
                                 <img class="w-5 h-5" src="/src/images/investorapp/icon-check.svg" />
                                 <p class="font-semibold">More data, better investment decision</p>
@@ -471,7 +456,7 @@ const menuItems = [
                             </div>
                         </div>
                         <!-- card right -->
-                        <div class="flex-1 articleSubParagraph">
+                        <div class="flex-1">
                             <div class="flex flex-col gap-1">
                                 <img class="w-5 h-5" src="/src/images/investorapp/icon-check.svg" />
                                 <p class="font-semibold">Intuitive interface</p>
@@ -490,11 +475,11 @@ const menuItems = [
 
         <!-- feature 04: Fund -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Fund process</p>
+            <p class="typo-heading-medium">Fund process</p>
             <div class="flex flex-col gap-paragraphGap">
                 <!-- problems -->
                 <div class="flex flex-col gap-1">
-                    <p class="articleH7">Problems:</p>
+                    <p class="typo-subtlest text-light-subtlest">Problems:</p>
                     <p>
                         In the current flow, investors can fund a facility only by tapping the
                         'Fund' button on the facility details. After making a funding transaction, a
@@ -505,7 +490,7 @@ const menuItems = [
 
                 <!-- solution -->
                 <div class="flex flex-col gap-1">
-                    <p class="articleH7">Design solution:</p>
+                    <p class="typo-subtlest text-light-subtlest">Design solution:</p>
                     <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
                         <li>Add another entry point to encourage Investor making the fund</li>
                         <li>
@@ -523,11 +508,11 @@ const menuItems = [
 
         <!-- feature 05: Portfolio management -->
         <div class="flex flex-col gap-aSectionContentGap">
-            <p class="articleH5">Portfolio Management</p>
+            <p class="typo-heading-medium">Portfolio Management</p>
             <div class="flex flex-col gap-paragraphGap">
                 <!-- problems -->
                 <div class="flex flex-col gap-1 pb-4">
-                    <p class="articleH7">Problems:</p>
+                    <p class="typo-subtlest text-light-subtlest">Problems:</p>
                     <div class="flex flex-col gap-paragraphGap">
                         <p>
                             Given the nature of the facilities being very short term (typically 1-3
@@ -541,7 +526,7 @@ const menuItems = [
 
                         <div class="flex flex-col gap-4 py-4">
                             <img src="/src/images/investorapp/3tabs.png" />
-                            <p class="articleH6">
+                            <p class="typo-tooltip text-light-subtlest">
                                 To find a facility Investor need to look into those 3 tabs
                             </p>
                         </div>
@@ -557,21 +542,19 @@ const menuItems = [
 
                 <!-- solution 01 -->
                 <div class="flex flex-col gap-1 pb-4">
-                    <p class="articleH7">Design solution 1: Portfolio Summary</p>
+                    <p class="typo-subtlest text-light-subtlest">
+                        Design solution 1: Portfolio Summary
+                    </p>
                     <img class="py-4" src="/src/images/investorapp/portfolio-summary.png" />
                     <!-- cards -->
-                    <div class="flex flex-row gap-6">
+                    <div class="flex flex-row gap-6 text-subtlest">
                         <!-- card left -->
-                        <div class="flex-1 articleSubParagraph">
+                        <div class="flex-1">
                             <div class="flex flex-col gap-1">
-                                <div class="flex flex-row gap-2 items-center">
-                                    <img
-                                        class="w-5 h-5"
-                                        src="/src/images/investorapp/icon-01.svg"
-                                    />
-                                    <p class="font-semibold">Upcoming repayment</p>
-                                </div>
-                                <p class="pl-7">
+                                <img class="w-5 h-5" src="/src/images/investorapp/icon-01.svg" />
+                                <p class="font-semibold">Upcoming repayment</p>
+
+                                <p>
                                     Provide investors with a quick and clear update on their
                                     expected returns, including the amount and due date. When they
                                     expand the can see up to 5 months upcoming repayment.
@@ -579,16 +562,11 @@ const menuItems = [
                             </div>
                         </div>
                         <!-- card right -->
-                        <div class="flex-1 articleSubParagraph">
+                        <div class="flex-1">
                             <div class="flex flex-col gap-1">
-                                <div class="flex flex-row gap-2 items-center">
-                                    <img
-                                        class="w-5 h-5"
-                                        src="/src/images/investorapp/icon-02.svg"
-                                    />
-                                    <p class="font-semibold">Upcoming repayment</p>
-                                </div>
-                                <p class="pl-7">
+                                <img class="w-5 h-5" src="/src/images/investorapp/icon-02.svg" />
+                                <p class="font-semibold">Upcoming repayment</p>
+                                <p>
                                     Display a clear breakdown of amounts that are not yet due and
                                     those that are overdue, give investors a better understanding of
                                     their portfolio's status.
@@ -600,7 +578,9 @@ const menuItems = [
 
                 <!-- solution 02 -->
                 <div class="flex flex-col gap-1 pb-4">
-                    <p class="articleH7">Design solution 2: Search and Filter</p>
+                    <p class="typo-subtlest text-light-subtlest">
+                        Design solution 2: Search and Filter
+                    </p>
                     <div class="flex flex-col gap-paragraphGap">
                         <p>
                             The search function and filters allow investors to quickly and easily
@@ -621,7 +601,9 @@ const menuItems = [
 
                 <!-- solution 03 -->
                 <div class="flex flex-col gap-1 pb-4">
-                    <p class="articleH7">Design solution 3: Repayment Schedule</p>
+                    <p class="typo-subtlest text-light-subtlest">
+                        Design solution 3: Repayment Schedule
+                    </p>
                     <div class="flex flex-col gap-paragraphGap">
                         <p>
                             One of the top User needs that we collected during the User Research was

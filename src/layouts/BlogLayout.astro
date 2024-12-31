@@ -17,9 +17,9 @@ const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
     <HeadBase pageTitle={pageTitle} canonical={canonicalLink} />
     <body
         id="top"
-        class="mx-auto max-w-2xl p-6 pt-16 pb-16 text-left text-dbodyColor selection:bg-lime-400 md:pt-16 bg-aBgColor flex flex-col min-h-screen"
+        class="mx-auto max-w-2xl p-6 pt-16 pb-16 text-left selection:bg-lime-400 md:pt-16 flex flex-col min-h-screen"
     >
-        <container class="flex flex-col gap-24 articleBodyParagraph">
+        <container class="flex flex-col gap-24 typo-body text-light-body">
             <content class="flex flex-col gap-16">
                 <div class="w-7 h-7">
                     <a class="group" href="/portfolio">
@@ -30,7 +30,7 @@ const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
                 {
                     (blogTitle || headDescription) && (
                         <div class="flex flex-col gap-2">
-                            {blogTitle && <p class="text-xl articleHead">{blogTitle}</p>}
+                            {blogTitle && <p class="text-xl">{blogTitle}</p>}
                             {headDescription && (
                                 <p class="articleSubParagraph">{headDescription}</p>
                             )}

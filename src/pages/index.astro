@@ -13,22 +13,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 >
 	<!-- section-introduction -->
 	<div class="flex flex-col gap-sectionContentGap">
-		<div class="text-2xl font-headLineFont flex flex-col gap-2">
+		<div class="text-2xl font-heading flex flex-col gap-2 text-black" >
 			<p>Product Designer who curious about how things work and why they matter.</p>
 		</div>
 		<div class="flex flex-col gap-linkGap pt-3">
-			<div><a class="bodyLink" href="/about/">/about me</a></div>
-			<div><a class="bodyLink" href="/now/">/now</a></div>
+			<div><a class="typo-topMenu" href="/about/">/about me</a></div>
+			<div><a class="typo-topMenu" href="/now/">/now</a></div>
 		</div>
 	</div>
 
 	<!-- section-case studies -->
 	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
-		<p class="sectionTitle">.what I do</p>
+		<div><p class="typo-subtlest bg-lime-200 inline-block">.what I do</p></div>
 		<p>
 			Probems discovery and finding solution for it. Those
-			<a href="/portfolio/#caseStudies" class="bodyLink">case studies</a> will give you a better
+			<a href="/portfolio/#caseStudies" class="typo-link">case studies</a> will give you a better
 			ideas of how I tackle design challenges and deliver solutions.
 		</p>
 	</div>
@@ -36,31 +36,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<!-- work experience -->
 	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
-		<p class="sectionTitle">.where I've worked</p>
+		<div><p class="typo-subtlest bg-lime-200 inline-block">.where I've worked</p></div>
 		<p>
-			I've been designing product for the past 8 years, primarily in startup environments and
-			delivering products for global markets. Most recently, I worked in Fintech industry at <a
-				class="bodyLink"
+			I have been designing products for the past 9 years, primarily in startup environments and
+			delivering design solutions for global markets. Most recently, I worked in Fintech industry at <a
+				class="typo-link"
 				target="_blank"
 				href="https://validus.sg/">Validus Capital</a
 			>.
 		</p>
 		<p>
 			Before that, I worked as Freelance Designer for 2 years, after leaving <a
-				class="bodyLink"
+				class="typo-link"
 				target="_blank"
 				href="https://www.nashtechglobal.com/">Nash Tech Global</a
 			>, collaborating with diverse clients and projects.
 		</p>
 		<p>
 			My Digital Design journey start with <a
-				class="bodyLink"
+				class="typo-link"
 				target="_blank"
 				href="https://x.com/sentifi">Sentifi</a
 			>, another a fintech company that provides insight about new investment opportunities.
 		</p>
 		<p class="border-t border-t-slate-800 border-dashed pt-4 mt-2">
-			Details resume at <a class="bodyLink" target="_blank" href="https://read.cv/trang"
+			Details resume at <a class="typo-link" target="_blank" href="https://read.cv/trang"
 				>read.cv/trang</a
 			>
 		</p>
@@ -69,33 +69,36 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<!-- section-side projects -->
 	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
-		<p class="sectionTitle">.when I'm not working</p>
+	<div><p class="typo-subtlest bg-lime-200 inline-block">.when I'm not working</p></div>
 
 		<!-- project block -->
 		<div class="flex flex-col gap-linkGap">
 			<div>
-				<a href="/thissite/" class="bodyLink"> Build this site</a>
+				<a href="/thissite/" class="typo-link"> Build this site</a>
 			</div>
 			<div>
-				<a href="/draw/" class="bodyLink"> Draw</a>
+				<a href="/draw/" class="typo-link"> Draw</a>
 			</div>
 			<div>
-				<a href="/doodle/" class="bodyLink">Doodle</a>
+				<a href="/doodle/" class="typo-link">Doodle</a>
 			</div>
 			<div>
 				<a
 					href="https://www.pinterest.com/gnartb88/me-my-garden/"
 					target="_blank"
-					class="bodyLink">Grow my plants</a
+					class="typo-link">Grow my plants</a
 				>
 			</div>
 			<div>
-				<a href="/places/" class="bodyLink">Go somewhere</a>
+				<a href="/places/" class="typo-link">Go somewhere</a>
 			</div>
 			<div>
-				<a href="https://www.imdb.com/user/ur14268874" target="_blank" class="bodyLink"
+				<a href="https://www.imdb.com/user/ur14268874" target="_blank" class="typo-link"
 					>Watch Movie</a
 				>
+			</div>
+			<div>
+				<a href="/til/" class="typo-link">Fill my ''Hermione's beaded bag'' </a>
 			</div>
 		</div>
 	</div>
@@ -103,18 +106,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<!-- section-connect -->
 	<div class="flex flex-col gap-sectionContentGap">
 		<!-- section title -->
-		<p class="sectionTitle">.connect</p>
+		<div><p class="typo-subtlest bg-lime-200 inline-block">.connect</p></div>
 
 		<!-- connect links-->
 		<div class="flex flex-row gap-2 items-center">
-			<a href="https://www.linkedin.com/in/thuytrangbui/" target="_blank" class="bodyLink"
+			<a href="https://www.linkedin.com/in/thuytrangbui/" target="_blank" class="typo-link"
 				>Linked in</a
 			>
 			<span class="text-xs opacity-30">·</span>
-			<a href="https://read.cv/trang" target="_blank" class="bodyLink">Read CV</a><span
-				class="text-xs opacity-30">·</span
+			<a href="https://read.cv/trang" target="_blank" class="typo-link">Read CV</a>
+			<span class="text-xs opacity-30">·</span
 			>
-			<a href="https://dribbble.com/trangbui" target="_blank" class="bodyLink">Dribbble</a>
+			<a href="https://dribbble.com/trangbui" target="_blank" class="typo-link">Dribbble</a>
 		</div>
 	</div>
 </BaseLayout>

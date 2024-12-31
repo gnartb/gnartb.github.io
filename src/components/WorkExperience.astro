@@ -3,24 +3,23 @@ interface Props {
     companyName?: string;
     roleTitle?: string;
     roleDescription?: string;
-    fromTo?: string ;
+    fromTo?: string;
 }
 const { companyName, roleTitle, roleDescription, fromTo } = Astro.props;
 ---
 
+<div class="flex flex-col gap-1">
+    <p class="text-base font-semibold">
+        {companyName}
+    </p>
 
-    <div class="flex flex-col gap-1">
-        <div class=" text-base font-medium text-bodyColor">
-            {companyName}
-        </div>
-        <div class="flex flex-row items-center text-subColor gap-2">
-            <p>{roleTitle}
-            <span class="text-xs opacity-80"> | </span>
-            {fromTo}</p>
-        </div>
-        <p class="text-subColor">
-            {roleDescription}
-        </p>
-        
-    </div>
+    <p>
+        {roleTitle}
+        <span class="text-xs opacity-80"> | </span>
+        {fromTo}
+    </p>
 
+    <p class="typo-body py-2">
+        {roleDescription}
+    </p>
+</div>

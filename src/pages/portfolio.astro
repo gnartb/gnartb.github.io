@@ -6,16 +6,14 @@ import InfoList from "../components/InfoList.astro";
 ---
 
 <BaseLayout
-pageTitle="Portfolio - Trang Bui"
-urlText="/works"
-pageHeadline="Works I've done"
-canonicalLink="https://trangbui.me/portfolio/"
-
+    pageTitle="Portfolio - Trang Bui"
+    urlText="/works"
+    pageHeadline="Works I've done"
+    canonicalLink="https://trangbui.me/portfolio/"
 >
-
     <!-- projects -->
     <div class="flex flex-col gap-3">
-        <p class="sectionTitle">.projects</p>
+        <div><p class="typo-subtlest bg-lime-200 inline-block">.projects</p></div>
         <div class="flex flex-col gap-6">
             <InfoList
                 postTitle="Digital Lending web platforms"
@@ -44,30 +42,25 @@ canonicalLink="https://trangbui.me/portfolio/"
             />
             <p class="items-baseline gap-1 border-t border-t-slate-800 border-dashed pt-4">
                 Some design screenshots are at
-                <a
-                    class="bodyLink"
-                    target="_blank"
-                    href="https://dribbble.com/trangbui"
+                <a class="typo-link" target="_blank" href="https://dribbble.com/trangbui"
                     >Dribbble
-                </a>
-                if it's more your thing
+                </a> if it's more your thing
             </p>
         </div>
     </div>
     <!-- case studies -->
     <div id="caseStudies" class="flex flex-col gap-3">
-        <p class="sectionTitle">.case studies</p>
+        <div><p class="typo-subtlest bg-lime-200 inline-block">.case studies</p></div>
         <div class="flex flex-col gap-6">
             <p>
-                Links below will take you to my old Framer site, which I used to
-                showcase my works. I will move those writtings to this site
-                later. Access to these case studies requires a password. Please contact me if you wish to
-                take a look at it.
+                Case studies for onboarding process below will take you to my old Framer site, which I used to showcase my works.
+                I will move it to this site later. Access to that case studies
+                requires a password. Please contact me if you wish to take a look at it.
             </p>
             <InfoList
                 postTitle="Investment application"
                 postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                url="https://trang.framer.website/investorapp"
+                url="/portfolio/investorapp"
             />
             <InfoList
                 postTitle="Simplifying the long onboarding process"
@@ -79,7 +72,7 @@ canonicalLink="https://trangbui.me/portfolio/"
     <!-- work experience -->
     <div class="flex flex-col gap-4">
         <!-- section title -->
-        <p class="sectionTitle">.where I've worked</p>
+        <div><p class="typo-subtlest bg-lime-200 inline-block">.where I've worked</p></div>
         <div class="flex flex-col gap-12">
             <WorkExperience
                 companyName="Validus Capital"
@@ -100,10 +93,8 @@ canonicalLink="https://trangbui.me/portfolio/"
                 fromTo="2014-2017"
             />
             <p class="border-t border-t-slate-800 border-dashed pt-4">
-                More detail at <a
-                    class="bodyLink"
-                    target="_blank"
-                    href="https://read.cv/trang">read.cv/trang</a
+                More detail at <a class="typo-link" target="_blank" href="https://read.cv/trang"
+                    >read.cv/trang</a
                 >
             </p>
         </div>

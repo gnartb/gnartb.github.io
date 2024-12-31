@@ -9,15 +9,18 @@ const { postTitle, url, postDescription, date } = Astro.props;
 ---
 
     <ul class="flex flex-col gap-1">
-        <li class=" text-subColor text-subFontSize font-urlFont">
+        <li class=" text-light-subtlest">
             {date}
         </li>
+
         <li>
             <a 
             target="_blank"
-            href={url} class="bodyLink">{postTitle}</a>
+            href={url} class="typo-link font-normal text-black">{postTitle}
+            </a>
         </li>
-        <li class="text-subColor">
+
+        <li>
             {postDescription}
         </li>
         
