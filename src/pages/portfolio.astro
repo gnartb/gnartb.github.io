@@ -3,6 +3,7 @@
 import WorkExperience from "../components/WorkExperience.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import InfoList from "../components/InfoList.astro";
+import ImageCard from "../components/ImageCard.astro";
 ---
 
 <BaseLayout
@@ -53,20 +54,34 @@ import InfoList from "../components/InfoList.astro";
         <div><p class="typo-subtlest bg-lime-200 inline-block">.case studies</p></div>
         <div class="flex flex-col gap-6">
             <p>
-                Case studies for onboarding process below will take you to my old Framer site, which I used to showcase my works.
-                I will move it to this site later. Access to that case studies
-                requires a password. Please contact me if you wish to take a look at it.
+                Case studies for onboarding process below will take you to my old Framer site, which
+                I used to showcase my works. I will move it to this site later. Access to that case
+                studies requires a password. Please contact me if you wish to take a look at it.
             </p>
-            <InfoList
-                postTitle="Investment application"
-                postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                url="/portfolio/investorapp"
-            />
-            <InfoList
-                postTitle="Simplifying the long onboarding process"
-                postDescription="Less steps for Customer and reduce manual works for Internal Team"
-                url="https://trang.framer.website/onboarding"
-            />
+            <div class="flex flex-col gap-2">
+                <InfoList
+                    postTitle="Investment application"
+                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
+                    url="/portfolio/investorapp"
+                />
+                <!-- <ImageCard
+                    imagePath="/src/assets/investorapp/thumbnail-article-1.png"
+                    altText="thumbnail"
+                    padding="py-2"
+                /> -->
+            </div>
+            <div class="flex flex-col gap-2">
+                <InfoList
+                    postTitle="Simplifying the long onboarding process"
+                    postDescription="Less steps for Customer and reduce manual works for Internal Team"
+                    url="https://trang.framer.website/onboarding"
+                />
+                <!-- <ImageCard
+                    imagePath="/src/assets/investorapp/thumbnail-article.png"
+                    altText="thumbnail"
+                    padding="py-2"
+                /> -->
+            </div>
         </div>
     </div>
     <!-- work experience -->
