@@ -2,6 +2,7 @@
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import TableContent from "../../components/TableContent.astro";
 import ImageCard from "../../components/ImageCard.astro";
+import VideoCard from "../../components/VideoCard.astro";
 
 const menuItems = [
     { id: "intro", name: "Intro" },
@@ -33,6 +34,16 @@ const menuItems = [
         <div id="intro" class="flex flex-col gap-aSectionContentGap">
             <p class="text-xl font-semibold my-2">Investor App Revamp</p>
             <div class="flex flex-col gap-paragraphGap">
+                <div class="p-4 rounded bg-green-50 flex flex-col gap-2">
+                    <p class="text-green-600 font-bold">TL;DR</p>
+                    <p>
+                        I led the end-to-end design of the Investor App, addressing high churn rate
+                        due to an unfriendly interface and lack of important features. The revamped
+                        app introduced enhanced functionality, and a new design system for
+                        consistency. Key outcomes: improved user experience, reduced manual workload
+                        for internal teams, and got positive customer feedback.
+                    </p>
+                </div>
                 <p>
                     Validus Investor is a mobile application for accredited and institutional
                     investors to monitors portfolios, views listed facilities from borrower (Small
@@ -372,7 +383,7 @@ const menuItems = [
                     </ul>
                 </div>
                 <video class="h-full w-full rounded py-4" autoplay loop>
-                    <source src="/src/images/investorapp/overview.mp4" type="video/mp4" />
+                    <source src="/videos/overview.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -461,7 +472,7 @@ const menuItems = [
                         </p>
                     </div>
                     <video class="h-full w-full rounded py-4" autoplay loop>
-                        <source src="/src/images/investorapp/facility-info.mp4" type="video/mp4" />
+                        <source src="/videos/facility-info.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <div class="flex flex-row gap-6 text-subtlest">
@@ -643,7 +654,7 @@ const menuItems = [
                         padding="py-4"
                     />
                     <video class="h-full w-full rounded py-4" autoplay loop>
-                        <source src="/src/images/investorapp/filter.mp4" type="video/mp4" />
+                        <source src="/videos/filter.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
