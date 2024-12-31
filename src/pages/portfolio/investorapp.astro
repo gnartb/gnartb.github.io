@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import TableContent from "../../components/TableContent.astro";
+import ImageCard from "../../components/ImageCard.astro";
 
 const menuItems = [
     { id: "intro", name: "Intro" },
@@ -59,6 +60,10 @@ const menuItems = [
                 </div>
 
                 <img class="py-4" src="/src/images/investorapp/final.png" />
+                <ImageCard
+                    imagePath="/src/assets/investorapp/final.png"
+                    altText="Screenshot of final app design"
+                />
             </div>
         </div>
 
