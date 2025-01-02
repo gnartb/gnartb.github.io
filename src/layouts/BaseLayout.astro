@@ -30,7 +30,7 @@ const { pageTitle, urlText, pageHeadline, subText, canonicalLink } = Astro.props
 			<Header />
 			<content class="flex flex-col gap-20">
 				<div class="flex flex-col gap-4">
-					{urlText && <p class="typo-subtlest text-light-subtlest">{urlText}</p>}
+					{urlText && <p class="text-sm font-nav text-light-subtlest">{urlText}</p>}
 					{pageHeadline && <p class="text-3xl font-heading">{pageHeadline}</p>}
 					{subText && <p class="typo-subtlest text-light-subtlest">{subText}</p>}
 				</div>

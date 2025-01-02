@@ -34,12 +34,13 @@ module.exports = {
 			fontFamily: {
 				body: 'Be Vietnam Pro, san-serif',
 				heading: 'Suranna',
-				url: 'Libre Franklin',
+				nav: 'Inconsolata',
 			},
 
 			fontSize: {
 				// apply for general body text
 				heading: "20px",
+				nav: '16px',
 				body: '14px',
 				subtlest: '13px',
 				url: '14px',
@@ -52,8 +53,10 @@ module.exports = {
 				sectionContentGap: '16px',
 
 				// apply for article
-				aSectionContentGap: '12px',
-				paragraphGap: '16px',
+				heading:'22px',
+				section:'22px',
+				title: '14px',
+				paragraph: '16px',
 
 			},
 
@@ -73,7 +76,7 @@ module.exports = {
 
 				'.typo-heading-medium': {
 					fontFamily: theme('fontFamily.body'),
-					fontSize: '15px',
+					fontSize: '20px',
 					fontWeight: theme('fontWeight.semibold'),
 					lineHeight: '22.4px',
 				},
@@ -120,12 +123,15 @@ module.exports = {
 				},
 
 
-				'.typo-topMenu': {
+				'.typo-nav': {
+					fontFamily: theme('fontFamily.nav'),
+					fontSize: theme('fontSize.nav'),
+					fontWeight: theme('fontWeight.normal'),
 					color: theme('colors.light.body'),
 
 				},
 
-				'.typo-topMenu:hover': {
+				'.typo-nav:hover': {
 					'background-color': colors.lime[400],
 				},
 
