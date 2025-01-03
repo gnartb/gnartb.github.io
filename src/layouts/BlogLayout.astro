@@ -19,14 +19,16 @@ const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
         id="top"
         class="mx-auto max-w-2xl p-6 pt-16 pb-16 text-left selection:bg-lime-400 md:pt-16 flex flex-col min-h-screen"
     >
-        <container class="flex flex-col gap-24 typo-body text-light-body">
-            <content class="flex flex-col gap-16">
+        <container class="flex flex-col typo-body gap-2 text-light-body">
+                <!-- back icon -->
                 <div class="w-7 h-7">
                     <a class="group" href="/portfolio">
                         <img class="w-7 h-7 group-hover:hidden" src="/back.svg" />
                         <img class="w-7 h-7 hidden group-hover:block" src="/back-hover.svg" />
                     </a>
                 </div>
+
+                <!-- blog title and descriptio -->
                 {
                     (blogTitle || headDescription) && (
                         <div class="flex flex-col gap-2">
@@ -37,9 +39,8 @@ const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
                         </div>
                     )
                 }
-
+                <!-- blog content here -->
                 <slot />
-            </content>
         </container>
     </body>
 </html>

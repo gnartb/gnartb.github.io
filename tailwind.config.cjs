@@ -118,7 +118,7 @@ module.exports = {
 				},
 
 				'.typo-red': {
-					color: theme('colors.light.warning'),
+					// color: theme('colors.light.warning'),
 					fontStyle: 'italic',
 				},
 
