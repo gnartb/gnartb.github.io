@@ -8,8 +8,8 @@ interface Props {
    padding?: string;
 }
 
-const { imagePath, altText, padding = "p-0" } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/investorapp/*.{jpeg,jpg,png,gif}');
+const { imagePath, altText, padding = "py-4" } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/investorapp/*.{jpeg,jpg,png,gif}"`);
 ---
 <div class={`card  ${padding}`}>

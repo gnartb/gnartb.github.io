@@ -1,0 +1,142 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import TableContent from "../../components/TableContent.astro";
+import ImageCard from "../../components/ImageCard.astro";
+---
+
+<BlogLayout
+    pageTitle="Investor App - Trang Bui"
+    canonicalLink="https://trangbui.me/portfolio/investorapp/"
+>
+    <!-- case studies content -->
+    <!-- <TableContent items={menuItems} /> -->
+
+    <!-- Sec 1: intro -->
+    <div class="flex flex-col gap-24">
+        <!-- introduction -->
+        <div id="intro" class="flex flex-col">
+            <!-- TLDR -->
+            <!-- <div class="p-4 my-4 rounded-md bg-zinc-50 border border-zinc-200 flex flex-col gap-2">
+                <p class="text-green-600 font-bold">TL;DR</p>
+                <p>
+                    I led the end-to-end re-design of the Investor App, addressing high churn rate
+                    due to an unfriendly interface and lack of important features.
+                </p>
+                <p>
+                    <span class="font-semibold">Key outcomes</span>: reduced manual workload for
+                    internal teams, improved user experience and got positive customer feedback.
+                </p>
+                <p>
+                    <span class="font-semibold">Deliverables</span>: new design system, key
+                    features: account overview, portfolio tracking, seach and filter...🚀
+                </p>
+            </div> -->
+
+            <div class="flex flex-col gap-heading my-8">
+                <p class="text-xl font-semibold my-2">App onboarding for Investor</p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        Our Investor app is limited to existing users and lacks the functionality
+                        for new users to sign up within the app itself.
+                    </p>
+                    <p>
+                        We have initiated a project aimed at simplifying the onboarding process from
+                        the current web-based approach to a mobile-friendly experience.
+                    </p>
+                    <p>
+                        I worked with 2 other Designers to create the user flow, wireframe, and
+                        final designs. Additionally, collaborate with cross functional teams, I
+                        worked on assigning resources and keep track of the development.
+                    </p>
+
+                    <div class="flex flex-row gap-6 py-5">
+                        <div class="flex-1">
+                            <p class="typo-subtlest text-light-subtlest">Role</p>
+                            <p>Lead Designer</p>
+                        </div>
+                        <div class="flex-1">
+                            <p class="typo-subtlest text-light-subtlest">Market</p>
+                            <p>Singapore</p>
+                        </div>
+                    </div>
+                    <!-- <ImageCard
+                        imagePath="/src/assets/onboarding/thumbnail-article.png"
+                        altText="Screenshot of final app design"
+                        padding="py-2"
+                    /> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- objective -->
+        <div id="objective" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Objective</p>
+            <div class="flex flex-col gap-paragraph">
+                <p>
+                    The main goal is to create a account creation process for investors by using the
+                    app, making it more convenient and user-friendly.
+                </p>
+                <p>
+                    On the other hand, we also want to streamline the collection of all necessary
+                    information and documents, reduce the need for paper-based documentation and
+                    make the process faster and more efficient for internal teams
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t border-dashed my-16"></div>
+
+    <!-- Sec 2: the process -->
+    <div class="flex flex-col gap-24">
+        <p class="typo-subtlest text-light-subtlest text-center">Process</p>
+        <!-- feature 01 -->
+        <div id="navigation" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Gathering requirements</p>
+            <div class="flex flex-col gap-section">
+                <div class="flex flex-col gap-title">
+                    <p class="typo-subtlest text-light-subtlest">Review existing web platform</p>
+                    <p>
+                        During the initial stages of designing the app, we took inspiration from our
+                        existing web platform and identified a few fundamental steps required to
+                        create an account. . The current process can take up to 3-4 working days
+                        from account creation to the time all submitted documents are approved.
+                    </p>
+
+                    <ImageCard/
+                        imagePath="/src/assets/onboarding/thumbnail-article.png"
+                        altText="table to show time taking of each step in the existing onboarding"
+                    >
+
+                    <p>
+                        Based on those steps, we had a wireframe for the mobile app in place and
+                        shared it with the business team for review and feedback.
+                    </p>
+                    <p>
+                        We realized that we didn't really understand fully the onboarding process
+                        for a new Investor as well as how the current system collect and store
+                        information from them.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-title">
+                    <p class="typo-subtlest text-light-subtlest">Design solution:</p>
+                    <p>
+                        To help Investors access and mange all their portfolio faster, we moved all
+                        facilities into 1 place and keep them group by status as the same before.
+                    </p>
+                </div>
+
+                <ImageCard
+                    imagePath="/src/assets/investorapp/navigation.png"
+                    altText="Screenshot from Miro to show a sitemap of old and new navigation"
+                    padding="pt-4"
+                />
+                <ImageCard
+                    imagePath="/src/assets/investorapp/navigation-2.png"
+                    altText="New navigation wireframe"
+                    padding="pb-4"
+                />
+            </div>
+        </div>
+    </div>
+</BlogLayout>

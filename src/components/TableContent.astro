@@ -16,12 +16,12 @@ const { items } = Astro.props;
   <nav>
     <ul class="space-y-4">
       {items.map((item) => (
-        <li data-id={item.id} class="menu-item space-y-1">
+        <li data-id={item.id} class="menu-item space-y-0">
           <a href={`#${item.id}`} class="hover:underline">
             {item.name}
           </a>
           {item.children && (
-            <ul class="pl-4 space-y-1">
+            <ul class="pl-4 space-y-0">
               {item.children.map((child) => (
                 <li data-id={child.id} class="menu-item">
                   <a href={`#${child.id}`} class="hover:underline">
@@ -80,8 +80,7 @@ const { items } = Astro.props;
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const anchorLinks = document.querySelectorAll('a[href*="#"]');
-
+    const anchorLinks = document.querySelectorAll('aside a[href^="#"]');
     anchorLinks.forEach(anchor => {
       anchor.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default anchor behavior

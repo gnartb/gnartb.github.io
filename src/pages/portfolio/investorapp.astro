@@ -2,7 +2,6 @@
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import TableContent from "../../components/TableContent.astro";
 import ImageCard from "../../components/ImageCard.astro";
-import VideoCard from "../../components/VideoCard.astro";
 
 const menuItems = [
     {
@@ -190,7 +189,7 @@ const menuItems = [
     <div class="border-t border-dashed my-16"></div>
 
     <!-- Sec 2: define problems -->
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-24">
         <div class="text-center typo-subtlest text-light-subtlest">Research, Define problems</div>
         <!-- review existing product -->
         <div id="existingproduct" class="flex flex-col gap-heading">
@@ -270,7 +269,7 @@ const menuItems = [
     <div class="border-t border-dashed my-16"></div>
 
     <!-- Sec 3: build the app -->
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-24">
         <div class="typo-subtlest text-light-subtlest text-center">Solutions</div>
         <!-- design system -->
         <div id="designsystem" class="flex flex-col gap-heading">
@@ -327,7 +326,7 @@ const menuItems = [
 
     <div class="border-t border-dashed my-16"></div>
     <!-- Sec 4: Feature details -->
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-24">
         <p class="typo-subtlest text-light-subtlest text-center">Design details</p>
         <!-- feature 01 -->
         <div id="navigation" class="flex flex-col gap-heading">
@@ -501,7 +500,6 @@ const menuItems = [
                     <ImageCard
                         imagePath="/src/assets/investorapp/new-livefacilities.png"
                         altText="New design of Live Facilities"
-                        padding="py-4"
                     />
 
                     <div class="flex flex-col gap-paragraph">
@@ -515,7 +513,7 @@ const menuItems = [
                         <source src="/videos/facility-info.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <div class="flex flex-row gap-6 text-subtlest">
+                    <div class="flex flex-row gap-6 border border-inner text-subtlest">
                         <!-- card left -->
                         <div class="flex-1">
                             <div class="flex flex-col gap-1">
@@ -582,14 +580,17 @@ const menuItems = [
                 <ImageCard
                     imagePath="/src/assets/investorapp/fund.png"
                     altText="List of changes made to the fund flow"
+                    padding="py-0"
                 />
                 <ImageCard
                     imagePath="/src/assets/investorapp/new-fund.png"
                     altText="New fund flow"
+                    padding="py-0"
                 />
                 <ImageCard
                     imagePath="/src/assets/investorapp/confirmation-screen.png"
                     altText="Confirmation screen after make a fund to notify failure or success"
+                    padding="pb-4"
                 />
             </div>
         </div>
@@ -642,7 +643,6 @@ const menuItems = [
                     <ImageCard
                         imagePath="/src/assets/investorapp/portfolio-summary.png"
                         altText="New design of portfolio summary"
-                        padding="py-4"
                     />
                     <!-- cards -->
                     <div class="flex flex-row gap-6 text-subtlest">
@@ -693,7 +693,6 @@ const menuItems = [
                     <ImageCard
                         imagePath="/src/assets/investorapp/search.png"
                         altText="Design of new search tool with filters"
-                        padding="py-4"
                     />
                     <video class="h-full w-full rounded py-4" autoplay loop>
                         <source src="/videos/filter.mp4" type="video/mp4" />
@@ -716,7 +715,6 @@ const menuItems = [
                         <ImageCard
                             imagePath="/src/assets/investorapp/repayment-schedule.png"
                             altText="Design shows a list of repayment schedule"
-                            padding="py-4"
                         />
                         <p>
                             For Overdue facilities, we added Collection notes section, to keep
@@ -726,7 +724,6 @@ const menuItems = [
                         <ImageCard
                             imagePath="/src/assets/investorapp/collection-note.png"
                             altText="Design shows collection notes"
-                            padding="py-4"
                         />
                     </div>
                 </div>
@@ -737,7 +734,7 @@ const menuItems = [
     <div class="text-center space-y-2">
         <p>Thank you for reading!</p>
         <p>
-            Feel free to <a class="typo-link" href="/#connect">connect</a> with me if you'd like to discuss this further.
+            Feel free to <a href="/#connect" class="typo-link">connect</a> with me if you'd like to discuss this further.
         </p>
     </div>
 </BlogLayout>

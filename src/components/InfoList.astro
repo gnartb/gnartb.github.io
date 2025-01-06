@@ -4,8 +4,9 @@ interface Props {
     url?: string;
     postDescription?: string;
     date?: string ;
+    targetType?: string;
 }
-const { postTitle, url, postDescription, date } = Astro.props;
+const { postTitle, url, postDescription, date, targetType= "_blank" } = Astro.props;
 ---
 
     <ul class="flex flex-col gap-1">
@@ -15,7 +16,7 @@ const { postTitle, url, postDescription, date } = Astro.props;
 
         <li>
             <a 
-            target="_blank"
+            target={targetType}
             href={url} class="typo-link font-normal text-black">{postTitle}
             </a>
         </li>
