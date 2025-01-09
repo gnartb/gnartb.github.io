@@ -19,7 +19,7 @@ module.exports = {
 
 				'light': {
 					background: colors.zinc[50],
-					heading: colors.zinc[200],
+					heading: colors.zinc[900],
 					body: colors.zinc[800],
 					subtle: colors.zinc[500],
 					subtlest: colors.zinc[400],
@@ -53,10 +53,10 @@ module.exports = {
 				sectionContentGap: '16px',
 
 				// apply for article
-				heading:'22px',
-				section:'22px',
+				heading:'24px',
+				section:'24px',
 				title: '14px',
-				paragraph: '16px',
+				paragraph: '18px',
 
 			},
 
@@ -87,6 +87,14 @@ module.exports = {
 					fontSize: theme('fontSize.body'),
 					fontWeight: theme('fontWeight.light'),
 					lineHeight: '22.4px',
+				},
+
+				'.typo-bodyBold': {
+					fontFamily: theme('fontFamily.body'),
+					fontSize: theme('fontSize.body'),
+					fontWeight: theme('fontWeight.bold'),
+					lineHeight: '22.4px',
+
 				},
 
 				'.typo-subtlest': {

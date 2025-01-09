@@ -5,7 +5,7 @@ import ImageCard from "../../components/ImageCard.astro";
 ---
 
 <BlogLayout
-    pageTitle="Investor App - Trang Bui"
+    pageTitle="Onboarding for Investor - Trang Bui"
     canonicalLink="https://trangbui.me/portfolio/investorapp/"
 >
     <!-- case studies content -->
@@ -13,7 +13,7 @@ import ImageCard from "../../components/ImageCard.astro";
 
     <!-- Sec 1: intro -->
     <div class="flex flex-col gap-24">
-        <!-- introduction -->
+        <!-- intro -->
         <div id="intro" class="flex flex-col">
             <!-- TLDR -->
             <!-- <div class="p-4 my-4 rounded-md bg-zinc-50 border border-zinc-200 flex flex-col gap-2">
@@ -59,17 +59,17 @@ import ImageCard from "../../components/ImageCard.astro";
                             <p>Singapore</p>
                         </div>
                     </div>
-                    <!-- <ImageCard
+
+                    <ImageCard
                         imagePath="/src/assets/onboarding/thumbnail-article.png"
                         altText="Screenshot of final app design"
-                        padding="py-2"
-                    /> -->
+                    />
                 </div>
             </div>
         </div>
 
         <!-- objective -->
-        <div id="objective" class="flex flex-col gap-heading">
+        <div id="goal" class="flex flex-col gap-heading">
             <p class="typo-heading-medium">Objective</p>
             <div class="flex flex-col gap-paragraph">
                 <p>
@@ -90,52 +90,265 @@ import ImageCard from "../../components/ImageCard.astro";
     <!-- Sec 2: the process -->
     <div class="flex flex-col gap-24">
         <p class="typo-subtlest text-light-subtlest text-center">Process</p>
-        <!-- feature 01 -->
-        <div id="navigation" class="flex flex-col gap-heading">
+        <!-- gathering requirements -->
+        <div id="requirement" class="flex flex-col gap-heading">
             <p class="typo-heading-medium">Gathering requirements</p>
             <div class="flex flex-col gap-section">
+                <!-- review exsiting platform -->
                 <div class="flex flex-col gap-title">
                     <p class="typo-subtlest text-light-subtlest">Review existing web platform</p>
-                    <p>
-                        During the initial stages of designing the app, we took inspiration from our
-                        existing web platform and identified a few fundamental steps required to
-                        create an account. . The current process can take up to 3-4 working days
-                        from account creation to the time all submitted documents are approved.
-                    </p>
+                    <div class="flex flex-col gap-paragraph">
+                        <p>
+                            With fundamental steps, the current process can take up to 3-4 working
+                            days from account creation to the time all submitted documents are
+                            approved.
+                        </p>
 
-                    <ImageCard/
-                        imagePath="/src/assets/onboarding/thumbnail-article.png"
-                        altText="table to show time taking of each step in the existing onboarding"
-                    >
+                        <ImageCard
+                            imagePath="/src/assets/onboarding/current-process.png"
+                            altText="table to show time taking of each step in the existing onboarding"
+                        />
 
-                    <p>
-                        Based on those steps, we had a wireframe for the mobile app in place and
-                        shared it with the business team for review and feedback.
-                    </p>
-                    <p>
-                        We realized that we didn't really understand fully the onboarding process
-                        for a new Investor as well as how the current system collect and store
-                        information from them.
-                    </p>
+                        <p>
+                            Based on those steps, we had a wireframe for the mobile app in place and
+                            shared it with the business team for review.
+                        </p>
+                        <ImageCard
+                            imagePath="/src/assets/onboarding/wireframe.png"
+                            altText="table to show time taking of each step in the existing onboarding"
+                        />
+                        <p>
+                            After received the feedback, realized that we didn't really understand
+                            fully the onboarding process for a new Investor as well as how the
+                            current system collects and stores information. Therefore, the wireframe
+                            we created didn't capture everything and <span class="font-semibold"
+                                >the manual process mostly remaining the same</span
+                            >.
+                        </p>
+                    </div>
                 </div>
+
+                <!-- discuss with BUs -->
                 <div class="flex flex-col gap-title">
-                    <p class="typo-subtlest text-light-subtlest">Design solution:</p>
+                    <p class="typo-subtlest text-light-subtlest">Discuss with diffferent BUs</p>
+                    <div class="flex flex-col gap-paragraph">
+                        <p>
+                            To address the knowledge gaps, we conducted a series of meetings with
+                            various BUs and these are important points that we learned from these
+                            meetings:
+                        </p>
+                        <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                            <li>
+                                Individual and Corporate Investor have different onboarding flows as
+                                Corporate Investor need to provide a lot more information.
+                            </li>
+                            <li>80% of the investor on our platform is Individual Investor.</li>
+                            <li>
+                                Web-version didn't capture fully the actual onboarding process,
+                                there were a lot of offline support from Investor Relation Team in
+                                order for investors to actually get a verified account (paper
+                                submission and approval).
+                            </li>
+                        </ul>
+                        <div class="flex flex-col gap-4 py-4">
+                            <ImageCard
+                                imagePath="/src/assets/onboarding/mindmap.png"
+                                altText="Mind map"
+                            />
+                            <p class="typo-tooltip text-light-subtlest">
+                                Mind map to capture the details requirements
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- connecting the dots -->
+                <div class="flex flex-col gap-title">
+                    <p class="typo-subtlest text-light-subtlest">Connecting the dots</p>
+                    <div class="flex flex-col gap-paragraph">
+                        <p class="text-base font-semibold">
+                            What's required to have a verified account?
+                        </p>
+                        <p>
+                            Once we collected enough information, we created a high level user flow
+                            to have a better understanding of what user had to provide to have a
+                            verified account, in compliance with Singapore's regulatory standards.
+                        </p>
+                        <ul class="flex flex-col gap-2 list-disc list-outside pl-3">
+                            <li>Personal information</li>
+                            <li>KYC documents -- to verify identity and user address.</li>
+                            <li>
+                                Required forms -- These forms are required by the Monetary Authority
+                                of Singapore and the Securities and Futures Act in order to
+                                participate as an investor on Validus.
+                            </li>
+                            <li>Bank details -- to transfer the funds and get the repayment.</li>
+                        </ul>
+                        <ImageCard
+                            imagePath="/src/assets/onboarding/high-level.png"
+                            altText="high-level user flow"
+                        />
+                        <p>
+                            Depended on the type of investor, users required to provide different
+                            sets of their personal or company details along with necessary
+                            documents. For Corporated Investor, the information and documentation
+                            requirements were more extensive may vary base on cases.
+                        </p>
+                        <p>
+                            Therefore, we decided to <span class="typo-bodyBold"
+                                >focus on build the app onboarding for Individual Investor only</span
+                            >, while corporate investors will continue to be onboarded through an
+                            offline process.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- define problems -->
+        <div id="problems" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Define problems</p>
+            <p>
+                Based on the high level flow, we created a detail flow that include scenarios, main
+                tasks and user interactions to complete the onboarding.
+            </p>
+
+            <iframe
+                width="768"
+                height="432"
+                src="https://miro.com/app/embed/uXjVLw5lLzs=/?pres=1&frameId=3458764612587266740&embedId=827224414160&autoplay=yep"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+            <p>
+                Due to the extensive amount of information required, we anticipate that users may
+                encounter the following issues:
+            </p>
+            <div class="flex flex-col gap-section">
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Inability to provide required documents</p>
                     <p>
-                        To help Investors access and mange all their portfolio faster, we moved all
-                        facilities into 1 place and keep them group by status as the same before.
+                        In order to do the KYC, Investor needs to take and upload photo of some
+                        documents, such as: front and back of the ID or passport, billing or bank
+                        statement to verify their address, certificate of tax residence…
+                    </p>
+                    <p>
+                        Some investors may not have the necessary documents readily available, which
+                        could result in them being unable to complete the process in one go.
+                    </p>
+                    <p>
+                        Furthermore, they are required to fill out certain paper-based forms, which
+                        need to be returned to the Validus, causing some delays.
                     </p>
                 </div>
 
-                <ImageCard
-                    imagePath="/src/assets/investorapp/navigation.png"
-                    altText="Screenshot from Miro to show a sitemap of old and new navigation"
-                    padding="pt-4"
-                />
-                <ImageCard
-                    imagePath="/src/assets/investorapp/navigation-2.png"
-                    altText="New navigation wireframe"
-                    padding="pb-4"
-                />
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">
+                        Lack of clarity on the purpose of providing information
+                    </p>
+                    <p>
+                        We conducted a User Research and find that Investors may not fully
+                        understand why certain information is required during onboarding process.
+                        There was some steps that required them to provide a numerous of personal
+                        information, income and assets.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Difficulty go through multiple steps</p>
+                    <p>
+                        The onboarding process may appear lengthy and complex to investors with many
+                        steps.
+                    </p>
+                    <p>
+                        Each step includes various information and sub-steps, which may lead to
+                        confusion, particularly on mobile devices where it's not possible to display
+                        everything on one screen.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Need support</p>
+                    <p>
+                        When we talked to the Investor Relation team, the team that manages the
+                        communication with Investor, we received a feedback that Investor usually
+                        drop-off in the midway, and seek out for help via phone call and message.
+                        Sometimes those requests were missed.
+                    </p>
+                    <p>
+                        Therefore, we will need to capture those support request from Investor
+                        during the onboarding.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- solution -->
+        <div id="problems" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Key solutions</p>
+            <div class="flex flex-col gap-section">
+                <!-- myInfo -->
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Provide information faster with myInfo</p>
+                    <p>
+                        To simplify the steps of entering the personal information reduce number of
+                        required documents of the Investor, we decided to integrate myInfo to our
+                        platform which speed up the KYC processes for individual users with data
+                        from Government sources.
+                    </p>
+                    <p>
+                        Furthermore, it reduce more than 60%▾ the information and upload documents
+                        that Investor had to key manually, compared with the web platform flow
+                        without myInfo.
+                    </p>
+                    <p>
+                        As a result, it increases the chance that they can complete the process in
+                        one go.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">
+                        Provide UX pattern to create an engaging onboarding experience
+                    </p>
+                    <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                        <li>Checklist to show the summary what need to be done</li>
+                        <li>Progress bar to inform user their onboarding progress</li>
+                        <li>Instruction on each steps</li>
+                        <li>Contact or get support feature</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Design -->
+        <div id="problems" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Design</p>
+            <div class="flex flex-col gap-section">
+                <!-- user flow -->
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Information structure and Users flows</p>
+                    <p>
+                        To create user flow and content layout, I sketched out wireframes for main
+                        screens that users would need in order to complete the onboarding. This part
+                        of the process required us doing quite a lot of iterations in order to get
+                        the flow and layout approved since its needed multiple teams to sign-off on
+                        the solutions.
+                    </p>
+                </div>
+
+                <!-- ux pattern-->
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">
+                        Provide UX pattern to create an engaging onboarding experience
+                    </p>
+                    <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                        <li>Checklist to show the summary what need to be done</li>
+                        <li>Progress bar to inform user their onboarding progress</li>
+                        <li>Instruction on each steps</li>
+                        <li>Contact or get support feature</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
