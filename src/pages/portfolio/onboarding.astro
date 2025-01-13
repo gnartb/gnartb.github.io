@@ -2,14 +2,52 @@
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import TableContent from "../../components/TableContent.astro";
 import ImageCard from "../../components/ImageCard.astro";
+
+const menuItems = [
+    {
+        id: "overview",
+        name: "Overview",
+        children: [
+            { id: "intro", name: "Intro" },
+            { id: "objective", name: "Objective" },
+        ],
+    },
+    {
+        id: "define",
+        name: "Define",
+        children: [
+            { id: "requirement", name: "Gathering requirements" },
+            { id: "problems", name: "Problems" },
+            { id: "solutions", name: "Keys solutions" },
+        ],
+    },
+    {
+        id: "wireframe",
+        name: "Wireframe",
+    },
+    {
+        id: "final",
+        name: "Final design",
+        children: [
+            { id: "checklist", name: "Design: Checklist" },
+            { id: "instruction", name: "Design: Instruction" },
+            { id: "modal", name: "Design: Modal" },
+            { id: "support", name: "Design: Get support" },
+        ],
+    },
+    {
+        id: "takeaway",
+        name: "Takeaway",
+    },
+];
 ---
 
 <BlogLayout
     pageTitle="Onboarding for Investor - Trang Bui"
-    canonicalLink="https://trangbui.me/portfolio/investorapp/"
+    canonicalLink="https://trangbui.me/portfolio/onboarding/"
 >
     <!-- case studies content -->
-    <!-- <TableContent items={menuItems} /> -->
+    <TableContent items={menuItems} />
 
     <!-- Sec 1: intro -->
     <div class="flex flex-col gap-24">
@@ -69,7 +107,7 @@ import ImageCard from "../../components/ImageCard.astro";
         </div>
 
         <!-- objective -->
-        <div id="goal" class="flex flex-col gap-heading">
+        <div id="objective" class="flex flex-col gap-heading">
             <p class="typo-heading-medium">Objective</p>
             <div class="flex flex-col gap-paragraph">
                 <p>
@@ -87,9 +125,9 @@ import ImageCard from "../../components/ImageCard.astro";
 
     <div class="border-t border-dashed my-16"></div>
 
-    <!-- Sec 2: the process -->
-    <div class="flex flex-col gap-24">
-        <p class="typo-subtlest text-light-subtlest text-center">Process</p>
+    <!-- Sec 2: define -->
+    <div id="define" class="flex flex-col gap-24">
+        <p class="typo-subtlest text-light-subtlest text-center">Define</p>
         <!-- gathering requirements -->
         <div id="requirement" class="flex flex-col gap-heading">
             <p class="typo-heading-medium">Gathering requirements</p>
@@ -174,6 +212,15 @@ import ImageCard from "../../components/ImageCard.astro";
                             to have a better understanding of what user had to provide to have a
                             verified account, in compliance with Singapore's regulatory standards.
                         </p>
+                        <ImageCard
+                            imagePath="/src/assets/onboarding/high-level.png"
+                            altText="high-level user flow"
+                        />
+                        <p>
+                            We had few brainstorming sessions and decided to divided the collecting
+                            information process into <span class="typo-bodyBold">4 main steps</span
+                            >:
+                        </p>
                         <ul class="flex flex-col gap-2 list-disc list-outside pl-3">
                             <li>Step 1: Personal information</li>
                             <li>Step 2: KYC documents -- to verify identity and user address.</li>
@@ -186,10 +233,7 @@ import ImageCard from "../../components/ImageCard.astro";
                                 Step 4: Bank details -- to transfer the funds and get the repayment.
                             </li>
                         </ul>
-                        <ImageCard
-                            imagePath="/src/assets/onboarding/high-level.png"
-                            altText="high-level user flow"
-                        />
+                        <p class="text-center py-4">· · ·</p>
                         <p>
                             Depended on the type of investor, users required to provide different
                             sets of their personal or company details along with necessary
@@ -209,7 +253,7 @@ import ImageCard from "../../components/ImageCard.astro";
 
         <!-- define problems -->
         <div id="problems" class="flex flex-col gap-heading">
-            <p class="typo-heading-medium">Define problems</p>
+            <p class="typo-heading-medium">Problems</p>
             <p>From our previous User Research, we were able to create a key persona, Shane.</p>
             <!-- persona -->
             <div
@@ -283,7 +327,7 @@ import ImageCard from "../../components/ImageCard.astro";
                 scrolling="no"
             >
             </iframe>
-            <div class="text-center">---</div>
+            <p class="text-center py-4">· · ·</p>
             <p>
                 Due to the extensive amount of information required, we anticipate that Shane may
                 encounter the following issues:
@@ -341,7 +385,7 @@ import ImageCard from "../../components/ImageCard.astro";
                     </p>
                 </div>
             </div>
-            <div class="text-center">---</div>
+            <p class="text-center py-4">· · ·</p>
             <p>Therefore, the key challenge statement was:</p>
             <p class="typo-bodyBold">
                 How might we simplify the onboarding process for investors, convenient,
@@ -350,7 +394,7 @@ import ImageCard from "../../components/ImageCard.astro";
         </div>
 
         <!-- solution -->
-        <div id="problems" class="flex flex-col gap-heading">
+        <div id="solutions" class="flex flex-col gap-heading">
             <p class="typo-heading-medium">Key solutions</p>
             <div class="flex flex-col gap-section">
                 <!-- myInfo -->
@@ -367,7 +411,7 @@ import ImageCard from "../../components/ImageCard.astro";
                         This would be a second method for Investor that can speed up the KYC
                         processes for individual users with data from Government sources.
                     </p>
-                    <ImageCard imagePath="/src/assets/onboarding/flow.png" altText="portrait" />
+                    <ImageCard imagePath="/src/assets/onboarding/flow.png" altText="flow" />
                     <p>
                         It reduce more than 40%▾ the information and upload documents that Investor
                         had to key manually in <a href="#4steps" class="typo-link">Step 1</a>,
@@ -392,70 +436,154 @@ import ImageCard from "../../components/ImageCard.astro";
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Design -->
-        <div id="design" class="flex flex-col gap-heading">
-            <p class="typo-heading-medium">Design</p>
-            <div class="flex flex-col gap-section">
-                <!-- wireframe -->
-                <div class="flex flex-col gap-title">
-                    <p class="typo-subtlest text-light-subtlest">Wireframe</p>
-                    <div>
-                        <p>
-                            To create user flow and content layout, I sketched out wireframes for
-                            main screens that users would need in order to complete the onboarding.
-                            This part of the process required us doing quite a lot of iterations in
-                            order to get the flow and layout approved since its needed multiple
-                            teams to sign-off on the solutions.
-                        </p>
-                        <!-- <ImageCard 
+    <div class="border-t border-dashed my-16"></div>
+
+    <!-- Design -->
+    <div id="design" class="flex flex-col gap-24">
+        <p class="typo-subtlest text-light-subtlest text-center">Design</p>
+        <!-- wireframe -->
+        <div id="wireframe" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Wireframe</p>
+            <div class="flex flex-col gap-paragraph">
+                <p>
+                    To create user flow and content layout, I sketched out wireframes for main
+                    screens that users would need in order to complete the onboarding. This part of
+                    the process required us doing quite a lot of iterations in order to get the flow
+                    and layout approved since its needed multiple teams to sign-off on the
+                    solutions.
+                </p>
+                <!-- <ImageCard 
                             imagePath="/src/assets/onboarding/flow.png" 
                             altText="portrait" 
                         /> -->
-                    </div>
-                </div>
+            </div>
+        </div>
 
-                <!-- finail UI: checklist -->
-                <div class="flex flex-col gap-title">
-                    <p class="typo-subtlest text-light-subtlest">
-                        Final design: Checklist screen helps user get started easier
+        <!-- finail design -->
+        <div id="final" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Final design</p>
+
+            <!-- finail UI: checklist -->
+            <div id="checklist" class="flex flex-col gap-title">
+                <p class="typo-subtlest text-light-subtlest">
+                    Final design 1: Checklist screen helps user get started easier
+                </p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        To ensure that investors don't get lost during the onboarding process, it's
+                        important to incorporate a checklist screen in all scenarios, whether it's
+                        new beginnings or ongoing progress. This screen serve as navigational
+                        screens, allowing investors to stay informed and engaged throughout their
+                        journey.
                     </p>
-                    <div class="flex flex-col gap-paragraph">
-                        <p>
-                            To ensure that investors don't get lost during the onboarding process,
-                            it's important to incorporate a checklist screen in all scenarios,
-                            whether it's new beginnings or ongoing progress. This screen serve as
-                            navigational screens, allowing investors to stay informed and engaged
-                            throughout their journey.
-                        </p>
-                        <p>
-                            This checklist screen is also appeared when Investor login the app if
-                            they haven't finished their account verification before and still have
-                            pending items need to be completed.
-                        </p>
-                        <p>
-                            From the initial design, we went through several drafts with various UI
-                            modifications to craft the final design as below:
-                        </p>
-                        <div class="flex flex-row gap-6">
-                            <div class="flex-1 bg-lime-100">test</div>
-                            <div class="flex-1 bg-lime-100">test</div>
-                            <div class="flex-1 bg-lime-100">test</div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- finail UI: modal -->
-                <div class="flex flex-col gap-title">
-                    <p class="typo-subtlest text-light-subtlest">
-                        Final design: Seamless context-switching with fullscreen modal
+                    <p>
+                        From the initial design, we went through several drafts with various UI
+                        modifications to craft the final design as below:
                     </p>
-                    <div>
-                        <p>Content</p>
-                    </div>
+
+                    <ImageCard
+                        imagePath="/src/assets/onboarding/checklist.png"
+                        altText="Checklist"
+                    />
+                    <p>
+                        This checklist screen is also appeared when Investor login the app if they
+                        haven't finished their account verification before and still have pending
+                        items need to be completed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- finail UI: Provide instruction -->
+            <div id="instruction" class="flex flex-col gap-title">
+                <p class="typo-subtlest text-light-subtlest">Final desig 2: Provide instruction</p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        During the onboarding process, we need to gather a significant amount of
+                        sensitive personal information from Investor. Having clear instruction at
+                        each step help Investor to understand the purpose of collecting those
+                        information.
+                    </p>
+                    <p>
+                        This help to <span class="typo-body">reduce frustration and mistrust</span>.
+                    </p>
+                    <ImageCard
+                        imagePath="/src/assets/onboarding/instruction.png"
+                        altText="Instruction on each screen"
+                    />
+                </div>
+            </div>
+
+            <!-- finail UI: context-switch -->
+            <div id="modal" class="flex flex-col gap-title">
+                <p class="typo-subtlest text-light-subtlest">
+                    Final design 3: Seamless context-switching with fullscreen modal
+                </p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        The critical parts lies in the steps involving the Required Documents.
+                        Investor must complete 3 financial declaration forms, each of which
+                        comprises 2 to 3 steps.
+                    </p>
+                    <p>
+                        At first, we used simple default 'push-to-left' transition between all
+                        screens. But it became confused for Investor, as it created an "endless
+                        onboarding" feeling through out 4 lengthy steps.
+                    </p>
+                    <p>
+                        To prevent this, we altered the transition to 'open a fullscreen modal' from
+                        the bottom, enabling the investor to <span class="typo-bodyBold"
+                            >stay informed about the context switch</span
+                        > . Once Investor finished filling out a form, it ends the flow by closing that
+                        fullscreen modal. This micro transition imbues users with a sense of accomplishment.
+                    </p>
+                    <video class="h-full w-full rounded py-4" autoplay loop muted>
+                        <source src="/videos/content-switch-o.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- finail UI: support -->
+            <div id="support" class="flex flex-col gap-title">
+                <p class="typo-subtlest text-light-subtlest">Final design 4: Support at anytime</p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        Long processes can overwhelm users, leading to confusion or mistakes.
+                        Therefore, to ensure that users feel guided and reassured throughout, we
+                        added an option for them to get support at any step during the onboarding.
+                    </p>
+                    <p>
+                        This enhanced user <span class="typo-bodyBold">trust and satisfaction</span
+                        >, which very important for processes involving personal or sensitive
+                        information.
+                    </p>
+                    <p>
+                        During our the research, we noticed that our Investor often ask the Account
+                        Manager to support them in person. To address this preference, we added an
+                        option in the form for them to select if they prefer to talk to our staff
+                        via phone or arrange a face-to-face meeting.
+                    </p>
+
+                    <ImageCard
+                        imagePath="/src/assets/onboarding/support.png"
+                        altText="Get support"
+                    />
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="border-t border-dashed my-16"></div>
+
+    <!-- takeaway -->
+    <div id="takeaway" class="flex flex-col gap-heading pb-72">
+        <p class="typo-heading-medium">Takeaway</p>
+        <p>
+            Due to the nature of the company business, the onboarding for new users can be very long
+            and complex. However, we still can create a user-friendly design with clear instructions
+            to make experience smooth and intuitive for users.
+        </p>
     </div>
 </BlogLayout>

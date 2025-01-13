@@ -53,10 +53,10 @@ module.exports = {
 				sectionContentGap: '16px',
 
 				// apply for article
-				heading:'24px',
-				section:'24px',
+				heading:'28px',
+				section:'32px',
 				title: '14px',
-				paragraph: '18px',
+				paragraph: '16px',
 
 			},
 
@@ -108,7 +108,7 @@ module.exports = {
 					fontFamily: theme('fontFamily.body'),
 					fontSize: theme('fontSize.subtlest'),
 					fontWeight: theme('fontWeight.light'),
-					lineHeight: '22.4px',
+					lineHeight: '18.6px',
 					textAlign: 'center',
 				},
 
