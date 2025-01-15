@@ -10,18 +10,18 @@ const { postTitle, url, postDescription, date, targetType= "_blank" } = Astro.pr
 ---
 
     <ul class="flex flex-col gap-1">
-        <li class=" text-light-subtle">
+        <li class=" text-light-subtle dark:text-dark-subtle">
             {date}
         </li>
 
         <li>
             <a 
             target={targetType}
-            href={url} class="typo-link font-normal text-black">{postTitle}
+            href={url} class="typo-link font-normal text-light-heading dark:text-dark-heading">{postTitle}
             </a>
         </li>
 
-        <li>
+        <li class="text-light-subtle dark:text-dark-subtle">
             {postDescription}
         </li>
         

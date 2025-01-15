@@ -1,0 +1,29 @@
+---
+interface Props {
+    projectTitle?: string;
+    prodjectDescription?: string;
+    url?: string;
+    year?: string;
+    targetType?: string;
+}
+const { projectTitle, url, prodjectDescription, year, targetType = "_blank" } = Astro.props;
+---
+
+<div class="flex flex-row gap-1">
+    <div class="flex-1 gap-2 ">
+            <a
+                target={targetType}
+                href={url}
+                class="typo-link font-normal text-light-heading dark:text-dark-heading"
+                >{projectTitle}
+            </a>
+        <img class="inline h-3 w-3" src="/link.svg">
+
+        <p class=" text-light-subtle dark:text-dark-subtle">
+            {prodjectDescription}
+        </p>
+    </div>
+    <div class="text-light-subtle dark:text-dark-subtle">
+        {year}
+    </div>
+</div>

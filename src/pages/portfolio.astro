@@ -2,8 +2,8 @@
 // Component Imports
 import WorkExperience from "../components/WorkExperience.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import InfoList from "../components/InfoList.astro";
-import ImageCard from "../components/ImageCard.astro";
 ---
 
 <BaseLayout
@@ -14,39 +14,47 @@ import ImageCard from "../components/ImageCard.astro";
 >
     <!-- projects -->
     <div class="flex flex-col gap-3">
-        <div><p class="typo-subtlest bg-lime-200 inline-block">.projects</p></div>
+        <div>
+            <p
+                class="typo-subtle bg-lime-200 inline-block dark:text-dark-subtle dark:bg-transparent"
+            >
+                .projects
+            </p>
+        </div>
         <div class="flex flex-col gap-6">
-            <InfoList
-                postTitle="Digital Lending web platforms"
-                postDescription="P2P platforms for Investor and SMEs across multiple markets"
-                url="https://validus.sg/"
-            />
-            <InfoList
-                postTitle="Investor Mobile Application"
-                postDescription="Browse live facilities available for investing and mange investments"
-                url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
-            />
-            <InfoList
-                postTitle="DHF"
-                postDescription="Farm diary management and inventory tracking"
+            <ProjectCard
+                projectTitle="DHF"
+                prodjectDescription="Farm diary management and inventory tracking"
                 url="https://www.dhfplatforms.com/"
             />
-            <InfoList
-                postTitle="Snafu Records"
-                postDescription="Portal & Website"
+            <ProjectCard
+                projectTitle="Investor App"
+                prodjectDescription="Browse live facilities, invest and mange portfolio"
+                url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
+            />
+            <ProjectCard
+                projectTitle="Digital Lending"
+                prodjectDescription="Platform for SMEs to Apply, get approved, and receive funds."
+                url="https://validus.sg/"
+            />
+
+            <ProjectCard
+                projectTitle="Snafu Records"
+                prodjectDescription="Portal & Website"
                 url="https://www.snafurecords.com/"
             />
-            <InfoList
-            postTitle="Ecotruck"
-            postDescription="Eco System for Trucking - Merchant Portal"
-            url="https://ecotruck.vn/"
-        />
-            <InfoList
-                postTitle="BackCountry Navigator"
-                postDescription="Outdoor navigation app that helps outdoor adventurers to find their way through the wilderness."
+            <ProjectCard
+                projectTitle="Ecotruck"
+                prodjectDescription="Eco System for Trucking - Merchant Portal"
+                url="https://ecotruck.vn/"
+            />
+            <ProjectCard
+                projectTitle="BC Navigator"
+                prodjectDescription="For outdoor adventurers to find way through the wilderness."
                 url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
             />
-            <p class="items-baseline gap-1 border-t border-t-zinc-300 border-dashed pt-4 mt-4">
+            <p>· · ·</p>
+            <p class="items-baseline gap-1">
                 Some design screenshots are at
                 <a class="typo-link" target="_blank" href="https://dribbble.com/trangbui"
                     >Dribbble
@@ -56,13 +64,14 @@ import ImageCard from "../components/ImageCard.astro";
     </div>
     <!-- case studies -->
     <div id="caseStudies" class="flex flex-col gap-3">
-        <div><p class="typo-subtlest bg-lime-200 inline-block">.case studies</p></div>
-        <div class="flex flex-col gap-6">
-            <p>
-                Case studies for onboarding process below will take you to my old Framer site, which
-                I used to showcase my works. I will move it to this site later. Access to that case
-                studies requires a password. Please contact me if you wish to take a look at it.
+        <div>
+            <p
+                class="typo-subtle bg-lime-200 inline-block dark:text-dark-subtle dark:bg-transparent"
+            >
+                .case studies
             </p>
+        </div>
+        <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
                 <InfoList
                     postTitle="Investment application"
@@ -70,11 +79,6 @@ import ImageCard from "../components/ImageCard.astro";
                     url="/portfolio/investorapp"
                     targetType="_self"
                 />
-                <!-- <ImageCard
-                    imagePath="/src/assets/investorapp/thumbnail-article-1.png"
-                    altText="thumbnail"
-                    padding="py-2"
-                /> -->
             </div>
             <div class="flex flex-col gap-2">
                 <InfoList
@@ -82,24 +86,31 @@ import ImageCard from "../components/ImageCard.astro";
                     postDescription="Less steps for Customer and reduce manual works for Internal Team"
                     url="https://trang.framer.website/onboarding"
                 />
-                <!-- <ImageCard
-                    imagePath="/src/assets/investorapp/thumbnail-article.png"
-                    altText="thumbnail"
-                    padding="py-2"
-                /> -->
             </div>
         </div>
     </div>
     <!-- work experience -->
     <div class="flex flex-col gap-4">
         <!-- section title -->
-        <div><p class="typo-subtlest bg-lime-200 inline-block">.where I've worked</p></div>
-        <div class="flex flex-col gap-12">
+        <div>
+            <p
+                class="typo-subtle bg-lime-200 inline-block dark:text-dark-subtle dark:bg-transparent"
+            >
+                .design journey
+            </p>
+        </div>
+        <div class="flex flex-col gap-10">
             <WorkExperience
                 companyName="Validus Capital"
                 roleDescription="Drive the end to end design process across Digital Lending products of all countries (Singapore, Viet Nam, Thai Land), including web and mobile applications."
-                roleTitle="Senior/Product Design Lead (Regional)"
-                fromTo="2019-2023"
+                roleTitle="Product Design Lead (Regional)"
+                fromTo="2021"
+            />
+            <WorkExperience
+                companyName="Validus Capital"
+                roleDescription="Drive the end to end design process across Digital Lending products of all countries (Singapore, Viet Nam, Thai Land), including web and mobile applications."
+                roleTitle="Senior Product Designer"
+                fromTo="2019"
             />
             <WorkExperience
                 companyName="NashTech Global"
@@ -111,9 +122,10 @@ import ImageCard from "../components/ImageCard.astro";
                 companyName="Sentifi AG"
                 roleDescription="Worked on widgets that help Investor to identify outliers and new investment opportunities, spot risks and monitor trends."
                 roleTitle="Digittal Designer"
-                fromTo="2014-2017"
+                fromTo="2014"
             />
-            <p class="border-t border-t-zinc-300 border-dashed pt-4">
+            <p>· · ·</p>
+            <p>
                 More detail at <a class="typo-link" target="_blank" href="https://read.cv/trang"
                     >read.cv/trang</a
                 >

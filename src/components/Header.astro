@@ -1,12 +1,14 @@
 ---
 import HeaderItem from "./HeaderItem.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 
 <header class="flex items-center">
-	<a href="/" class="whitespace-nowrap text-2xl font-bold text-black">tb</a>
+	<a href="/" class="whitespace-nowrap text-2xl font-bold text-black dark:text-white">tb</a>
 	<nav class="flex grow items-center justify-end gap-6 text-sm md:gap-8">
 		<HeaderItem headmenu="/portfolio" url="/portfolio/"></HeaderItem>
 		<HeaderItem headmenu="/following" url="/following/"></HeaderItem>
+		<ThemeIcon />
 	</nav>
 </header>

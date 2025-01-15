@@ -6,13 +6,22 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				//background
+				zinc: {
+					...colors.zinc,
+					'400': '#B0B0B0',
+				},
+				blue: {
+					...colors.blue,
+					'900': '#1e3656',
+				},
+				
 				'dark': {
-					background: colors.zinc[900],
-					heading: colors.zinc[200],
-					body: colors.zinc[300],
-					subtle: colors.zinc[500],
+					background: colors.neutral[900],
+					heading: colors.zinc[50],
+					body: colors.zinc[200],
+					subtle: colors.zinc[400],
 					footnote: colors.zinc[500],
+					selectText: '#b3fc03',
 					// warning:
 					// success:
 
@@ -23,7 +32,6 @@ module.exports = {
 					heading: colors.zinc[900],
 					body: colors.zinc[800],
 					subtle: colors.zinc[500],
-					subtlest: colors.zinc[400],
 					footnote: colors.zinc[500],
 					test: colors.lime[400],
 					warning: colors.rose[500],
@@ -35,7 +43,8 @@ module.exports = {
 			fontFamily: {
 				body: 'Be Vietnam Pro, san-serif',
 				heading: 'Suranna',
-				nav: 'Inconsolata',
+				nav: 'Newsreader',
+				decor: 'Newsreader'
 			},
 
 			fontSize: {
@@ -43,8 +52,9 @@ module.exports = {
 				heading: "20px",
 				nav: '16px',
 				body: '14px',
-				subtlest: '13px',
+				subtle: '13px',
 				url: '14px',
+				decorBody: '16px',
 			},
 
 			gap: {
@@ -54,8 +64,8 @@ module.exports = {
 				sectionContentGap: '16px',
 
 				// apply for article
-				heading:'28px',
-				section:'32px',
+				heading: '28px',
+				section: '32px',
 				title: '14px',
 				paragraph: '16px',
 
@@ -64,7 +74,7 @@ module.exports = {
 		}
 	},
 
-	
+
 	plugins: [
 		function ({ addUtilities, theme }) {
 			addUtilities({
@@ -98,16 +108,16 @@ module.exports = {
 
 				},
 
-				'.typo-subtlest': {
+				'.typo-subtle': {
 					fontFamily: theme('fontFamily.body'),
-					fontSize: theme('fontSize.subtlest'),
+					fontSize: theme('fontSize.subtle'),
 					fontWeight: theme('fontWeight.light'),
 					lineHeight: '22.4px',
 				},
 
 				'.typo-tooltip': {
 					fontFamily: theme('fontFamily.body'),
-					fontSize: theme('fontSize.subtlest'),
+					fontSize: theme('fontSize.subtle'),
 					fontWeight: theme('fontWeight.light'),
 					lineHeight: '18.6px',
 					textAlign: 'center',
@@ -116,7 +126,13 @@ module.exports = {
 
 				'.typo-link': {
 					borderBottomWidth: '1px',
-					borderColor: colors.zinc[400],
+					borderColor: colors.zinc[300],
+					// transition: 'all 0.3s ease',
+				},
+
+				'.dark .typo-link': {
+					borderBottomWidth: '1px',
+					borderColor: colors.zinc[700],
 					// transition: 'all 0.3s ease',
 				},
 
@@ -124,6 +140,12 @@ module.exports = {
 					borderBottomWidth: '1px',
 					borderColor: colors.zinc[500],
 					'background-color': colors.lime[400],
+				},
+
+				'.dark .typo-link:hover': {
+					borderBottomWidth: '0px',
+					'background-color': colors.lime[950],
+					color: theme('colors.dark.selectText'),
 				},
 
 				'.typo-red': {
@@ -135,8 +157,7 @@ module.exports = {
 				'.typo-nav': {
 					fontFamily: theme('fontFamily.nav'),
 					fontSize: theme('fontSize.nav'),
-					fontWeight: theme('fontWeight.normal'),
-					color: theme('colors.light.body'),
+					fontWeight: theme('fontWeight.light'),
 
 				},
 
@@ -144,7 +165,13 @@ module.exports = {
 					'background-color': colors.lime[400],
 				},
 
-				
+				'.dark .typo-nav:hover': {
+					'background-color': colors.lime[950],
+					color: theme('colors.dark.selectText'),
+
+				},
+
+
 
 
 
