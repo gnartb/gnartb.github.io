@@ -10,7 +10,7 @@ module.exports = {
 					background: colors.neutral[900],
 					heading: colors.zinc[50],
 					body: colors.zinc[200],
-					subtle: colors.zinc[400],
+					subtle: '#b9b9b9',
 					footnote: colors.zinc[500],
 					selectText: '#b3fc03',
 					// warning:
