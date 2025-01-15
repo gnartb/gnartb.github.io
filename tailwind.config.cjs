@@ -6,15 +6,6 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				zinc: {
-					...colors.zinc,
-					'400': '#B0B0B0',
-				},
-				blue: {
-					...colors.blue,
-					'900': '#1e3656',
-				},
-				
 				'dark': {
 					background: colors.neutral[900],
 					heading: colors.zinc[50],
@@ -24,7 +15,6 @@ module.exports = {
 					selectText: '#b3fc03',
 					// warning:
 					// success:
-
 				},
 
 				'light': {
