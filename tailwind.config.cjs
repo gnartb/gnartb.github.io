@@ -8,8 +8,8 @@ module.exports = {
 			colors: {
 				'dark': {
 					background: colors.neutral[900],
-					heading: colors.zinc[50],
-					body: colors.zinc[200],
+					heading: colors.zinc[200],
+					body: colors.zinc[300],
 					subtle: '#b9b9b9',
 					footnote: colors.zinc[500],
 					selectText: '#b3fc03',
