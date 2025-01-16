@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+/** @type {import('tailwindcss').Config} */
 
 module.exports = {
 	darkMode: 'class',
@@ -8,7 +9,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-			custom: ['AritaBuri', ...defaultTheme.fontFamily.sans],
+			'AritaBuri': ['AritaBuri', ...defaultTheme.fontFamily.sans],
+			'heli': ['heli', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				'dark': {
@@ -142,11 +144,6 @@ module.exports = {
 					borderBottomWidth: '0px',
 					'background-color': colors.lime[950],
 					color: theme('colors.dark.selectText'),
-				},
-
-				'.typo-red': {
-					// color: theme('colors.light.warning'),
-					fontStyle: 'italic',
 				},
 
 

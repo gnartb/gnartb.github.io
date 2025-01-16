@@ -177,15 +177,22 @@ const menuItems = [
                         </p>
                         <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
                             <li>
-                                Individual and Corporate Investor have different onboarding flows as
-                                Corporate Investor need to provide a lot more information.
+                                Individual and <span class="typo-bodyBold">Corporate Investor</span>
+                                have different onboarding flows as Corporate Investor need to <span
+                                    class="typo-bodyBold">provide a lot more information</span
+                                >. (Company info and it's legal representative)
                             </li>
-                            <li>80% of the investor on our platform is Individual Investor.</li>
+                            <li>
+                                <span class="typo-bodyBold">80%</span> of the investor on our platform
+                                is Individual Investor, which later we decided to focus on only this
+                                type of Investor
+                            </li>
                             <li>
                                 Web-version didn't capture fully the actual onboarding process,
-                                there were a lot of offline support from Investor Relation Team in
-                                order for investors to actually get a verified account (paper
-                                submission and approval).
+                                there were <span class="typo-bodyBold"
+                                    >a lot of offline support</span
+                                > from Investor Relation Team in order for investors to actually get
+                                a verified account (paper submission and approval).
                             </li>
                         </ul>
                         <div class="flex flex-col gap-4 py-4">
@@ -310,14 +317,13 @@ const menuItems = [
                 wanted to become an Investor on the platform using the app as as his busy schedule
                 doesn't allow much time for using a laptop or PC. With the detailed flow, we saw
                 that Shane had to go through a lot of steps and provide a significant amount of
-                information. This could make him drop-off midway or need assistance to complete the
-                onboarding.
+                information. He could face some problems and drop-off midway or need assistance to
+                complete the onboarding.
             </p>
             <p>
                 <span class="typo-bodyBold">The second scenario</span>, is when Shane returns to the
                 app to continue his onboarding process. This time he might not remember where he had
-                left off last time and concerned about whether the information he previously
-                provided is still saved.
+                left off last time and could not remember what he had done before.
             </p>
             <iframe
                 width="auto"
@@ -327,253 +333,263 @@ const menuItems = [
                 scrolling="no"
             >
             </iframe>
-        </div>
-        <p class="text-center py-4">· · ·</p>
-        <p>
-            Due to the extensive amount of information required, we anticipate that Shane may
-            encounter the following issues:
-        </p>
-        <div class="flex flex-col gap-section">
-            <div class="flex flex-col gap-paragraph">
-                <p class="font-semibold text-black">Inability to provide required documents</p>
-                <p>
-                    In order to do the KYC, Investor needs to take and upload photo of some
-                    documents, such as: front and back of the ID or passport, billing or bank
-                    statement to verify their address, certificate of tax residence…
-                </p>
-                <p>
-                    Some investors may not have the necessary documents readily available, which
-                    could result in them being unable to complete the process in one go.
-                </p>
-                <p>
-                    Furthermore, they are required to fill out certain paper-based forms, which need
-                    to be returned to the Validus, causing some delays.
-                </p>
-            </div>
-
-            <div class="flex flex-col gap-paragraph">
-                <p class="font-semibold text-black">
-                    Lack of clarity on the purpose of providing information
-                </p>
-                <p>
-                    Investors may not fully understand why certain information is required during
-                    onboarding process. There was some steps that required them to provide a
-                    numerous of personal information, income and assets.
-                </p>
-            </div>
-
-            <div class="flex flex-col gap-paragraph">
-                <p class="font-semibold text-black">Difficulty go through multiple steps</p>
-                <p>
-                    The onboarding process may appear lengthy and complex to investors with many
-                    steps.
-                </p>
-                <p>
-                    Each step includes various information and sub-steps, which may lead to
-                    confusion, particularly on mobile devices where it's not possible to display
-                    everything on one screen.
-                </p>
-            </div>
-
-            <div class="flex flex-col gap-paragraph">
-                <p class="font-semibold text-black">Need support</p>
-                <p>
-                    When we talked to the Investor Relation team, the team that manages the
-                    communication with Investor, we received a feedback that Investor usually
-                    drop-off in the midway, and seek out for help via phone call and message.
-                    Sometimes those requests were missed. We will need to capture those support
-                    request from Investor during the onboarding.
-                </p>
-            </div>
-        </div>
-        <p class="text-center py-4">· · ·</p>
-        <p>Therefore, the key challenge statement was:</p>
-        <p class="typo-bodyBold">
-            How might we simplify the onboarding process for investors, convenient, user-friendly
-            and does not make Investors feel insecure?
-        </p>
-    </div>
-
-    <!-- solution -->
-    <div id="solutions" class="flex flex-col gap-heading">
-        <p class="typo-heading-medium">Key solutions</p>
-        <div class="flex flex-col gap-section">
-            <!-- myInfo -->
-            <div class="flex flex-col gap-paragraph">
-                <p class="font-semibold text-black">Provide information faster with myInfo</p>
-                <p>
-                    To simplify the steps of entering the personal information reduce number of
-                    required documents of the Investor, we decided to integrate <a
-                        href="https://www.developer.tech.gov.sg/products/categories/digital-identity/myinfo/overview.html"
-                        class="typo-link">myInfo</a
-                    > to our platform.
-                </p>
-                <p>
-                    This would be a second method for Investor that can speed up the KYC processes
-                    for individual users with data from Government sources.
-                </p>
-                <ImageCard imagePath="/src/assets/onboarding/flow.png" altText="flow" />
-                <p>
-                    It reduce more than 40%▾ the information and upload documents that Investor had
-                    to key manually in <a href="#4steps" class="typo-link">Step 1</a>, compared with
-                    the web platform flow without myInfo.
-                </p>
-                <p>
-                    As a result, it increases the chance that Investors can complete the process in
-                    one go.
-                </p>
-            </div>
-
-            <div class="flex flex-col gap-paragraph">
-                <p class="font-semibold text-black">
-                    Provide UX pattern to create an engaging onboarding experience
-                </p>
-                <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
-                    <li>Checklist to show the summary what need to be done</li>
-                    <li>Progress bar to inform user their onboarding progress</li>
-                    <li>Instruction on each steps</li>
-                    <li>Contact or get support feature</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</BlogLayout>
-
-<div class="border-t border-dashed my-16"></div>
-
-<!-- Design -->
-<div id="design" class="flex flex-col gap-24">
-    <p class="typo-subtle text-light-subtle text-center">Design</p>
-    <!-- wireframe -->
-    <div id="wireframe" class="flex flex-col gap-heading">
-        <p class="typo-heading-medium">Wireframe</p>
-        <div class="flex flex-col gap-paragraph">
+            <p class="text-center py-4">· · ·</p>
             <p>
-                To create user flow and content layout, I sketched out wireframes for main screens
-                that users would need in order to complete the onboarding. This part of the process
-                required us doing quite a lot of iterations in order to get the flow and layout
-                approved since its needed multiple teams to sign-off on the solutions.
+                Due to the extensive amount of information required, we anticipate that Shane may
+                encounter the following issues:
             </p>
-            <ImageCard
-                imagePath="/src/assets/onboarding/wireframe-sc1.png"
-                altText="wireframe-scenario1"
-            />
+            <div class="flex flex-col gap-section">
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Inability to provide required documents</p>
+                    <p>
+                        In order to do the KYC, Investor needs to take and upload photo of some
+                        documents, such as: front and back of the ID or passport, billing or bank
+                        statement to verify their address, certificate of tax residence…
+                    </p>
+                    <p>
+                        Some investors may not have the necessary documents readily available, which
+                        could result in them being unable to complete the process in one go.
+                    </p>
+                    <p>
+                        Furthermore, they are required to fill out certain paper-based forms, which
+                        need to be returned to the Validus, causing some delays.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">
+                        Lack of clarity on the purpose of providing information
+                    </p>
+                    <p>
+                        Investors may not fully understand why certain information is required
+                        during onboarding process. There was some steps that required them to
+                        provide a numerous of personal information, income and assets.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Difficulty go through multiple steps</p>
+                    <p>
+                        The onboarding process may appear lengthy and complex to investors with many
+                        steps.
+                    </p>
+                    <p>
+                        Each step includes various information and sub-steps, which may lead to
+                        confusion, particularly on mobile devices where it's not possible to display
+                        everything on one screen.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Need support</p>
+                    <p>
+                        When we talked to the Investor Relation team, the team that manages the
+                        communication with Investor, we received a feedback that Investor usually
+                        drop-off in the midway, and seek out for help via phone call and message.
+                        Sometimes those requests were missed. We will need to capture those support
+                        request from Investor during the onboarding.
+                    </p>
+                </div>
+            </div>
+            <p class="text-center py-4">· · ·</p>
+            <p class="text-center">Therefore, the key challenge statement was:</p>
+            <p class="textHlight text-center">
+                How might we simplify the onboarding process for investors, convenient,
+                user-friendly and does not make Investors feel insecure?
+            </p>
+        </div>
+
+        <!-- solution -->
+        <div id="solutions" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Key solutions</p>
+            <div class="flex flex-col gap-section">
+                <!-- myInfo -->
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">Provide information faster with myInfo</p>
+                    <p>
+                        To simplify the steps of entering the personal information reduce number of
+                        required documents of the Investor, we decided to integrate <a
+                            href="https://www.developer.tech.gov.sg/products/categories/digital-identity/myinfo/overview.html"
+                            class="typo-link">myInfo</a
+                        > to our platform.
+                    </p>
+                    <p>
+                        This would be a second method for Investor that can speed up the KYC
+                        processes for individual users with data from Government sources.
+                    </p>
+                    <ImageCard imagePath="/src/assets/onboarding/flow.png" altText="flow" />
+                    <p>
+                        It reduce more than 40%▾ the information and upload documents that Investor
+                        had to key manually in <a href="#4steps" class="typo-link">Step 1</a>,
+                        compared with the web platform flow without myInfo.
+                    </p>
+                    <p>
+                        As a result, it increases the chance that Investors can complete the process
+                        in one go.
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-paragraph">
+                    <p class="font-semibold text-black">
+                        Provide UX pattern to advoid confustion and create an engaging onboarding experience. 
+                    </p>
+                    <ul class="flex flex-col gap-1 list-disc list-outside pl-3">
+                        <li>Checklist to show the summary what need to be done</li>
+                        <li>Progress bar to inform user their onboarding progress</li>
+                        <li>Instruction on each steps</li>
+                        <li>Contact or get support feature</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- finail design -->
-    <div id="final" class="flex flex-col gap-heading">
-        <p class="typo-heading-medium">Final design</p>
+    <div class="border-t border-dashed my-16"></div>
 
-        <!-- finail UI: checklist -->
-        <div id="checklist" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">
-                Final design 1: Checklist screen helps user get started easier
-            </p>
+    <!-- Design -->
+    <div id="design" class="flex flex-col gap-24">
+        <p class="typo-subtle text-light-subtle text-center">Design</p>
+        <!-- wireframe -->
+        <div id="wireframe" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Wireframe</p>
             <div class="flex flex-col gap-paragraph">
                 <p>
-                    To ensure that investors don't get lost during the onboarding process, it's
-                    important to incorporate a checklist screen in all scenarios, whether it's new
-                    beginnings or ongoing progress. This screen serve as navigational screens,
-                    allowing investors to stay informed and engaged throughout their journey.
-                </p>
-                <p>
-                    From the initial design, we went through several drafts with various UI
-                    modifications to craft the final design as below:
-                </p>
-
-                <ImageCard imagePath="/src/assets/onboarding/checklist.png" altText="Checklist" />
-                <p>
-                    This checklist screen is also appeared when Investor login the app if they
-                    haven't finished their account verification before and still have pending items
-                    need to be completed.
-                </p>
-            </div>
-        </div>
-
-        <!-- finail UI: Provide instruction -->
-        <div id="instruction" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">Final desig 2: Provide instruction</p>
-            <div class="flex flex-col gap-paragraph">
-                <p>
-                    During the onboarding process, we need to gather a significant amount of
-                    sensitive personal information from Investor. Having clear instruction at each
-                    step help Investor to understand the purpose of collecting those information.
-                </p>
-                <p>
-                    This help to <span class="typo-body">reduce frustration and mistrust</span>.
+                    To create user flow and content layout, I sketched out wireframes for main
+                    screens that users would need in order to complete the onboarding. This part of
+                    the process required us doing quite a lot of iterations in order to get the flow
+                    and layout approved since its needed multiple teams to sign-off on the
+                    solutions.
                 </p>
                 <ImageCard
-                    imagePath="/src/assets/onboarding/instruction.png"
-                    altText="Instruction on each screen"
+                    imagePath="/src/assets/onboarding/wireframe-sc1.png"
+                    altText="wireframe-scenario1"
                 />
             </div>
         </div>
 
-        <!-- finail UI: context-switch -->
-        <div id="modal" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">
-                Final design 3: Seamless context-switching with fullscreen modal
-            </p>
-            <div class="flex flex-col gap-paragraph">
-                <p>
-                    The critical parts lies in the steps involving the Required Documents. Investor
-                    must complete 3 financial declaration forms, each of which comprises 2 to 3
-                    steps.
+        <!-- finail design -->
+        <div id="final" class="flex flex-col gap-heading">
+            <p class="typo-heading-medium">Final design</p>
+
+            <!-- finail UI: checklist -->
+            <div id="checklist" class="flex flex-col gap-title">
+                <p class="typo-subtle text-light-subtle">
+                    Final design 1: Checklist screen helps user get started easier
                 </p>
-                <p>
-                    At first, we used simple default 'push-to-left' transition between all screens.
-                    But it became confused for Investor, as it created an "endless onboarding"
-                    feeling through out 4 lengthy steps.
-                </p>
-                <p>
-                    To prevent this, we altered the transition to 'open a fullscreen modal' from the
-                    bottom, enabling the investor to <span class="typo-bodyBold"
-                        >stay informed about the context switch</span
-                    > . Once Investor finished filling out a form, it ends the flow by closing that fullscreen
-                    modal. This micro transition imbues users with a sense of accomplishment.
-                </p>
-                <video class="h-full w-full rounded py-4" autoplay loop muted>
-                    <source src="/videos/content-switch-o.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        To ensure that investors don't get lost during the onboarding process, it's
+                        important to incorporate a checklist screen in all scenarios, whether it's
+                        new beginnings or ongoing progress. This screen serve as navigational
+                        screens, allowing investors to stay informed and engaged throughout their
+                        journey.
+                    </p>
+                    <p>
+                        From the initial design, we went through several drafts with various UI
+                        modifications to craft the final design as below:
+                    </p>
+
+                    <ImageCard
+                        imagePath="/src/assets/onboarding/checklist.png"
+                        altText="Checklist"
+                    />
+                    <p>
+                        This checklist screen is also appeared when Investor login the app if they
+                        haven't finished their account verification before and still have pending
+                        items need to be completed.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- finail UI: support -->
-        <div id="support" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">Final design 4: Support at anytime</p>
-            <div class="flex flex-col gap-paragraph">
-                <p>
-                    Long processes can overwhelm users, leading to confusion or mistakes. Therefore,
-                    to ensure that users feel guided and reassured throughout, we added an option
-                    for them to get support at any step during the onboarding.
-                </p>
-                <p>
-                    This enhanced user <span class="typo-bodyBold">trust and satisfaction</span>,
-                    which very important for processes involving personal or sensitive information.
-                </p>
-                <p>
-                    During our the research, we noticed that our Investor often ask the Account
-                    Manager to support them in person. To address this preference, we added an
-                    option in the form for them to select if they prefer to talk to our staff via
-                    phone or arrange a face-to-face meeting.
-                </p>
+            <!-- finail UI: Provide instruction -->
+            <div id="instruction" class="flex flex-col gap-title">
+                <p class="typo-subtle text-light-subtle">Final desig 2: Provide instruction</p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        During the onboarding process, we need to gather a significant amount of
+                        sensitive personal information from Investor. Having clear instruction at
+                        each step help Investor to understand the purpose of collecting those
+                        information.
+                    </p>
+                    <p>
+                        This help to <span class="typo-body">reduce frustration and mistrust</span>.
+                    </p>
+                    <ImageCard
+                        imagePath="/src/assets/onboarding/instruction.png"
+                        altText="Instruction on each screen"
+                    />
+                </div>
+            </div>
 
-                <ImageCard imagePath="/src/assets/onboarding/support.png" altText="Get support" />
+            <!-- finail UI: context-switch -->
+            <div id="modal" class="flex flex-col gap-title">
+                <p class="typo-subtle text-light-subtle">
+                    Final design 3: Seamless context-switching with fullscreen modal
+                </p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        The critical parts lies in the steps involving the Required Documents.
+                        Investor must complete 3 financial declaration forms, each of which
+                        comprises 2 to 3 steps.
+                    </p>
+                    <p>
+                        At first, we used simple default 'push-to-left' transition between all
+                        screens. But it became confused for Investor, as it created an "endless
+                        onboarding" feeling through out 4 lengthy steps.
+                    </p>
+                    <p>
+                        To prevent this, we altered the transition to 'open a fullscreen modal' from
+                        the bottom, enabling the investor to <span class="typo-bodyBold"
+                            >stay informed about the context switch</span
+                        > . Once Investor finished filling out a form, it ends the flow by closing that
+                        fullscreen modal. This micro transition imbues users with a sense of accomplishment.
+                    </p>
+                    <video class="h-full w-full rounded py-4" autoplay loop muted>
+                        <source src="/videos/content-switch-o.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- finail UI: support -->
+            <div id="support" class="flex flex-col gap-title">
+                <p class="typo-subtle text-light-subtle">Final design 4: Support at anytime</p>
+                <div class="flex flex-col gap-paragraph">
+                    <p>
+                        Long processes can overwhelm users, leading to confusion or mistakes.
+                        Therefore, to ensure that users feel guided and reassured throughout, we
+                        added an option for them to get support at any step during the onboarding.
+                    </p>
+                    <p>
+                        This enhanced user <span class="typo-bodyBold">trust and satisfaction</span
+                        >, which very important for processes involving personal or sensitive
+                        information.
+                    </p>
+                    <p>
+                        During our the research, we noticed that our Investor often ask the Account
+                        Manager to support them in person. To address this preference, we added an
+                        option in the form for them to select if they prefer to talk to our staff
+                        via phone or arrange a face-to-face meeting.
+                    </p>
+
+                    <ImageCard
+                        imagePath="/src/assets/onboarding/support.png"
+                        altText="Get support"
+                    />
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="border-t border-dashed my-16"></div>
+    <div class="border-t border-dashed my-16"></div>
 
-<!-- takeaway -->
-<div id="takeaway" class="flex flex-col gap-heading pb-72">
-    <p class="typo-heading-medium">Takeaway</p>
-    <p>
-        Due to the nature of the company business, the onboarding for new users can be very long and
-        complex. However, we still can create a user-friendly design with clear instructions to make
-        experience smooth and intuitive for users.
-    </p>
-</div>
+    <!-- takeaway -->
+    <div id="takeaway" class="flex flex-col gap-heading pb-72">
+        <p class="typo-heading-medium">Takeaway</p>
+        <p>
+            Due to the nature of the company business, the onboarding for new users can be very long
+            and complex. However, we still can create a user-friendly design with clear instructions
+            to make experience smooth and intuitive for users.
+        </p>
+    </div>
+</BlogLayout>
