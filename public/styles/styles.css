@@ -6,4 +6,47 @@
   text-decoration-thickness: 0.5em;
   text-underline-offset: -0.20em;
 
+
+}
+
+
+@font-face {
+  font-family: 'AritaBuri';
+  src: url('/fonts/AritaBuriKR-HairLine.tff') format('tff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AritaBuri';
+  src: url('/fonts/AritaBuriKR-Light.tff') format('tff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AritaBuri';
+  src: url('/fonts/AritaBuriKR-Medium.tff') format('tff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AritaBuri';
+  src: url('/fonts/AritaBuriKR-SemiBoldd.tff') format('tff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'AritaBuri';
+  src: url('/fonts/AritaBuriKR-Bold.tff') format('tff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }

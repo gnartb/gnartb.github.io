@@ -1,10 +1,15 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 
 module.exports = {
 	darkMode: 'class',
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,css}'],
 	theme: {
 		extend: {
+			fontFamily: {
+			custom: ['AritaBuri', ...defaultTheme.fontFamily.sans],
+			},
 			colors: {
 				'dark': {
 					background: colors.neutral[900],
@@ -34,7 +39,8 @@ module.exports = {
 				body: 'Be Vietnam Pro, san-serif',
 				heading: 'Suranna',
 				nav: 'Newsreader',
-				decor: 'Newsreader'
+				decor: 'Newsreader',
+				sbody: "AritaBuri",
 			},
 
 			fontSize: {
@@ -160,148 +166,6 @@ module.exports = {
 					color: theme('colors.dark.selectText'),
 
 				},
-
-
-
-
-
-
-				// '.subParagraph': {
-				// 	fontFamily: theme('fontFamily.bodyFont'),
-				// 	fontSize: theme('fontSize.subFontSize'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	lineHeight: '22.4px',
-				// },
-				// '.bodyBold': {
-				// 	fontFamily: theme('fontFamily.bodyFont'),
-				// 	fontSize: theme('fontSize.bodyFontSize'),
-				// 	fontWeight: theme('fontWeight.bold'),
-				// },
-
-
-
-
-
-				// '.menuText': {
-				// 	fontFamily: theme('fontFamily.urlFont'),
-				// 	color: theme('colors.subColor'),
-
-
-
-
-				// '.subText': {
-				// 	color: theme('colors.subColor'),
-				// 	fontSize: theme('fontSize.subFontSize'),
-				// },
-
-				// '.darkSubText': {
-				// 	color: theme('colors.dsubColor'),
-				// 	fontSize: theme('fontSize.subFontSize'),
-				// },
-				// '.urlText': {
-				// 	color: theme('colors.urlColor'),
-				// 	fontSize: theme('fontSize.urlFontSize'),
-				// 	fontFamily: theme('fontFamily.urlFont'),
-				// 	fontWeight: '300',
-				// },
-				// '.sectionTitle': {
-				// 	fontFamily: theme('fontFamily.urlFont'),
-				// 	fontSize: theme('fontSize.bodyFontSize'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.sectionTitle'),
-				// },
-
-
-
-
-				// for article
-
-				// '.articleHead': {
-				// 	fontFamily: theme('fontFamily.articleHead'),
-				// 	fontSize: theme('fontSize.articleHead'),
-				// 	fontWeight: theme('fontWeight.bold'),
-				// 	color: theme('colors.dbodyColor'),
-				// 	lineHeight: '22.4px',
-				// },
-				// '.articleBodyParagraph': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.articleBodyFontsize'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.dparagraphColor'),
-				// 	lineHeight: '20px',
-				// },
-
-				// '.articleSubParagraph': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.articleSubFontSize'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.dColor'),
-				// 	lineHeight: '18px',
-				// },
-
-				// '.aLabel': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.articleSubFontSize'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.dsubColor'),
-				// 	lineHeight: '22.4px',
-				// },
-
-				// '.articleH2': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.h2'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.dbodyColor'),
-				// 	lineHeight: '22.4px',
-				// 	textAlign: 'center',
-
-				// },
-
-				// '.articleH5': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.h5'),
-				// 	fontWeight: theme('fontWeight.bold'),
-				// 	color: theme('colors.dbodyColor'),
-				// 	lineHeight: '22.4px',
-				// },
-
-				// // use for tooltip text below image
-				// '.articleH6': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.h6'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.dsubColor'),
-				// 	fontStyle: 'italic',
-				// 	textAlign: 'center',
-				// },
-
-				// '.articleH7': {
-				// 	fontFamily: theme('fontFamily.articleBodyFont'),
-				// 	fontSize: theme('fontSize.h7'),
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	color: theme('colors.dsubColor'),
-				// },
-
-				// '.articleSemibold': {
-				// 	fontWeight: theme('fontWeight.semibold'),
-				// 	color: theme('colors.dbodyColor'),
-				// },
-
-				// '.issue': {
-				// 	fontWeight: theme('fontWeight.light'),
-				// 	fontStyle: 'italic',
-				// 	color: theme('colors.issue'),
-				// },
-				// '.solution': {
-				// 	fontWeight: theme('fontWeight.semibold'),
-				// 	// fontStyle: 'italic',
-				// 	color: theme('colors.dbodyColor'),
-				// },
-
-
-
-
-
 			})
 		}
 	]
