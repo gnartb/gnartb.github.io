@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Aritaburi';
-  src: url('/fonts/AritaBuriKR-HairLine.ttf') format('ttf');
+  src: url('/fonts/AritaBuriKR-HairLine.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'Aritaburi';
-  src: url('/fonts/AritaBuriKR-Light.ttf') format('ttf');
+  src: url('/fonts/AritaBuriKR-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Aritaburi';
-  src: url('/fonts/AritaBuriKR-Medium.ttf') format('ttf');
+  src: url('/fonts/AritaBuriKR-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: 'Aritaburi';
-  src: url('/fonts/AritaBuriKR-SemiBoldd.ttf') format('ttf');
+  src: url('/fonts/AritaBuriKR-SemiBoldd.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -45,17 +45,8 @@
 
 @font-face {
   font-family: 'Aritaburi';
-  src: url('/fonts/AritaBuriKR-Bold.ttf') format('ttf');
+  src: url('/fonts/AritaBuriKR-Bold.ttf') format('truetype');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'heli';
-  src: url('/fonts/heli.otf') format('otf');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
