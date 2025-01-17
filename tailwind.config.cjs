@@ -50,6 +50,7 @@ module.exports = {
 				heading: "20px",
 				nav: '16px',
 				body: '14px',
+				sbody: '15px',
 				subtle: '13px',
 				url: '14px',
 				decorBody: '16px',
@@ -87,6 +88,13 @@ module.exports = {
 					fontFamily: theme('fontFamily.body'),
 					fontSize: '20px',
 					fontWeight: theme('fontWeight.semibold'),
+					lineHeight: '22.4px',
+				},
+
+				'.typo-sbody': {
+					fontFamily: theme('fontFamily.sbody'),
+					fontSize: theme('fontSize.sbody'),
+					fontWeight: theme('fontWeight.thin'),
 					lineHeight: '22.4px',
 				},
 
