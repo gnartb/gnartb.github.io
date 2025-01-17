@@ -91,13 +91,6 @@ module.exports = {
 					lineHeight: '22.4px',
 				},
 
-				'.typo-sbody': {
-					fontFamily: theme('fontFamily.sbody'),
-					fontSize: theme('fontSize.sbody'),
-					fontWeight: theme('fontWeight.thin'),
-					lineHeight: '22.4px',
-				},
-
 
 				'.typo-body': {
 					fontFamily: theme('fontFamily.body'),
