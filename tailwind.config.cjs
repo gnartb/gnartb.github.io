@@ -94,8 +94,8 @@ module.exports = {
 				'.typo-sbody': {
 					fontFamily: theme('fontFamily.sbody'),
 					fontSize: theme('fontSize.sbody'),
-					fontWeight: theme('fontWeight.thin'),
-					lineHeight: '22.4px',
+					fontWeight: theme('fontWeight.light'),
+					lineHeight: '26px',
 				},
 
 

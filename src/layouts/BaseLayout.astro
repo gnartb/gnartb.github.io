@@ -6,13 +6,12 @@ import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
 	pageTitle: string;
-	urlText?: string;
 	pageHeadline?: string;
-	subText?: string;
 	canonicalLink?: string;
+	backTo?: string;
 }
 
-const { pageTitle, urlText, pageHeadline, subText, canonicalLink } = Astro.props;
+const { pageTitle, pageHeadline, canonicalLink, backTo } = Astro.props;
 ---
 
 <html lang="en">
@@ -24,20 +23,22 @@ const { pageTitle, urlText, pageHeadline, subText, canonicalLink } = Astro.props
 		selection:bg-lime-400
 		selection:text-black
 		text-light-body
-		text-left typo-body
+		text-left typo-sbody
 		dark:bg-dark-background
 		dark:selection:bg-zinc-800
 		dark:selection:text-dark-body
 		dark:text-dark-body"
 	>
-		<container class="flex flex-grow flex-col gap-24">
+		<container class="flex flex-grow flex-col pt-24 gap-6">
 			<Header />
 			<content class="flex flex-col gap-20">
-				<div class="flex flex-col gap-4">
-					{urlText && <p class="text-sm font-nav text-light-subtle dark:text-dark-subtle">{urlText}</p>}
+				<!-- page title and navigation -->
+				<div class="flex flex-col gap-8">
+					<a href="">index</a>
 					{pageHeadline && <p class="text-3xl text-light-heading dark:text-dark-heading font-heading">{pageHeadline}</p>}
-					{subText && <p class="typo-subtle text-light-subtle dark:text-dark-subtle">{subText}</p>}
+					
 				</div>
+				<!-- page content -->
 				<slot />
 			</content>
 			<Footer />
