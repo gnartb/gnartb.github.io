@@ -31,11 +31,11 @@ const { pageTitle, pageHeadline, canonicalLink, backTo } = Astro.props;
 	>
 		<container class="flex flex-grow flex-col pt-24 gap-6">
 			<Header />
-			<content class="flex flex-col gap-20">
+			<content class="flex flex-col gap-20 flex-grow">
 				<!-- page title and navigation -->
 				<div class="flex flex-col gap-8">
 					<a href="">index</a>
-					{pageHeadline && <p class="text-3xl text-light-heading dark:text-dark-heading font-heading">{pageHeadline}</p>}
+					<p class="text-3xl text-light-heading dark:text-dark-heading font-heading">{pageHeadline}</p>
 					
 				</div>
 				<!-- page content -->
