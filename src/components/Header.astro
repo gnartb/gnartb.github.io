@@ -1,13 +1,29 @@
 ---
 import HeaderItem from "./HeaderItem.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+
+export interface Props {
+	pageTitle?: string;
+	showBackButton?: boolean;
+}
+
+const { pageTitle, showBackButton = false } = Astro.props;
+
+// Calculate the parent URL
+const currentPath = Astro.url.pathname.replace(/\/$/, ""); // Removes trailing slash
+const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"; // Parent folder or root
 ---
 
-
-<header class="flex items-center">
-	<a href="/" class="whitespace-nowrap font-medium text-black dark:text-white">Trang Bui</a>
-	<nav class="flex grow items-center justify-end gap-6 text-sm md:gap-8">
-		<HeaderItem headmenu="/following" url="/following/"></HeaderItem>
-		<ThemeIcon />
-	</nav>
+<header class="items-center sticky">
+	<div class="flex flex-col">
+		<a href={parentPath} class="whitespace-nowrap font-semibold text-black dark:text-dark-body typo-sbody italic">
+			{showBackButton && <img class="inline h-3 w-3" src="/back-index.svg" />}
+			{pageTitle}
+		</a>
+		<nav class="flex grow items-center justify-end gap-6 text-sm md:gap-8">
+			<!-- <HeaderItem headmenu="/portfolio" url="/portfolio/"></HeaderItem> -->
+			<ThemeIcon/>
+		</nav>
+	</div>
+	
 </header>

@@ -5,20 +5,21 @@ import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
-	pageTitle: string;
-	pageHeadline?: string;
+	pageName: string;
 	canonicalLink?: string;
 	backTo?: string;
+	pageTitle?: string;
+	showBackButton: boolean;
 }
 
-const { pageTitle, pageHeadline, canonicalLink, backTo } = Astro.props;
+const { pageName, canonicalLink, backTo, pageTitle, showBackButton} = Astro.props;
 ---
 
 <html lang="en">
-	<HeadBase pageTitle={pageTitle} canonical={canonicalLink} />
+	<HeadBase pageName={pageName} canonical={canonicalLink} />
 	<body
 		id="top"
-		class="flex flex-col min-h-screen mx-auto max-w-xl p-6
+		class="flex flex-col min-h-screen mx-auto max-w-2xl p-6
 		bg-light-background
 		selection:bg-lime-400
 		selection:text-black
@@ -30,12 +31,13 @@ const { pageTitle, pageHeadline, canonicalLink, backTo } = Astro.props;
 		dark:text-dark-body"
 	>
 		<container class="flex flex-grow flex-col pt-24 gap-6">
-			<Header />
+			<Header
+				pageTitle={pageTitle} showBackButton={showBackButton}
+			/>
 			<content class="flex flex-col gap-20 flex-grow">
 				<!-- page title and navigation -->
 				<div class="flex flex-col gap-8">
-					<a href="">index</a>
-					<p class="text-3xl text-light-heading dark:text-dark-heading font-heading">{pageHeadline}</p>
+					{backTo && <p class="">{backTo}</p>}
 					
 				</div>
 				<!-- page content -->

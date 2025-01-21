@@ -16,7 +16,7 @@ module.exports = {
 				'dark': {
 					background: colors.neutral[900],
 					heading: colors.zinc[200],
-					body: colors.zinc[300],
+					body: colors.zinc[400],
 					subtle: '#b9b9b9',
 					footnote: colors.zinc[500],
 					selectText: '#b3fc03',
@@ -26,7 +26,7 @@ module.exports = {
 
 				'light': {
 					background: colors.zinc[50],
-					heading: colors.zinc[900],
+					heading: colors.zinc[950],
 					body: colors.zinc[800],
 					subtle: colors.zinc[500],
 					footnote: colors.zinc[500],
@@ -131,6 +131,7 @@ module.exports = {
 
 
 				'.typo-link': {
+					fontWeight: theme('fontWeight.normal'),
 					borderBottomWidth: '1px',
 					borderColor: colors.zinc[300],
 					// transition: 'all 0.3s ease',

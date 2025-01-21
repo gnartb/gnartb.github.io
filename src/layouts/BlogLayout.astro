@@ -1,78 +1,42 @@
 ---
 // Component Imports
 import HeadBase from "../components/HeadBase.astro";
+import Header from "../components/Header.astro";
 
 export interface Props {
-    pageTitle: string;
+    pageName: string;
     blogTitle?: string;
     headDescription?: string;
     canonicalLink?: string;
+    pageTitle?: string;
+    showBackButton?: boolean;
 }
 
-const { pageTitle, blogTitle, headDescription, canonicalLink } = Astro.props;
+const { pageName, blogTitle, headDescription, canonicalLink, pageTitle, showBackButton } =
+    Astro.props;
 ---
 
 <html lang="en">
-    <HeadBase pageTitle={pageTitle} canonical={canonicalLink} />
+    <HeadBase pageName={pageName} canonical={canonicalLink} />
     <body
         id="top"
-        class="mx-auto max-w-2xl p-6 pt-16 pb-16 text-left selection:bg-lime-400 md:pt-16 flex flex-col min-h-screen dark:bg-black dark:text-white"
+        class="mx-auto max-w-2xl p-6 md:pt-6 flex flex-col min-h-screen
+        text-left
+        selection:bg-lime-400
+        dark:bg-black
+        dark:text-dark-body"
     >
-        <!-- toogle dark theme -->
-        <!-- Moon SVG from Heroicons -->
-        <div>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                class="hidden h-6 w-6 cursor-pointer"
-                id="toggle-dark"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                ></path>
-            </svg>
-        </div>
-        <!-- Sun SVG from Heroicons -->
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            class="hidden h-6 w-6 cursor-pointer"
-            id="toggle-light"
-        >
-            <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-            ></path>
-        </svg>
-        <!-- end toggle  -->
-
-        <container class="flex flex-col typo-body gap-2 text-light-body">
-            <!-- back icon -->
-            <div class="w-7 h-7">
-                <a class="group" href="/portfolio">
-                    <img class="w-7 h-7 group-hover:hidden" src="/back.svg" />
-                    <img class="w-7 h-7 hidden group-hover:block" src="/back-hover.svg" />
-                </a>
-            </div>
-
-            <!-- blog title and descriptio -->
-            {
+        <container class="flex flex-col typo-body gap-24 pt-24 text-light-body dark:text-dark-body">
+            <Header pageTitle={pageTitle} showBackButton={showBackButton} />
+            <!-- blog title and description -->
+            <!-- {
                 (blogTitle || headDescription) && (
                     <div class="flex flex-col gap-2">
                         {blogTitle && <p class="text-xl">{blogTitle}</p>}
                         {headDescription && <p class="articleSubParagraph">{headDescription}</p>}
                     </div>
                 )
-            }
+            } -->
             <!-- blog content here -->
             <slot />
         </container>

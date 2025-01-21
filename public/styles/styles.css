@@ -9,6 +9,15 @@
 
 }
 
+.dark-textHlight {
+  text-decoration: underline;
+  text-decoration-color: #3f6212;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.5em;
+  text-underline-offset: -0.20em;
+
+
+}
 
 @font-face {
   font-family: 'Aritaburi';
