@@ -8,11 +8,11 @@ export interface Props {
     blogTitle?: string;
     headDescription?: string;
     canonicalLink?: string;
-    pageTitle?: string;
+    backTo?: string;
     showBackButton?: boolean;
 }
 
-const { pageName, blogTitle, headDescription, canonicalLink, pageTitle, showBackButton } =
+const { pageName, blogTitle, headDescription, canonicalLink, backTo, showBackButton } =
     Astro.props;
 ---
 
@@ -23,11 +23,11 @@ const { pageName, blogTitle, headDescription, canonicalLink, pageTitle, showBack
         class="mx-auto max-w-2xl p-6 md:pt-6 flex flex-col min-h-screen
         text-left
         selection:bg-lime-400
-        dark:bg-black
+        dark:bg-dark-background
         dark:text-dark-body"
     >
         <container class="flex flex-col typo-body gap-24 pt-24 text-light-body dark:text-dark-body">
-            <Header pageTitle={pageTitle} showBackButton={showBackButton} />
+            <Header backTo={backTo} showBackButton={showBackButton} />
             <!-- blog title and description -->
             <!-- {
                 (blogTitle || headDescription) && (

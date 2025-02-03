@@ -8,11 +8,12 @@ export interface Props {
 	pageName: string;
 	canonicalLink?: string;
 	backTo?: string;
-	pageTitle?: string;
 	showBackButton: boolean;
+	isItalic?: boolean;
+
 }
 
-const { pageName, canonicalLink, backTo, pageTitle, showBackButton} = Astro.props;
+const { pageName, canonicalLink, backTo, showBackButton, isItalic=true } = Astro.props;
 ---
 
 <html lang="en">
@@ -30,19 +31,11 @@ const { pageName, canonicalLink, backTo, pageTitle, showBackButton} = Astro.prop
 		dark:selection:text-dark-body
 		dark:text-dark-body"
 	>
-		<container class="flex flex-grow flex-col pt-24 gap-6">
-			<Header
-				pageTitle={pageTitle} showBackButton={showBackButton}
-			/>
-			<content class="flex flex-col gap-20 flex-grow">
-				<!-- page title and navigation -->
-				<div class="flex flex-col gap-8">
-					{backTo && <p class="">{backTo}</p>}
-					
-				</div>
-				<!-- page content -->
+		<container class="flex flex-grow flex-col pt-24 gap-16">
+			<Header backTo={backTo} showBackButton={showBackButton} isItalic={isItalic} />
+			<div class="flex flex-grow flex-col pt-23 gap-10">
 				<slot />
-			</content>
+			</div>
 			<Footer />
 		</container>
 	</body>
