@@ -42,9 +42,9 @@ const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"
 		dark:selection:text-dark-body
 		dark:text-dark-body"
 	>
-		<div class="flex flex-row flex-grow gap-10 pt-24" >
+		<div class="flex flex-row flex-grow gap-10 pt-24 flex-wrap" >
 			<!-- col left -->
-			<div class="min-w-40">
+			<div class="flex-auto max-w-40 min-w-40">
 				<div class="sticky top-24">
 					<a
 						href={parentPath}
@@ -56,7 +56,7 @@ const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"
 				</div>
 			</div>
 			<!-- col middle -->
-			<div class="flex flex-col gap-16">
+			<div class="flex flex-col gap-16 w-[576px]">
 				<Header
 					pageTitle={pageTitle}
 					pageIntro={pageIntro}
@@ -67,7 +67,7 @@ const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"
 				<Footer />
 			</div>
 			<!-- col right -->
-			<div class="min-w-40"></div>
+			<div class="flex-auto max-w-40"></div>
 		</div>
 	</body>
 </html>

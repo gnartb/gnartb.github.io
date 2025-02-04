@@ -20,7 +20,7 @@ const { pageName, blogTitle, headDescription, canonicalLink, pageTitle, showBack
     <HeadBase pageName={pageName} canonical={canonicalLink} />
     <body
         id="top"
-        class="mx-auto max-w-2xl p-6 md:pt-6 flex flex-col min-h-screen
+        class="mx-auto max-w-5xl p-6 md:pt-6 flex flex-col min-h-screen
         text-left
         selection:bg-lime-400
         bg-light-background
@@ -28,8 +28,7 @@ const { pageName, blogTitle, headDescription, canonicalLink, pageTitle, showBack
         dark:text-dark-body"
     >
         <div class="flex flex-col typo-body text-light-body dark:text-dark-body pt-24">
-            <Header />
-            <div class="pt-8">
+            <Header pageTitle={pageTitle} />
             <slot />
             </div>
         </div>

@@ -55,10 +55,14 @@ const menuItems = [
     pageTitle="Investor App Revamp"
 >
     <!-- slot -->
-        <TableContent items={menuItems} backTo="Back to Projects" showBackButton={true} />
+    <div class="flex flex-row flex-grow gap-10 pt-24 flex-wrap">
+        <!-- col left -->
+        <div class="flex-auto max-w-40 min-w-40">
+            <TableContent items={menuItems} backTo="Projects" showBackButton={true} />
         </div>
-        <!-- case studies content -->
-        <div class="flex flex-col gap-24">
+
+        <!-- case studies content - col middle-->
+        <div class="flex flex-col gap-24 w-[576px]">
             <!-- Sec 1: intro -->
             <div class="flex flex-col gap-24">
                 <!-- introduction -->
@@ -765,5 +769,8 @@ const menuItems = [
                 </div>
             </div>
         </div>
+
+        <!-- col right -->
+        <div class="flex-auto max-w-40 min-w-40"></div>
     </div>
 </BlogLayout>
