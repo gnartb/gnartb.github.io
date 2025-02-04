@@ -7,32 +7,54 @@ interface MenuItem {
 
 export interface Props {
   items: MenuItem[];
+  backTo?: string;
+  showBackButton: boolean;
 }
 
-const { items } = Astro.props;
+const { items, backTo, showBackButton } = Astro.props;
+
+// Calculate the parent URL
+const currentPath = Astro.url.pathname.replace(/\/$/, ""); // Removes trailing slash
+const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"; // Parent folder or root
 ---
 
-<aside class="w-80 hidden lg:block items-center top-16 left px-6 text-subtle text-zinc-400 sticky h-0 left-full pl-16 translate-x-full overflow-visible">
+<aside
+  class="w-80 hidden lg:block items-center top-16 left px-6 text-subtle text-gray-400 sticky h-0 left-full pl-16 translate-x-full overflow-visible
+"
+>
+  
+    <div class="sticky top-24 gap-4 mb-4">
+      <a
+        href={parentPath}
+        class={`whitespace-nowrap text-ssubtle text-light-subtle dark:text-dark-subtle italic font-sbody`}
+      >
+        {showBackButton && <img class="inline h-3 w-3" src="/back-index.svg" />}
+        {backTo}
+      </a>
+    </div>
+
   <nav>
     <ul class="space-y-4">
-      {items.map((item) => (
-        <li data-id={item.id} class="menu-item space-y-0">
-          <a href={`#${item.id}`} class="hover:underline">
-            {item.name}
-          </a>
-          {item.children && (
-            <ul class="pl-4 space-y-0">
-              {item.children.map((child) => (
-                <li data-id={child.id} class="menu-item">
-                  <a href={`#${child.id}`} class="hover:underline">
-                    {child.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
+      {
+        items.map((item) => (
+          <li data-id={item.id} class="menu-item space-y-0">
+            <a href={`#${item.id}`} class="hover:underline">
+              {item.name}
+            </a>
+            {item.children && (
+              <ul class="pl-4 space-y-0">
+                {item.children.map((child) => (
+                  <li data-id={child.id} class="menu-item">
+                    <a href={`#${child.id}`} class="hover:underline">
+                      {child.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </aside>
@@ -48,16 +70,13 @@ const { items } = Astro.props;
       const scrollPosition = window.scrollY;
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - (window.innerHeight / 6) - 70; // Adjust for fixed header offset
+        const sectionTop = section.offsetTop - window.innerHeight / 6 - 70; // Adjust for fixed header offset
         const sectionHeight = section.offsetHeight;
 
         menuItems.forEach((menuItem) => {
           const id = menuItem.getAttribute("data-id");
           if (id === section.id) {
-            if (
-              scrollPosition >= sectionTop &&
-              scrollPosition < sectionTop + sectionHeight
-            ) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
               menuItem.classList.add("active");
             } else {
               menuItem.classList.remove("active");
@@ -74,18 +93,18 @@ const { items } = Astro.props;
 <style>
   .menu-item.active > a {
     /* color: var(--active-color, blue); Adjust to match your theme */
-    @apply text-slate-950 bg-lime-300
+    @apply text-gray-950 bg-lime-300;
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const anchorLinks = document.querySelectorAll('aside a[href^="#"]');
-    anchorLinks.forEach(anchor => {
-      anchor.addEventListener('click', function(event) {
+    anchorLinks.forEach((anchor) => {
+      anchor.addEventListener("click", function (event) {
         event.preventDefault(); // Prevent default anchor behavior
 
-        const targetId = this.getAttribute('href').substr(1); // Get the ID from href
+        const targetId = this.getAttribute("href").substr(1); // Get the ID from href
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
@@ -93,8 +112,8 @@ const { items } = Astro.props;
 
           // Scroll to the target element, adjusted to center it in the viewport
           window.scrollTo({
-            top: targetOffset - (window.innerHeight / 6), // Adjust to keep target in the middle
-            behavior: 'smooth' // Optional: keeps the smooth scroll effect
+            top: targetOffset - window.innerHeight / 6, // Adjust to keep target in the middle
+            behavior: "smooth", // Optional: keeps the smooth scroll effect
           });
         }
       });

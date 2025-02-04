@@ -44,17 +44,19 @@ const menuItems = [
         ],
     },
 ];
+
+
+
 ---
 
 <BlogLayout
     pageName="Investor App - Trang Bui"
     canonicalLink="https://trangbui.me/portfolio/investorapp/"
-    showBackButton={true}
-    backTo="Portfolio"
+    pageTitle="Investor App Revamp"
 >
     <!-- slot -->
-    <div>
-        <TableContent items={menuItems} />
+        <TableContent items={menuItems} backTo="Back to Projects" showBackButton={true} />
+        </div>
         <!-- case studies content -->
         <div class="flex flex-col gap-24">
             <!-- Sec 1: intro -->
@@ -65,10 +67,10 @@ const menuItems = [
                     <!-- TLDR -->
                     <div
                         class="p-4 rounded-md flex flex-col gap-2
-                        bg-zinc-50 border
-                        border-zinc-200
+                        bg-gray-50 border
+                        border-gray-200
                         dark:bg-dark-background
-                        dark:border-zinc-800"
+                        dark:border-gray-800"
                     >
                         <p class="text-green-600 font-bold">TL;DR</p>
                         <p>

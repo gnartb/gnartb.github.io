@@ -5,10 +5,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
 	pageName="About - Trang Bui"
+	backTo="Index"
 	canonicalLink="https://trangbui.me/about/"
+	showBackButton={true}
+	pageTitle="About"
 >
 	<!-- <img class="rounded items-start h-40 w-40" src="/profile.jpeg" /> -->
-	<div class="flex flex-col gap-pGap dark:text-dark-subtle">
+	<div class="flex flex-col gap-pGap">
 		<p>
 			I enjoy diving into anything that sparks my curiosity, whether it's about design and
 			technology or the random moments I encounter.
@@ -20,17 +23,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			dedicate my focus and energy to. I decided to put myself in a different direction.
 		</p>
 		<p>
-			Since making the career switch in 2017, I've worked for startups and many hats along the
+			Since making the career switch to <span class="text-light-heading dark:text-dark-heading font-semibold">Product Design</span> in 2017, I've worked for startups and many hats along the
 			way, beyond just a Product Designer. I've tackled many problems and enjoy the journey of
 			exploring the solutions, trying new things and learning as I go.
 		</p>
 		<p>
 			Beside work, I love to do many different things, travel to new places, watch a movie, or
 			simply spending my time with family and friends. I'm learning to play an ukulele and try
-			to spend at least 15' a day to pratice. More about the thing i'm up to. Check out my <a
-				class="bodyLink"
-				href="/now/">/now</a
-			> page.
+			to spend at least 15' a day to pratice.
+		</p>
+		<p>
+			More about the things i'm up to, check out my <a class="typo-link text-light-heading dark:text-dark-heading" href="/now/"
+				>/now
+			</a> page.
 		</p>
 		<p>
 			If you'd like to get in touch with me, my inbox is open for collaboration at <a

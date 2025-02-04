@@ -7,21 +7,19 @@ import InfoList from "../components/InfoList.astro";
 ---
 
 <BaseLayout
-    pageName="Portfolio - Trang Bui" 
+    pageName="Portfolio - Trang Bui"
     backTo="Index"
     canonicalLink="https://trangbui.me/portfolio/"
     showBackButton={true}
+    pageTitle="Projects"
+    pageIntro="I've been working on"
 >
-    <!-- projects -->
-    <div class="flex flex-col gap-3">
-        <div>
-            <p
-                class="typo-subtle bg-lime-200 inline-block dark:text-dark-subtle dark:bg-transparent"
-            >
-                .projects
-            </p>
-        </div>
-        <div class="flex flex-col gap-6">
+
+    <!-- projects new design -->
+    <div class="flex flex-row gap-8">
+        <!-- app -->
+        <div class="flex-1 flex-col flex gap-6">
+            <p class="text-ssubtle">App</p>
             <ProjectCard
                 projectTitle="DHF"
                 prodjectDescription="Farm diary management and inventory tracking"
@@ -33,103 +31,56 @@ import InfoList from "../components/InfoList.astro";
                 url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
             />
             <ProjectCard
-                projectTitle="Digital Lending"
-                prodjectDescription="Platform for SMEs to Apply, get approved, and receive funds."
-                url="https://validus.sg/"
+                projectTitle="BC Navigator"
+                prodjectDescription="For outdoor adventurers to find way through the wilderness."
+                url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
             />
+        </div>
 
+        <!-- web-app -->
+        <div class="flex-1 flex-col flex gap-6">
+            <p class="text-ssubtle">Web app</p>
             <ProjectCard
-                projectTitle="Snafu Records"
-                prodjectDescription="Portal & Website"
-                url="https://www.snafurecords.com/"
+                projectTitle="Digital Lending"
+                prodjectDescription="For SMEs to apply, get approved & receive funds."
+                url="https://validus.sg/"
             />
             <ProjectCard
                 projectTitle="Ecotruck"
                 prodjectDescription="Eco System for Trucking - Merchant Portal"
                 url="https://ecotruck.vn/"
             />
+        </div>
+
+        <!-- website -->
+        <div class="flex-1 flex-col flex gap-6">
+            <p class="text-ssubtle">Website</p>
             <ProjectCard
-                projectTitle="BC Navigator"
-                prodjectDescription="For outdoor adventurers to find way through the wilderness."
-                url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
+                projectTitle="Snafu Records"
+                prodjectDescription="Funding Portal"
+                url="https://www.snafurecords.com/"
             />
-            <p>· · ·</p>
-            <p class="items-baseline gap-1">
-                Some design screenshots are at
-                <a class="typo-link" target="_blank" href="https://dribbble.com/trangbui"
-                    >Dribbble
-                </a> if it's more your thing
-            </p>
         </div>
     </div>
+
+    <div class="text-light-subtle dark:text-dark-subtle">· · ·</div>
+
     <!-- case studies -->
-    <div id="caseStudies" class="flex flex-col gap-3">
-        <div>
-            <p
-                class="typo-subtle bg-lime-200 inline-block dark:text-dark-subtle dark:bg-transparent"
-            >
-                .case studies
-            </p>
-        </div>
-        <div class="flex flex-col gap-6">
-            <div class="flex flex-col gap-2">
-                <InfoList
-                    postTitle="Investment application"
-                    postDescription="Redesign mobile Investor mobile app with more features for better experience"
-                    url="/portfolio/investorapp"
-                    targetType="_self"
-                />
-            </div>
-            <div class="flex flex-col gap-2">
-                <InfoList
-                    postTitle="Simplifying the long onboarding process"
-                    postDescription="Less steps for Customer and reduce manual works for Internal Team"
-                    url="https://trang.framer.website/onboarding"
-                />
-            </div>
-        </div>
-    </div>
-    <!-- work experience -->
-    <div class="flex flex-col gap-4">
-        <!-- section title -->
-        <div>
-            <p
-                class="typo-subtle bg-lime-200 inline-block dark:text-dark-subtle dark:bg-transparent"
-            >
-                .design journey
-            </p>
-        </div>
-        <div class="flex flex-col gap-10">
-            <WorkExperience
-                companyName="Validus Capital"
-                roleDescription="Drive the end to end design process across Digital Lending products of all countries (Singapore, Viet Nam, Thai Land), including web and mobile applications."
-                roleTitle="Product Design Lead (Regional)"
-                fromTo="2021"
-            />
-            <WorkExperience
-                companyName="Validus Capital"
-                roleDescription="Drive the end to end design process across Digital Lending products of all countries (Singapore, Viet Nam, Thai Land), including web and mobile applications."
-                roleTitle="Senior Product Designer"
-                fromTo="2019"
-            />
-            <WorkExperience
-                companyName="NashTech Global"
-                roleDescription="Design career portal that help candidates to search, apply for job easily and showcasing the company's work-life culture."
-                roleTitle="UX/UI Designer"
-                fromTo="2017"
-            />
-            <WorkExperience
-                companyName="Sentifi AG"
-                roleDescription="Worked on widgets that help Investor to identify outliers and new investment opportunities, spot risks and monitor trends."
-                roleTitle="Digittal Designer"
-                fromTo="2014"
-            />
-            <p>· · ·</p>
-            <p>
-                More detail at <a class="typo-link" target="_blank" href="https://read.cv/trang"
-                    >read.cv/trang</a
-                >
-            </p>
-        </div>
+    <div class="flex-1 flex-col flex gap-4">
+        <p>
+            Problems discovery and finding solution for it. Those <span class="text-light-heading dark:text-dark-heading font-semibold">case studies</span> will give you a
+            better ideas of how I tackle design challenges and deliver solutions.
+        </p>
+        <InfoList
+            postTitle="Investment application"
+            postDescription="Redesign mobile Investor mobile app with more features for better experience"
+            url="/portfolio/investorapp"
+            targetType="_self"
+        />
+        <InfoList
+            postTitle="Simplifying the long onboarding process"
+            postDescription="Less steps for Customer and reduce manual works for Internal Team"
+            url="https://trang.framer.website/onboarding"
+        />
     </div>
 </BaseLayout>

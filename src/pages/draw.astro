@@ -31,10 +31,10 @@ function getDescriptionByKey(key) {
   >
 	<div class="columns-2 mx-auto space-y-4">
 		{imagePaths.map((src) => (
-		  <img src={src} alt="draw with procreate" class="w-full h-auto rounded shadow-md border-slate-800 border" />
+		  <img src={src} alt="draw with procreate" class="w-full h-auto rounded shadow-md border-gray-800 border" />
           <p class="font-urlFont">{getDescriptionByKey(src.split('/').pop())}</p> 
 		))}
-         <video class="h-full w-full rounded  border-slate-800 border" autoplay loop controls>
+         <video class="h-full w-full rounded  border-gray-800 border" autoplay loop controls>
             <source
               src="/images/draw/06.mov"
               type="video/mp4"

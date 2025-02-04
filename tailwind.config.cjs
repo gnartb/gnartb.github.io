@@ -15,23 +15,25 @@ module.exports = {
 			colors: {
 				'dark': {
 					background: colors.neutral[900],
-					heading: colors.zinc[200],
-					body: colors.zinc[400],
-					subtle: '#b9b9b9',
-					footnote: colors.zinc[500],
+					heading: colors.gray[100],
+					body: colors.gray[400],
+					subtle: colors.gray[500],
+					footnote: colors.gray[500],
 					selectText: '#b3fc03',
+					line: colors.gray[800],
 					// warning:
 					// success:
 				},
 
 				'light': {
-					background: colors.zinc[50],
-					heading: colors.zinc[950],
-					body: colors.zinc[800],
-					subtle: colors.zinc[500],
-					footnote: colors.zinc[500],
+					background: colors.gray[50],
+					heading: colors.gray[950],
+					body: colors.gray[800],
+					subtle: colors.gray[500],
+					footnote: colors.gray[500],
 					test: colors.lime[400],
 					warning: colors.rose[500],
+					line: colors.gray[200],
 					// success:
 				},
 
@@ -50,10 +52,11 @@ module.exports = {
 				heading: "20px",
 				nav: '16px',
 				body: '14px',
-				sbody: '15px',
 				subtle: '13px',
 				url: '14px',
-				decorBody: '16px',
+
+				sbody: '15px',
+				ssubtle: '14px',
 			},
 
 			gap: {
@@ -133,19 +136,19 @@ module.exports = {
 				'.typo-link': {
 					fontWeight: theme('fontWeight.normal'),
 					borderBottomWidth: '1px',
-					borderColor: colors.zinc[300],
+					borderColor: colors.gray[200],
 					// transition: 'all 0.3s ease',
 				},
 
 				'.dark .typo-link': {
 					borderBottomWidth: '1px',
-					borderColor: colors.zinc[700],
+					borderColor: colors.gray[800],
 					// transition: 'all 0.3s ease',
 				},
 
 				'.typo-link:hover': {
 					borderBottomWidth: '1px',
-					borderColor: colors.zinc[500],
+					borderColor: colors.gray[500],
 					'background-color': colors.lime[400],
 				},
 
