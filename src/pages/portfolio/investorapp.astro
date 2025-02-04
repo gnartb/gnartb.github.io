@@ -1,5 +1,5 @@
 ---
-import BlogLayout from "../../layouts/BlogLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import TableContent from "../../components/TableContent.astro";
 import ImageCard from "../../components/ImageCard.astro";
 
@@ -21,7 +21,7 @@ const menuItems = [
         name: "Define problems",
         children: [
             { id: "existingproduct", name: "Review existing product" },
-            { id: "userstudy", name: "User research - Test ideas and solution" },
+            { id: "userstudy", name: "User research" },
         ],
     },
     {
@@ -34,7 +34,7 @@ const menuItems = [
     },
     {
         id: "featuredetails",
-        name: "Design Details",
+        name: "Design details",
         children: [
             { id: "navigation", name: "Navigation" },
             { id: "accoverview", name: "Account overview" },
@@ -49,29 +49,31 @@ const menuItems = [
 
 ---
 
-<BlogLayout
+<BaseLayout
     pageName="Investor App - Trang Bui"
     canonicalLink="https://trangbui.me/portfolio/investorapp/"
+    backTo="Projects"
+    showBackButton={true}
     pageTitle="Investor App Revamp"
+    pageIntro="for a better user experience"
 >
     <!-- slot -->
-        <TableContent items={menuItems} backTo="Back to Projects" showBackButton={true} />
-        </div>
+     <div class="typo-body text-light-body dark:text-dark-body">
+        <TableContent items={menuItems} />
+
         <!-- case studies content -->
         <div class="flex flex-col gap-24">
             <!-- Sec 1: intro -->
             <div class="flex flex-col gap-24">
                 <!-- introduction -->
                 <div id="intro" class="flex flex-col gap-8">
-                    <p class="text-xl font-sbody font-semibold my-2">Investor App Revamp</p>
                     <!-- TLDR -->
                     <div
                         class="p-4 rounded-md flex flex-col gap-2
                         bg-gray-50 border
                         border-gray-200
                         dark:bg-dark-background
-                        dark:border-gray-800"
-                    >
+                        dark:border-gray-800">
                         <p class="text-green-600 font-bold">TL;DR</p>
                         <p>
                             I led the end-to-end re-design of the Investor App, addressing high
@@ -204,7 +206,7 @@ const menuItems = [
                 </div>
             </div>
 
-            <div class="border-t border-dashed my-16"></div>
+            <div class="text-center">· · ·</div>
 
             <!-- Sec 2: define problems -->
             <div class="flex flex-col gap-24">
@@ -287,7 +289,7 @@ const menuItems = [
                 </div>
             </div>
 
-            <div class="border-t border-dashed my-16"></div>
+            <div class="text-center">· · ·</div>
 
             <!-- Sec 3: build the app -->
             <div class="flex flex-col gap-24">
@@ -347,7 +349,8 @@ const menuItems = [
                 </div>
             </div>
 
-            <div class="border-t border-dashed my-16"></div>
+            <div class="text-center">· · ·</div>
+
             <!-- Sec 4: Feature details -->
             <div class="flex flex-col gap-24">
                 <p class="typo-subtle text-light-subtle text-center">Design details</p>
@@ -766,4 +769,4 @@ const menuItems = [
             </div>
         </div>
     </div>
-</BlogLayout>
+</BaseLayout>

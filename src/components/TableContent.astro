@@ -7,20 +7,15 @@ interface MenuItem {
 
 export interface Props {
   items: MenuItem[];
-  backTo?: string;
-  showBackButton: boolean;
 }
 
-const { items, backTo, showBackButton } = Astro.props;
+const { items } = Astro.props;
 
-// Calculate the parent URL
-const currentPath = Astro.url.pathname.replace(/\/$/, ""); // Removes trailing slash
-const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"; // Parent folder or root
 ---
 
 <aside
   class="
-  top-16 left px-6 
+  top-24 left px-6 
   text-subtle 
   text-gray-400 
   sticky h-0 
@@ -28,17 +23,6 @@ const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"
   w-80 hidden lg:block items-center 
 "
 >
-  
-    <div class="sticky top-24 gap-4 mb-4">
-      <a
-        href={parentPath}
-        class={`whitespace-nowrap text-ssubtle text-light-subtle dark:text-dark-subtle italic font-sbody`}
-      >
-        {showBackButton && <img class="inline h-3 w-3" src="/back-index.svg" />}
-        {backTo}
-      </a>
-    </div>
-
   <nav>
     <ul class="space-y-4">
       {
