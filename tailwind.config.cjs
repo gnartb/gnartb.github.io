@@ -181,4 +181,3 @@ module.exports = {
 		}
 	]
 };
-http://localhost:4321/
