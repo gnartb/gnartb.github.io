@@ -1,0 +1,30 @@
+---
+// Component Imports
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Notes from "../components/Notes.astro";
+
+---
+
+<BaseLayout
+    pageName="Playground - Trang Bui"
+    canonicalLink="https://trangbui.me/playground/"
+    backTo="Index"
+    showBackButton={true}
+    pageTitle="Playground"
+    pageIntro="Always learning something interesting"
+>
+<div class="flex flex-col gap-2">
+    <Notes 
+        noteTitle="Spline - Meow65 Keyboard"
+        url="/link"
+    />
+    <Notes 
+        noteTitle="Spline - Bottle liquid"
+        url="/link"
+    />
+    <Notes 
+        noteTitle="Midjourney"
+        url="/link"
+    />
+</div>
+</BaseLayout>

@@ -1,0 +1,83 @@
+---
+// Component Imports
+import BaseLayout from "../layouts/BaseLayout.astro";
+import InfoList from "../components/InfoList.astro";
+
+interface DailyLearn {
+    frontmatter: {
+        newPostTitle?: string;
+        newPostDescription?: string;
+        newDate: string;
+        newUrl?: string;
+    };
+    compiledContent: () => string;
+}
+// Function to Get all posts under folder content/til and sort by the date
+async function getDailyLearn(): Promise<DailyLearn[]> {
+    const tilPost = Object.values(
+        await import.meta.glob("../content/til/*.md", { eager: true }),
+    ) as DailyLearn[];
+
+    // Month order to compare months
+    const monthOrder = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ];
+
+    // Sort the companies by the date in descending order
+    return tilPost.sort((a, b) => {
+        // Extract the publish date from the frontmatter
+        const publishDateA = a.frontmatter.newDate; // Example: "08 Dec, 2024"
+        const publishDateB = b.frontmatter.newDate; // Example: "07 Nov, 2024"
+
+        // Parse the date format: "DD MMM, YYYY"
+        const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
+        const [dayB, monthB, yearB] = publishDateB.replace(",", "").split(" ");
+
+        // Compare years first (in descending order)
+        if (yearA !== yearB) {
+            return parseInt(yearB) - parseInt(yearA); // Sort by year descending
+        }
+
+        // If years are equal, compare months (in descending order)
+        const monthDiff =
+            monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
+        if (monthDiff !== 0) {
+            return monthDiff; // Sort by month descending
+        }
+
+        // If months are also equal, compare days (in descending order)
+        return parseInt(dayB) - parseInt(dayA); // Sort by day descending
+    });
+}
+
+const dailyLearnPosts = await getDailyLearn();
+---
+
+<BaseLayout
+    pageName="Things I learn - Trang Bui"
+    pageHeadline="My ''Hermione's beaded bag''"
+    canonicalLink="https://trangbui.me/til/"
+    
+>
+    {
+        dailyLearnPosts.map((post) => (
+            <InfoList
+                postTitle={post.frontmatter.newPostTitle}
+                postDescription={post.frontmatter.newPostDescription}
+                url={post.frontmatter.newUrl}
+                date={post.frontmatter.newDate}
+            />
+        ))
+    }
+</BaseLayout>

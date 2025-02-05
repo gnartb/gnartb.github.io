@@ -134,7 +134,7 @@ module.exports = {
 
 
 				'.typo-link': {
-					fontWeight: theme('fontWeight.normal'),
+					fontWeight: theme('fontWeight.medium'),
 					borderBottomWidth: '1px',
 					borderColor: colors.gray[200],
 					// transition: 'all 0.3s ease',
@@ -153,9 +153,11 @@ module.exports = {
 				},
 
 				'.dark .typo-link:hover': {
-					borderBottomWidth: '0px',
-					'background-color': colors.lime[950],
-					color: theme('colors.dark.selectText'),
+					borderBottomWidth: '1px',
+					'background-color': colors.neutral[800],
+					borderColor: colors.gray[900],
+					// color: theme('colors.dark.selectText'),
+					borderRadius: '4px',
 				},
 
 
@@ -179,3 +181,4 @@ module.exports = {
 		}
 	]
 };
+http://localhost:4321/
