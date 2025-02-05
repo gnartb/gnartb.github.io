@@ -1,6 +1,6 @@
 ---
-newPostTitle: "I'll read it"
-newPostDescription: "If you want to write something but afraid of no one would read it? Send it to Manuel Moreale. He will be your first reader. And more to come..."
-newUrl: "https://manuelmoreale.com/i-ll-read-it"
-newDate: "08 Dec, 2024"
+noteTitle: "Pinterest Masonry Grid Layout"
+noteDescription: "Display your photos/images in gallery, random height, with Tailwind CSS"
+noteUrl: "https://sabinbaniya.hashnode.dev/pinterest-masonry-grid-layout-with-tailwind-css-unsplash-api"
+noteDate: "07 Dec, 2024"
 ---

@@ -1,6 +1,6 @@
 ---
-noteTitle: "I'll read it"
-noteDescription: "If you want to write something but afraid of no one would read it? Send it to Manuel Moreale. He will be your first reader. And more to come..."
-noteUrl: "https://manuelmoreale.com/i-ll-read-it"
+noteTitle: "Pinterest Masonry Grid Layout"
+noteDescription: "Display your photos/images in gallery, random height, with Tailwind CSS"
+noteUrl: "https://sabinbaniya.hashnode.dev/pinterest-masonry-grid-layout-with-tailwind-css-unsplash-api"
 noteDate: "08 Dec, 2024"
 ---

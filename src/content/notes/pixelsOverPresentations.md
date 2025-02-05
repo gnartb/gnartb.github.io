@@ -1,6 +1,6 @@
 ---
-noteTitle: "Portfolios: Prioritise pixels over presentations"
-noteDescription: "''Showing deep, deep examinations of your solutions AND what you didn't deliver is a really great way to show how you approach solving a problem.''"
-noteUrl: "https://read.cv/disco_lu/pixels-over-portfolios"
-noteDate: "06 Dec, 2024"
+noteTitle: "Pinterest Masonry Grid Layout"
+noteDescription: "Display your photos/images in gallery, random height, with Tailwind CSS"
+noteUrl: "https://sabinbaniya.hashnode.dev/pinterest-masonry-grid-layout-with-tailwind-css-unsplash-api"
+noteDate: "07 Oct, 2024"
 ---

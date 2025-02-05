@@ -1,0 +1,29 @@
+---
+interface Props {
+    noteTitle?: string;
+    noteDescription?: string;
+    noteUrl?: string;
+    noteDate?: string;
+    noteYear?: string;
+}
+const { noteTitle, noteDescription, noteUrl, noteDate, noteYear } = Astro.props;
+---
+
+<!-- notes and date -->
+<div class="flex flex-row flex-1 gap-8">
+    <div class="flex flex-1 flex-col">
+        <div>
+            <a href={noteUrl} class="typo-link text-light-body dark:text-dark-body">{noteTitle}</a>
+        </div>
+        {
+            noteDescription && (
+                <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">
+                    {noteDescription}
+                </p>
+            )
+        }
+    </div>
+    <div class="flex text-ssubtle text-light-subtle dark:text-dark-subtle">
+        {noteDate}
+    </div>
+</div>

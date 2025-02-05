@@ -1,28 +1,24 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import NoteList from "../components/Notes.astro";
+import NoteList from "../components/NoteList.astro";
 
 interface AllNotes {
     frontmatter: {
         noteTitle?: string;
         noteDescription?: string;
+        noteDate: string;
         noteUrl?: string;
-        noteDate?: string;
-        noteYear?: string;
     };
     compiledContent: () => string;
 }
 
-const { noteTitle, noteDescription, noteUrl, noteDate, noteYear } = Astro.props;
-
 // Function to Get all posts under folder content/til and sort by the date
-async function getAllNotes(): Promise<AllNotes[]> {
+async function getAllNotes(): Promise<[string, AllNotes[]][]> {
     const notePost = Object.values(
         await import.meta.glob("../content/notes/*.md", { eager: true }),
     ) as AllNotes[];
 
-    // Month order to compare months
     const monthOrder = [
         "Jan",
         "Feb",
@@ -38,67 +34,58 @@ async function getAllNotes(): Promise<AllNotes[]> {
         "Dec",
     ];
 
-    // Sort the notes by the date in descending order
     const sortedNotes = notePost.sort((a, b) => {
-        // Extract the publish date from the frontmatter
-        const publishDateA = a.frontmatter.noteDate; // Example: "08 Dec, 2024"
-        const publishDateB = b.frontmatter.noteDate; // Example: "07 Nov, 2024"
+        const publishDateA = a.frontmatter.noteDate;
+        const publishDateB = b.frontmatter.noteDate;
 
-        // Parse the date format: "DD MMM, YYYY"
         const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
         const [dayB, monthB, yearB] = publishDateB.replace(",", "").split(" ");
 
-        // Compare years first (in descending order)
-        if (yearA !== yearB) {
-            return parseInt(yearB) - parseInt(yearA); // Sort by year descending
-        }
-
-        // If years are equal, compare months (in descending order)
+        if (yearA !== yearB) return parseInt(yearB) - parseInt(yearA);
         const monthDiff = monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
-        if (monthDiff !== 0) {
-            return monthDiff; // Sort by month descending
-        }
-
-        // If months are also equal, compare days (in descending order)
-        return parseInt(dayB) - parseInt(dayA); // Sort by day descending
+        if (monthDiff !== 0) return monthDiff;
+        return parseInt(dayB) - parseInt(dayA);
     });
 
-    // Group notes by year
     const groupedNotes: Record<string, AllNotes[]> = {};
-    sortedNotes.forEach(note => {
-        const year = note.frontmatter.noteDate.split(", ")[1]; // Extract year from "08 Dec, 2024"
+    sortedNotes.forEach((note) => {
+        const year = note.frontmatter.noteDate.split(", ")[1];
         if (!groupedNotes[year]) groupedNotes[year] = [];
         groupedNotes[year].push(note);
     });
-    
-    return groupedNotes;
-    
+
+    // Convert object to array and sort it by year in descending order
+    return Object.entries(groupedNotes).sort(
+        ([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA),
+    );
 }
 
-const NotePost = await getAllNotes();
+const showSortedNotes = await getAllNotes();
 ---
 
 <BaseLayout
-    pageName="NoteList - Trang Bui"
-    canonicalLink="https://trangbui.me/NoteList/"
+    pageName="Notes - Trang Bui"
+    canonicalLink="https://trangbui.me/portfolio/"
     backTo="Index"
     showBackButton={true}
-    pageTitle="NoteList"
+    pageTitle="Notes"
     pageIntro="Random things"
 >
     {
-        NotePost.map((post) => (
-            <NoteList
-                noteTitle={post.frontmatter.noteTitle}
-                noteDescription={post.frontmatter.noteDescription}
-                noteUrl={post.frontmatter.noteUrl}
-                noteDate={post.frontmatter.noteDate}
-                noteDate={post.frontmatter.noteDate}
-                noteYear={noteYear}
-            />
+        showSortedNotes.map(([year, posts]) => (
+            <div class="relative flex flex-row gap-8 flex-wrap">
+                <div class="md:absolute md:-left-20">{year}</div>
+                <div class="flex flex-col gap-6">
+                    {posts.map((post) => (
+                        <NoteList
+                            noteTitle={post.frontmatter.noteTitle}
+                            noteDescription={post.frontmatter.noteDescription}
+                            noteUrl={post.frontmatter.noteUrl}
+                            noteDate={post.frontmatter.noteDate.split(", ")[0]}
+                        />
+                    ))}
+                </div>
+            </div>
         ))
     }
 </BaseLayout>
-
-
-
