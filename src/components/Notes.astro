@@ -1,28 +1,29 @@
+
 ---
 interface Props {
     noteTitle?: string;
     noteDescription?: string;
-    url?: string;
-    date?: string;
-    year?: string;
+    noteUrl?: string;
+    noteDate?: string;
+    noteYear?: string;
 }
-const { noteTitle, noteDescription, url, date, year } = Astro.props;
+const { noteTitle, noteDescription, noteUrl, noteDate, noteYear } = Astro.props;
 ---
 
 <div class="relative flex flex-row gap-8 flex-wrap">
     <div class=" md:absolute md:-left-20">
-        {year}
+        {noteYear}
     </div>
 
     <!-- notes and date -->
     <div class="flex flex-row flex-1 gap-8">
         <div class="flex flex-1 flex-col gap-2">
-            <div><a href={url} class="typo-link text-light-body dark:text-dark-body">{noteTitle}</a></div>
+            <div><a href={noteUrl} class="typo-link text-light-body dark:text-dark-body">{noteTitle}</a></div>
             {noteDescription && <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">{noteDescription}</p>}
                 
         </div>
         <div class="flex text-ssubtle">
-            {date}
+            {noteDate}
         </div>
     </div>
 </div>

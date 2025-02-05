@@ -1,30 +1,104 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Notes from "../components/Notes.astro";
+import NoteList from "../components/Notes.astro";
 
+interface AllNotes {
+    frontmatter: {
+        noteTitle?: string;
+        noteDescription?: string;
+        noteUrl?: string;
+        noteDate?: string;
+        noteYear?: string;
+    };
+    compiledContent: () => string;
+}
+
+const { noteTitle, noteDescription, noteUrl, noteDate, noteYear } = Astro.props;
+
+// Function to Get all posts under folder content/til and sort by the date
+async function getAllNotes(): Promise<AllNotes[]> {
+    const notePost = Object.values(
+        await import.meta.glob("../content/notes/*.md", { eager: true }),
+    ) as AllNotes[];
+
+    // Month order to compare months
+    const monthOrder = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ];
+
+    // Sort the notes by the date in descending order
+    const sortedNotes = notePost.sort((a, b) => {
+        // Extract the publish date from the frontmatter
+        const publishDateA = a.frontmatter.noteDate; // Example: "08 Dec, 2024"
+        const publishDateB = b.frontmatter.noteDate; // Example: "07 Nov, 2024"
+
+        // Parse the date format: "DD MMM, YYYY"
+        const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
+        const [dayB, monthB, yearB] = publishDateB.replace(",", "").split(" ");
+
+        // Compare years first (in descending order)
+        if (yearA !== yearB) {
+            return parseInt(yearB) - parseInt(yearA); // Sort by year descending
+        }
+
+        // If years are equal, compare months (in descending order)
+        const monthDiff = monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
+        if (monthDiff !== 0) {
+            return monthDiff; // Sort by month descending
+        }
+
+        // If months are also equal, compare days (in descending order)
+        return parseInt(dayB) - parseInt(dayA); // Sort by day descending
+    });
+
+    // Group notes by year
+    const groupedNotes: Record<string, AllNotes[]> = {};
+    sortedNotes.forEach(note => {
+        const year = note.frontmatter.noteDate.split(", ")[1]; // Extract year from "08 Dec, 2024"
+        if (!groupedNotes[year]) groupedNotes[year] = [];
+        groupedNotes[year].push(note);
+    });
+    
+    return groupedNotes;
+    
+}
+
+const NotePost = await getAllNotes();
 ---
 
 <BaseLayout
-    pageName="Notes - Trang Bui"
-    canonicalLink="https://trangbui.me/notes/"
+    pageName="NoteList - Trang Bui"
+    canonicalLink="https://trangbui.me/NoteList/"
     backTo="Index"
     showBackButton={true}
-    pageTitle="Notes"
+    pageTitle="NoteList"
     pageIntro="Random things"
 >
-<div class="flex flex-col gap-2">
-    <Notes 
-    noteTitle="notes title will be here"
-    url="/link"
-    date="22.12"
-    year="2024"
-/>
-<Notes 
-    noteTitle="Utilities for controlling how flex items both grow and shrink"
-    url="/link"
-    date="05.12"
-    year="2024"
-/>
-</div>
+    {
+        NotePost.map((post) => (
+            <NoteList
+                noteTitle={post.frontmatter.noteTitle}
+                noteDescription={post.frontmatter.noteDescription}
+                noteUrl={post.frontmatter.noteUrl}
+                noteDate={post.frontmatter.noteDate}
+                noteDate={post.frontmatter.noteDate}
+                noteYear={noteYear}
+            />
+        ))
+    }
 </BaseLayout>
+
+
+
