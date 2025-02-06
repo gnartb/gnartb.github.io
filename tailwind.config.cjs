@@ -134,7 +134,7 @@ module.exports = {
 
 
 				'.typo-link': {
-					fontWeight: theme('fontWeight.medium'),
+					fontWeight: theme('fontWeight.semibold'),
 					borderBottomWidth: '1px',
 					borderColor: colors.gray[200],
 					// transition: 'all 0.3s ease',

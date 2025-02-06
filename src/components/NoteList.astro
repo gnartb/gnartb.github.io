@@ -13,7 +13,7 @@ const { noteTitle, noteDescription, noteUrl, noteDate } = Astro.props;
 <div class="flex flex-row flex-1 gap-8">
     <div class="flex flex-1 flex-col">
         <div>
-            <a href={noteUrl} class="typo-link text-light-body dark:text-dark-body">{noteTitle}</a>
+            <a href={noteUrl} class="typo-link text-light- dark:text-dark-body">{noteTitle}</a>
         </div>
         {
             noteDescription && (

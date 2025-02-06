@@ -1,20 +1,23 @@
 ---
 // Component Imports
-import BaseLayout from "../layouts/BaseLayout.astro";
-import DoodleImage from "../components/DoodleImage.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DoodleImage from "../../components/DoodleImage.astro";
 
 const doodleImagesPath = '/images/doodles';
 ---
 
-<BaseLayout 
-	pageName="Doodle - Trang Bui"
-	pageHeadline="100 days of doodle"
-	canonicalLink="https://trangbui.me/doodle/"
+<BaseLayout
+    pageName="Doodles - Trang Bui"
+    canonicalLink="https://trangbui.me/playground/doodle/"
+    backTo="Playground"
+    showBackButton={true}
+    pageTitle="100 days of Doodles"
+    pageIntro="2023"
+>
 
-	>
 	
 	<!-- post -->
-	<div class="flex flex-col gap-8">
+	<div class="flex flex-col gap-12">
 		<!-- Intro -->
 		<div class="flex flex-col gap-2">
 			<p>
@@ -31,7 +34,7 @@ const doodleImagesPath = '/images/doodles';
 				> projects.
 			</p>
 			<p>
-				I always thought i can't make a simple doodle but turn out it
+				I always thought i can't draw but turn out it
 				was not so bad 🤓.
 			</p>
 		</div>
@@ -107,7 +110,7 @@ const doodleImagesPath = '/images/doodles';
 			<DoodleImage
 				imageName={`${doodleImagesPath}/d095.jpeg`}
 				imageDate="Day 95"
-				imageDesc="My neighbor and I spontaneously took a one-day road trip to the Vietnam-Cambodia border by scooter. Exploring new places always makes me happy!"
+				imageDesc="My neighbor friend and I took a one-day road trip to the Vietnam-Cambodia border by scooter. Exploring new places always makes me happy!"
 			/>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-1 gap-4">

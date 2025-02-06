@@ -1,3 +1,5 @@
+<!-- Use to display Case Studies list in Projects -->
+
 ---
 interface Props {
     postTitle?: string;
@@ -17,7 +19,7 @@ const { postTitle, url, postDescription, date, targetType= "_blank" } = Astro.pr
         <li>
             <a 
             target={targetType}
-            href={url} class="typo-link font-normal text-light-heading dark:text-dark-heading">{postTitle}
+            href={url} class="typo-link font-normal text-light-body dark:text-dark-body">{postTitle}
             </a>
         </li>
 

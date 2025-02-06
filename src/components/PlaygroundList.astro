@@ -1,0 +1,25 @@
+---
+interface Props {
+    title?: string;
+    description?: string;
+    url?: string;
+    targetType?: string;
+
+}
+const { title, description, url, targetType="_self" } = Astro.props;
+---
+
+<div class="flex flex-row flex-1 gap-8">
+    <div class="flex flex-1 flex-col">
+        <div>
+            <a href={url} target={targetType} class="typo-link text-light-body dark:text-dark-body">{title}</a>
+        </div>
+        {
+            description && (
+                <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">
+                    {description}
+                </p>
+            )
+        }
+    </div>
+</div>

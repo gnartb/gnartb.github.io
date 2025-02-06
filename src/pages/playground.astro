@@ -2,7 +2,67 @@
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NoteList from "../components/NoteList.astro";
+import PlaygroundList from "../components/PlaygroundList.astro";
 
+interface AllPlayground {
+    frontmatter: {
+        title?: string;
+        description?: string;
+        date: string;
+        url?: string;
+        targetType?: string;
+    };
+    compiledContent: () => string;
+}
+
+// Function to Get all posts under folder content/til and sort by the date
+async function getAllPlayground(): Promise<[string, AllPlayground[]][]> {
+    const notePost = Object.values(
+        await import.meta.glob("../content/playground/*.mdx", { eager: true }),
+    ) as AllPlayground[];
+
+    const monthOrder = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ];
+
+    const sortedPlaygrounds = notePost.sort((a, b) => {
+        const publishDateA = a.frontmatter.date;
+        const publishDateB = b.frontmatter.date;
+
+        const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
+        const [dayB, monthB, yearB] = publishDateB.replace(",", "").split(" ");
+
+        if (yearA !== yearB) return parseInt(yearB) - parseInt(yearA);
+        const monthDiff = monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
+        if (monthDiff !== 0) return monthDiff;
+        return parseInt(dayB) - parseInt(dayA);
+    });
+
+    const groupedPlaygrounds: Record<string, AllPlayground[]> = {};
+    sortedPlaygrounds.forEach((note) => {
+        const year = note.frontmatter.date.split(", ")[1];
+        if (!groupedPlaygrounds[year]) groupedPlaygrounds[year] = [];
+        groupedPlaygrounds[year].push(note);
+    });
+
+    // Convert object to array and sort it by year in descending order
+    return Object.entries(groupedPlaygrounds).sort(
+        ([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA),
+    );
+}
+
+const showSortedPlaygrounds = await getAllPlayground();
 ---
 
 <BaseLayout
@@ -11,20 +71,23 @@ import NoteList from "../components/NoteList.astro";
     backTo="Index"
     showBackButton={true}
     pageTitle="Playground"
-    pageIntro="Always learning something interesting"
+    pageIntro="Creating something"
 >
-<div class="flex flex-col gap-2">
-    <NoteList 
-        noteTitle="Spline - Meow65 Keyboard"
-        url="/link"
-    />
-    <NoteList 
-        noteTitle="Spline - Bottle liquid"
-        url="/link"
-    />
-    <NoteList 
-        noteTitle="Midjourney"
-        url="/link"
-    />
-</div>
+    {
+        showSortedPlaygrounds.map(([year, posts]) => (
+            <div class="relative flex flex-row gap-8 flex-wrap">
+                <div class="md:absolute md:-left-20">{year}</div>
+                <div class="flex flex-col gap-6">
+                    {posts.map((post) => (
+                        <PlaygroundList
+                            title={post.frontmatter.title}
+                            description={post.frontmatter.description}
+                            url={post.frontmatter.url}
+                            targetType={post.frontmatter.targetType}
+                        />
+                    ))}
+                </div>
+            </div>
+        ))
+    }
 </BaseLayout>
