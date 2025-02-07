@@ -1,0 +1,107 @@
+---
+// Component Imports
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentItem from "./ContentItem.astro";
+
+interface Props {
+    pageName: string;
+    canonicalLink?: string;
+    backTo?: string;
+    showBackButton?: boolean;
+    pageTitle: string;
+    pageIntro?: string;
+    contentFolder: string;
+}
+const { pageName, canonicalLink, backTo, showBackButton = true, pageTitle, pageIntro, contentFolder } = Astro.props;
+
+interface AllItem {
+    frontmatter: {
+        title?: string;
+        description?: string;
+        date: string;
+        targetType?: string;
+        slug?: string;
+        isDisplayDate?: boolean;
+    };
+    url?: string;
+    compiledContent: () => string;
+}
+
+// Load all `.mdx` files from all subfolders inside `content/`
+const allFiles = import.meta.glob("../content/**/*.mdx", { eager: true });
+
+function getAllPlayground(folder: string): [string, AllItem[]][] {
+    const notePost: AllItem[] = [];
+
+    for (const [filePath, mod] of Object.entries(allFiles)) {
+        if (!filePath.includes(`/content/${folder}/`)) continue; // Filter by folder
+
+        const fileName = filePath.split("/").pop()?.replace(".mdx", "") || "";
+
+        notePost.push({
+            ...(mod as AllItem),
+            frontmatter: {
+                ...((mod as AllItem).frontmatter || {}),
+                slug: fileName, // Assign slug from filename
+            },
+            url: filePath.replace("../content/", "").replace(".mdx", ""),
+        });
+    }
+
+    const monthOrder = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    const sortedItems = notePost.sort((a, b) => {
+        const publishDateA = a.frontmatter.date;
+        const publishDateB = b.frontmatter.date;
+
+        const [dayA, monthA, yearA] = publishDateA.replace(",", "").split(" ");
+        const [dayB, monthB, yearB] = publishDateB.replace(",", "").split(" ");
+
+        if (yearA !== yearB) return parseInt(yearB) - parseInt(yearA);
+        const monthDiff = monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
+        if (monthDiff !== 0) return monthDiff;
+        return parseInt(dayB) - parseInt(dayA);
+    });
+
+    const groupedItems: Record<string, AllItem[]> = {};
+    for (const note of sortedItems) {
+        const year = note.frontmatter.date.split(", ")[1];
+        if (!groupedItems[year]) groupedItems[year] = [];
+        groupedItems[year].push(note);
+    }
+
+    return Object.entries(groupedItems).sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA));
+}
+
+// Call function with the dynamic folder name
+const showSortedItems = getAllPlayground(contentFolder);
+---
+
+<BaseLayout
+    pageName={pageName}
+    canonicalLink={canonicalLink}
+    backTo={backTo}
+    showBackButton={showBackButton}
+    pageTitle={pageTitle}
+    pageIntro={pageIntro}
+>
+    {
+        showSortedItems.map(([year, posts]) => (
+            <div class="relative flex flex-row gap-8 flex-wrap">
+                <div class="md:absolute md:-left-20">{year}</div>
+                <div class="flex flex-col gap-6">
+                    {posts.map((post) => (
+                        <ContentItem
+                            title={post.frontmatter.title}
+                            description={post.frontmatter.description}
+                            url={`/${post.url}`}
+                            targetType={post.frontmatter.targetType}
+                            date={post.frontmatter.date}
+                            isDisplayDate={post.frontmatter.isDisplayDate}
+                        />
+                    ))}
+                </div>
+            </div>
+        ))
+    }
+</BaseLayout>

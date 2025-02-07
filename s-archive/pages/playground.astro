@@ -1,8 +1,9 @@
 ---
 // Component Imports
-import ContentList from "../components/ContentList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NoteList from "../components/NoteList.astro";
+import ContentItem from "../components/ContentItem.astro";
 
-<<<<<<< HEAD
 interface AllPlayground {
     frontmatter: {
         title?: string;
@@ -11,13 +12,14 @@ interface AllPlayground {
         url?: string;
         targetType?: string;
     };
+    url?: string;
     compiledContent: () => string;
 }
 
 // Function to Get all posts under folder content/til and sort by the date
 async function getAllPlayground(): Promise<[string, AllPlayground[]][]> {
     const notePost = Object.values(
-        await import.meta.glob("../content/playground/*.md", { eager: true }),
+        await import.meta.glob("../content/playground/*.mdx", { eager: true }),
     ) as AllPlayground[];
 
     const monthOrder = [
@@ -62,16 +64,31 @@ async function getAllPlayground(): Promise<[string, AllPlayground[]][]> {
 }
 
 const showSortedPlaygrounds = await getAllPlayground();
-=======
->>>>>>> a18ff78 (Add Dynamic contents)
 ---
 
-<ContentList
+<BaseLayout
     pageName="Playground - Trang Bui"
     canonicalLink="https://trangbui.me/playground/"
     backTo="Index"
     showBackButton={true}
     pageTitle="Playground"
     pageIntro="Creating something"
-    contentFolder="playground"
-/>
+>
+    {
+        showSortedPlaygrounds.map(([year, posts]) => (
+            <div class="relative flex flex-row gap-8 flex-wrap">
+                <div class="md:absolute md:-left-20">{year}</div>
+                <div class="flex flex-col gap-6">
+                    {posts.map((post) => (
+                        <ContentItem
+                            title={post.frontmatter.title}
+                            description={post.frontmatter.description}
+                            url={`/playground/${post.url?.split("/").pop()?.replace(".mdx", "") || ""}`}
+                            targetType={post.frontmatter.targetType}
+                        />
+                    ))}
+                </div>
+            </div>
+        ))
+    }
+</BaseLayout>
