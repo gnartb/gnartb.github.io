@@ -15,7 +15,7 @@ module.exports = {
 			colors: {
 				'dark': {
 					background: colors.neutral[900],
-					heading: colors.gray[100],
+					heading: colors.gray[200],
 					body: colors.gray[400],
 					subtle: colors.gray[500],
 					footnote: colors.gray[500],
@@ -109,13 +109,6 @@ module.exports = {
 					lineHeight: '22.4px',
 				},
 
-				'.typo-bodyBold': {
-					fontFamily: theme('fontFamily.body'),
-					fontSize: theme('fontSize.body'),
-					fontWeight: theme('fontWeight.bold'),
-					lineHeight: '22.4px',
-
-				},
 
 				'.typo-subtle': {
 					fontFamily: theme('fontFamily.body'),
@@ -175,6 +168,17 @@ module.exports = {
 				'.dark .typo-nav:hover': {
 					'background-color': colors.lime[950],
 					color: theme('colors.dark.selectText'),
+
+				},
+
+				'.typo-hLight': {
+					fontStyle: 'italic',
+					'background-color': colors.lime[300],
+
+				},
+
+				'.dark .typo-hLight': {
+					'background-color': colors.neutral[800],
 
 				},
 			})

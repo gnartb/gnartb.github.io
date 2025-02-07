@@ -1,14 +1,17 @@
 ---
 // Component Imports
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-	pageName="This site - Trang Bui"
-	pageHeadline="How I buid it"
-	canonicalLink="https://trangbui.me/thissite/"
-	
+    pageName="This site - Trang Bui"
+    canonicalLink="https://trangbui.me/playground/doodle/"
+    backTo="Playground"
+    showBackButton={true}
+    pageTitle="Re-design this site"
+    pageIntro="2025"
 >
+
 	<div class="flex flex-col gap-pGap typo-body ">
 		<div class="flex flex-col gap-pGap dark:text-dark-subtle">
 		<p>This site is probably version 8, and definitely not the last.</p>
@@ -17,8 +20,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			always loved the idea to build my sites from scratch. I have some
 			knowledge about HTML and CSS, just enough to collaborate effectively
 			with developers. And after stumbled upon DeadSimpleSites, I felt
-			inspired to dive in and create something similar for me. Simple,
-			intuitive and easy to build - perfect for non-code designer.
+			inspired to dive in and create something similar for me.
 		</p>
 		<p>
 			I drew inspiration from the links below and hope they inspire you as

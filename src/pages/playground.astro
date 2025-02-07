@@ -18,7 +18,7 @@ interface AllPlayground {
 // Function to Get all posts under folder content/til and sort by the date
 async function getAllPlayground(): Promise<[string, AllPlayground[]][]> {
     const notePost = Object.values(
-        await import.meta.glob("../content/playground/*.mdx", { eager: true }),
+        await import.meta.glob("../content/playground/*.md", { eager: true }),
     ) as AllPlayground[];
 
     const monthOrder = [
