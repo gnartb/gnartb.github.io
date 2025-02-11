@@ -178,7 +178,8 @@ module.exports = {
 				},
 
 				'.dark .typo-hLight': {
-					'background-color': colors.neutral[800],
+					'background-color': colors.lime[400],
+					color: theme('colors.light.body'),
 
 				},
 			})
