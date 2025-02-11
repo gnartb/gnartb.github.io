@@ -1,0 +1,34 @@
+---
+export const prerender = true;
+
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getAllContents(folder: string) {
+    return await getCollection(folder, ({ data }) => {
+        return import.meta.env.PROD ? data.draft !== true : true;
+    });
+}
+
+export const getStaticPaths = (async () => {
+    const contentFolders = ["playground", "notes", "til"]; // List of folders
+    let paths: { params: { ContentName: string; slug: string }; props: { entry: any } }[] = [];
+
+    for (const folder of contentFolders) {
+        const entries = await getAllContents(folder);
+        paths.push(...entries.map((entry) => ({
+            params: { ContentName: folder, slug: entry.slug },
+            props: { entry },
+        })));
+    }
+
+    return paths;
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry } = Astro.props as { entry: { render: () => Promise<{ Content: any }> } };
+const { Content } = await entry.render();
+---
+
+<Content />

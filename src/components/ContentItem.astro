@@ -4,9 +4,11 @@ interface Props {
     description?: string;
     url?: string;
     targetType?: string;
+    date?: string;
+    isDisplayDate?: boolean;
 
 }
-const { title, description, url, targetType="_self" } = Astro.props;
+const { title, description, url, targetType="_self", date, isDisplayDate=true } = Astro.props;
 ---
 
 <div class="flex flex-row flex-1 gap-8">
@@ -22,4 +24,8 @@ const { title, description, url, targetType="_self" } = Astro.props;
             )
         }
     </div>
+    <div class="flex text-ssubtle text-light-subtle dark:text-dark-subtle">
+        {date && isDisplayDate ? date.split(", ")[0] : ''}
+    </div>
 </div>
+
