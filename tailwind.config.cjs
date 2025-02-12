@@ -102,7 +102,7 @@ module.exports = {
           fontFamily: theme("fontFamily.body"),
           fontSize: theme("fontSize.body"),
           fontWeight: theme("fontWeight.light"),
-          lineHeight: "22.4px",
+          lineHeight: "24px",
         },
 
         ".typo-subtle": {
@@ -121,7 +121,7 @@ module.exports = {
         },
 
         ".typo-link": {
-          fontWeight: theme("fontWeight.semibold"),
+          fontWeight: theme("fontWeight.medium"),
           borderBottomWidth: "1px",
           borderColor: colors.gray[200],
           // transition: 'all 0.3s ease',
