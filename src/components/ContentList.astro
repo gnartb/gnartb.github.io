@@ -41,7 +41,7 @@ function getAllPlayground(folder: string): [string, AllItem[]][] {
         notePost.push({
             ...(mod as AllItem),
             frontmatter: {
-                ...((mod as AllItem).frontmatter || {}),
+                ...((mod as AllItem).frontmatter),
                 slug: fileName, // Assign slug from filename
             },
             url: filePath.replace("../content/", "").replace(".mdx", ""),
