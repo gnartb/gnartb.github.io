@@ -1,47 +1,49 @@
 ---
 export interface Props {
-    pageTitle: string;
-    canonical?: string;
+  pageName: string;
+  canonical?: string;
 }
 
-const { pageTitle, canonical } = Astro.props;
-
+const { pageName, canonical } = Astro.props;
 ---
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-    <meta
-        name="description"
-        content="UX and Product Designer based in Viet Nam. Curious about how things work and why they matter. Always learning something."
-    />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="canonical" href={canonical} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{pageName}</title>
+  <meta
+    name="description"
+    content="UX and Product Designer based in Viet Nam. Curious about how things work and why they matter. Always learning something."
+  />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="canonical" href={canonical} />
 
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Suranna&display=swap"
-        rel="stylesheet"
-    />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Suranna&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTR1WMGE8L"></script>
-    <script is:inline>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTR1WMGE8L"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-        gtag("config", "G-TTR1WMGE8L");
-    </script>
+    gtag("config", "G-TTR1WMGE8L");
+  </script>
 
-    <script async data-id="101472236" src="//static.getclicky.com/js"></script>
+  <script async data-id="101472236" src="//static.getclicky.com/js"></script>
 </head>

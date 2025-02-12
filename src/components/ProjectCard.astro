@@ -1,4 +1,6 @@
 ---
+// Used in Project pages
+
 interface Props {
     projectTitle?: string;
     prodjectDescription?: string;
@@ -9,21 +11,23 @@ interface Props {
 const { projectTitle, url, prodjectDescription, year, targetType = "_blank" } = Astro.props;
 ---
 
-<div class="flex flex-row gap-1">
-    <div class="flex-1 gap-2 ">
+<div class="flex flex-row gap-1 min-h-24">
+    <div class="flex-1 gap-1 flex flex-col">
+        <div>
             <a
                 target={targetType}
                 href={url}
-                class="typo-link font-normal text-light-heading dark:text-dark-heading"
+                class="typo-link text-light-body dark:text-dark-body"
                 >{projectTitle}
             </a>
-        <img class="inline h-3 w-3" src="/link.svg">
-
-        <p class=" text-light-subtle dark:text-dark-subtle">
+            <!-- <img class="inline h-3 w-3" src="/link.svg" /> -->
+        </div>
+        <p class="text-light-subtle text-ssubtle dark:text-dark-subtle">
             {prodjectDescription}
         </p>
     </div>
-    <div class="text-light-subtle dark:text-dark-subtle">
+    
+    <div class="text-light-body dark:text-dark-body">
         {year}
     </div>
 </div>

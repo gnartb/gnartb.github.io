@@ -1,14 +1,25 @@
 ---
-import HeaderItem from "./HeaderItem.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+
+export interface Props {
+	pageTitle?: string;
+	pageIntro?: string;
+}
+
+const {
+	pageTitle,
+	pageIntro,
+} = Astro.props;
+
+
 ---
 
-
-<header class="flex items-center">
-	<a href="/" class="whitespace-nowrap text-2xl font-bold text-black dark:text-white">tb</a>
+<header class="flex flex-row gap-4 items-start bg-light-background dark:bg-dark-background">
+	<div>
+		<p class="font-semibold text-light-heading dark:text-dark-heading">{pageTitle}</p>
+		<p class="text-ssubtle text-light-subtle dark:text-dark-subtle">{pageIntro}</p>
+	</div>
 	<nav class="flex grow items-center justify-end gap-6 text-sm md:gap-8">
-		<HeaderItem headmenu="/portfolio" url="/portfolio/"></HeaderItem>
-		<HeaderItem headmenu="/following" url="/following/"></HeaderItem>
 		<ThemeIcon />
 	</nav>
 </header>

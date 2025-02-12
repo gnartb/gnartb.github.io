@@ -1,3 +1,5 @@
+<!-- Used in Case Studies pages -->
+
 ---
 interface MenuItem {
   id: string;
@@ -10,29 +12,41 @@ export interface Props {
 }
 
 const { items } = Astro.props;
+
 ---
 
-<aside class="w-80 hidden lg:block items-center top-16 left px-6 text-subtle text-zinc-400 sticky h-0 left-full pl-16 translate-x-full overflow-visible">
+<aside
+  class="
+  top-24 left px-6 
+  text-subtle 
+  text-gray-400 
+  sticky h-0 
+  left-full pl-16 translate-x-full overflow-visible
+  w-80 hidden lg:block items-center 
+"
+>
   <nav>
     <ul class="space-y-4">
-      {items.map((item) => (
-        <li data-id={item.id} class="menu-item space-y-0">
-          <a href={`#${item.id}`} class="hover:underline">
-            {item.name}
-          </a>
-          {item.children && (
-            <ul class="pl-4 space-y-0">
-              {item.children.map((child) => (
-                <li data-id={child.id} class="menu-item">
-                  <a href={`#${child.id}`} class="hover:underline">
-                    {child.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
+      {
+        items.map((item) => (
+          <li data-id={item.id} class="menu-item space-y-0">
+            <a href={`#${item.id}`} class="hover:underline">
+              {item.name}
+            </a>
+            {item.children && (
+              <ul class="pl-4 space-y-0">
+                {item.children.map((child) => (
+                  <li data-id={child.id} class="menu-item">
+                    <a href={`#${child.id}`} class="hover:underline">
+                      {child.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </aside>
@@ -48,16 +62,13 @@ const { items } = Astro.props;
       const scrollPosition = window.scrollY;
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - (window.innerHeight / 6) - 70; // Adjust for fixed header offset
+        const sectionTop = section.offsetTop - window.innerHeight / 6 - 70; // Adjust for fixed header offset
         const sectionHeight = section.offsetHeight;
 
         menuItems.forEach((menuItem) => {
           const id = menuItem.getAttribute("data-id");
           if (id === section.id) {
-            if (
-              scrollPosition >= sectionTop &&
-              scrollPosition < sectionTop + sectionHeight
-            ) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
               menuItem.classList.add("active");
             } else {
               menuItem.classList.remove("active");
@@ -74,18 +85,18 @@ const { items } = Astro.props;
 <style>
   .menu-item.active > a {
     /* color: var(--active-color, blue); Adjust to match your theme */
-    @apply text-slate-950 bg-lime-300
+    @apply text-gray-950 bg-lime-300;
   }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const anchorLinks = document.querySelectorAll('aside a[href^="#"]');
-    anchorLinks.forEach(anchor => {
-      anchor.addEventListener('click', function(event) {
+    anchorLinks.forEach((anchor) => {
+      anchor.addEventListener("click", function (event) {
         event.preventDefault(); // Prevent default anchor behavior
 
-        const targetId = this.getAttribute('href').substr(1); // Get the ID from href
+        const targetId = this.getAttribute("href").substr(1); // Get the ID from href
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
@@ -93,8 +104,8 @@ const { items } = Astro.props;
 
           // Scroll to the target element, adjusted to center it in the viewport
           window.scrollTo({
-            top: targetOffset - (window.innerHeight / 6), // Adjust to keep target in the middle
-            behavior: 'smooth' // Optional: keeps the smooth scroll effect
+            top: targetOffset - window.innerHeight / 6, // Adjust to keep target in the middle
+            behavior: "smooth", // Optional: keeps the smooth scroll effect
           });
         }
       });

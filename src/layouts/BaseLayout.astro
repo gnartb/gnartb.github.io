@@ -5,42 +5,70 @@ import Footer from "../components/Footer.astro";
 import HeadBase from "../components/HeadBase.astro";
 
 export interface Props {
-	pageTitle: string;
-	urlText?: string;
-	pageHeadline?: string;
-	subText?: string;
+	pageName: string;
 	canonicalLink?: string;
+	backTo?: string;
+	showBackButton: boolean;
+	pageTitle: string;
+	pageIntro?: string;
 }
 
-const { pageTitle, urlText, pageHeadline, subText, canonicalLink } = Astro.props;
+const {
+	pageName,
+	canonicalLink,
+	backTo,
+	showBackButton,
+	pageTitle,
+	pageIntro,
+} = Astro.props;
+
+// Calculate the parent URL
+const currentPath = Astro.url.pathname.replace(/\/$/, ""); // Removes trailing slash
+const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/")) || "/"; // Parent folder or root
 ---
 
 <html lang="en">
-	<HeadBase pageTitle={pageTitle} canonical={canonicalLink} />
+	<HeadBase pageName={pageName} canonical={canonicalLink} />
 	<body
 		id="top"
-		class="flex flex-col min-h-screen mx-auto max-w-xl p-6
+		class="flex flex-col min-h-screen mx-auto max-w-5xl p-6
 		bg-light-background
 		selection:bg-lime-400
 		selection:text-black
 		text-light-body
-		text-left typo-body
+		text-left typo-sbody
 		dark:bg-dark-background
-		dark:selection:bg-zinc-800
+		dark:selection:bg-gray-800
 		dark:selection:text-dark-body
 		dark:text-dark-body"
 	>
-		<container class="flex flex-grow flex-col gap-24">
-			<Header />
-			<content class="flex flex-col gap-20">
-				<div class="flex flex-col gap-4">
-					{urlText && <p class="text-sm font-nav text-light-subtle dark:text-dark-subtle">{urlText}</p>}
-					{pageHeadline && <p class="text-3xl text-light-heading dark:text-dark-heading font-heading">{pageHeadline}</p>}
-					{subText && <p class="typo-subtle text-light-subtle dark:text-dark-subtle">{subText}</p>}
+		<div class="flex flex-row flex-grow gap-10 pt-24 flex-wrap" >
+			<!-- col left -->
+			<div class="flex-auto max-w-40 min-w-40">
+				<div class="sticky top-24">
+					<a
+						href={parentPath}
+						class={`whitespace-nowrap text-ssubtle text-black dark:text-dark-body italic`}
+					>
+						{showBackButton && <img class="inline h-3 w-3" src="/back-index.svg" />}
+						{backTo}
+					</a>
 				</div>
-				<slot />
-			</content>
-			<Footer />
-		</container>
+			</div>
+			<!-- col middle -->
+			<div class="flex flex-col gap-16 w-[576px]">
+				<Header
+					pageTitle={pageTitle}
+					pageIntro={pageIntro}
+				/>
+				<!-- main center column -->
+				<div class="flex flex-grow flex-col gap-20">
+					<slot />
+				</div>
+				<Footer />
+			</div>
+			<!-- col right -->
+			<div class="flex-auto max-w-40"></div>
+		</div>
 	</body>
 </html>

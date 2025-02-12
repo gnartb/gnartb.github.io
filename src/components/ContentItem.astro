@@ -1,0 +1,33 @@
+---
+interface Props {
+    title?: string;
+    description?: string;
+    url?: string;
+    targetType?: string;
+    date: string;
+    isDisplayDate?: boolean;
+
+}
+const { title, description, url, targetType="_self", date, isDisplayDate=true } = Astro.props;
+---
+
+<div class="flex flex-row gap-8">
+    <!-- row 1: title & description -->
+    <div class="flex flex-1 flex-grow flex-col">
+        <div>
+            <a href={url} target={targetType} class="typo-link text-light-body dark:text-dark-body">{title}</a>
+        </div>
+        {
+            description && (
+                <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">
+                    {description}
+                </p>
+            )
+        }
+    </div>
+    <!-- row 2: date -->
+    <div class="flex text-ssubtle text-light-subtle dark:text-dark-subtle">
+        {date && isDisplayDate ? date.split(", ")[0] : ''}
+    </div>
+</div>
+

@@ -1,17 +1,19 @@
 ---
+
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 
 interface Props {
    imagePath: string;   
    altText: string;
-   padding?: string;
+   margin?: string;
 }
 
-const { imagePath, altText, padding = "py-4" } = Astro.props;
+const { imagePath, altText, margin = "py-4" } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/investorapp/*.{jpeg,jpg,png,gif}"`);
+
 ---
-<div class={`card  ${padding} rounded-lg`}>
+<div class={`card ${margin} rounded`}>
     <Image src={images[imagePath]()} alt={altText} />
 </div>

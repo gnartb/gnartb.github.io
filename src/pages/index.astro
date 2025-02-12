@@ -1,96 +1,33 @@
 ---
 // Component Imports
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-
 ---
 
 <BaseLayout
-	pageTitle="Trang Bui - Product Designer"
-	urlText="/"
-	canonicalLink="https://trangbui.me/"
+    pageName="Trang Bui - Product Designer"
+    canonicalLink="https://trangbui.me/"
+    showBackButton={false}
+    pageTitle="Trang Bui"
 >
-	<!-- section-introduction -->
-	<div class="flex flex-col gap-sectionContentGap">
-		<div class="text-3xl font-heading flex flex-col gap-0 text-black  dark:text-dark-heading " >
-			<p>Product Designer, always curious about how things work and why they matter.</p>
-		</div>
-		<div class="flex flex-col gap-linkGap pt-3">
-			<div><a class="typo-nav" href="/about/">/about me</a></div>
-			<div><a class="typo-nav" href="/now/">/now</a></div>
-		</div>
-	</div>
-
-	<!-- section-case studies -->
-	<div class="flex flex-col gap-sectionContentGap">
-		<!-- section title -->
-		<div><p class="typo-subtle bg-lime-200 dark:bg-transparent inline-block dark:text-dark-subtle">.what I do</p></div>
-		<p>
-			Probems discovery and finding solution for it. Those
-			<a href="/portfolio/#caseStudies" class="typo-link">case studies</a> will give you a better
-			ideas of how I tackle design challenges and deliver solutions.
-		</p>
-	</div>
-
-	<!-- work experience -->
-	<div class="flex flex-col gap-sectionContentGap">
-		<!-- section title -->
-		<div><p class="typo-subtle bg-lime-200dark:bg-transparent inline-block dark:text-dark-subtle">.where I've worked</p></div>
-		<p> <a href="www.validus.sg" class="typo-link">Validus Capital</a>, <a href="www.nashtechglobal.com" class="typo-link">NashTech Global</a>, <a href="https://x.com/sentifi" class="typo-link">Sentifi</a></p>
-	</div>
-
-	<!-- section-side projects -->
-	<div class="flex flex-col gap-sectionContentGap">
-		<!-- section title -->
-	<div><p class="typo-subtle bg-lime-200 dark:bg-transparent inline-block dark:text-dark-subtle">.when I'm not working</p></div>
-
-		<!-- project block -->
-		<div class="flex flex-col gap-linkGap dark:">
-			<div>
-				<a href="/thissite/" class="typo-link"> Build this site</a>
-			</div>
-			<div>
-				<a href="/draw/" class="typo-link"> Draw</a>
-			</div>
-			<div>
-				<a href="/doodle/" class="typo-link">Doodle</a>
-			</div>
-			<div>
-				<a
-					href="https://www.pinterest.com/gnartb88/me-my-garden/"
-					target="_blank"
-					class="typo-link">Grow my plants</a
-				>
-			</div>
-			<div>
-				<a href="/places/" class="typo-link">Go somewhere</a>
-			</div>
-			<div>
-				<a href="https://www.imdb.com/user/ur14268874" target="_blank" class="typo-link"
-					>Watch Movie</a
-				>
-			</div>
-			<div>
-				<a href="/til/" class="typo-link">Fill my ''Hermione's beaded bag'' </a>
-			</div>
-		</div>
-	</div>
-
-	<!-- section-connect -->
-	<div id="connect" class="flex flex-col gap-sectionContentGap">
-		<!-- section title -->
-		<div><p class="typo-subtle bg-lime-200 dark:bg-transparent inline-block dark:text-dark-subtle">.connect</p></div>
-
-		<!-- connect links-->
-		<div class="flex flex-row gap-2 items-center">
-			<a href="https://www.linkedin.com/in/thuytrangbui/" target="_blank" class="typo-link"
-				>Linked in</a
-			>
-			<span class="text-xs opacity-30">·</span>
-			<a href="https://read.cv/trang" target="_blank" class="typo-link">Read CV</a>
-			<span class="text-xs opacity-30">·</span
-			>
-			<a href="https://dribbble.com/trangbui" target="_blank" class="typo-link">Dribbble</a>
-		</div>
-	</div>
+    <div class="flex flex-col gap-4">
+        <p>
+            Crafting seamless <a href="/portfolio/" class="typo-link text-light-heading dark:text-dark-heading">user experiences.</a>
+        </p>
+        <p>
+            Curious about how things work and why they matter. Spending most of <a href="/now/" class="typo-link">my time</a>
+            continuously <a href="/til/" class="typo-link">learning</a> and exploring things.
+        </p>
+    </div>
+    <div class="flex flex-col gap-2">
+        <div>
+            <a href="/portfolio/" class="typo-link">Projects</a>
+        </div>
+        <div>
+            <a href="/playground/" class="typo-link">Playground</a>
+        </div>
+        <div>
+            <a href="/notes/" class="typo-link">Notes</a>
+        </div>
+    </div>
 </BaseLayout>
+

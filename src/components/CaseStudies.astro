@@ -1,0 +1,32 @@
+---
+
+// Use to display Case Studies list in Projects
+
+interface Props {
+    postTitle?: string;
+    url?: string;
+    postDescription?: string;
+    date?: string ;
+    targetType?: string;
+}
+const { postTitle, url, postDescription, date, targetType= "_blank" } = Astro.props;
+---
+
+    <ul class="flex flex-col gap-1">
+        <li class=" text-light-subtle dark:text-dark-subtle">
+            {date}
+        </li>
+
+        <li>
+            <a 
+            target={targetType}
+            href={url} class="typo-link font-normal text-light-body dark:text-dark-body">{postTitle}
+            </a>
+        </li>
+
+        <li class="text-light-subtle dark:text-dark-subtle text-ssubtle">
+            {postDescription}
+        </li>
+        
+    </ul>
+
