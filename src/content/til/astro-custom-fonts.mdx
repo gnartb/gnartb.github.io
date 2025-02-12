@@ -1,0 +1,40 @@
+---
+title: "Import custom fonts to Astro"
+date: "17 Jan, 2025"
+isDisplayDate: false
+targetType: "_self"
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Prism } from "@astrojs/prism";
+
+<BaseLayout
+    pageName="Import custom fonts to Astro - Trang Bui"
+    canonicalLink="https://trangbui.me/til/astro-custom-fonts/"
+    backTo="Today I learned"
+    showBackButton={true}
+    pageTitle="Import custom fonts to Astro"
+    pageIntro="17 Jan, 2025"
+    
+>   
+<div class="flex flex-col gap-8 typo-body">
+    <p>To use custom font in Astro, you can follow their <a href="https://docs.astro.build/en/guides/fonts/" class="typo-link">documentation</a>to register the font as below:</p>
+    <div class="typo-subtle rounded">
+```css title="style.css"
+
+    @font-face {
+    font-family: 'DistantGalaxy';
+    src: url('/fonts/DistantGalaxy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    }
+
+```
+    </div>
+    <p>If your font is a <span class="typo-code">.ttf</span>, and you change the code to <span class="typo-code">format('ttf')</span> it will not work. Should be <span class="typo-code">format('true type')</span> </p>
+</div>
+
+
+</BaseLayout>
+```

@@ -1,0 +1,63 @@
+---
+title: "Draw with Procreate "
+date: "24 Oct, 2024"
+isDisplayDate: false
+targetType: "_self"
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DoodleImage from "../../components/DoodleImage.astro";
+
+export const doodleImagesPath = "/images/draw";
+
+<BaseLayout
+    pageName="Draw with Procreate - Trang Bui"
+    canonicalLink="https://trangbui.me/playground/spl-bottle/"
+    backTo="Playground"
+    showBackButton={true}
+    pageTitle="Draw with Procreate"
+    pageIntro="24 Oct, 2024"
+    
+>
+<div class="flex flex-col gap-20 typo-body">
+<DoodleImage
+	imageName={`${doodleImagesPath}/001.png`}
+    imageDate="'Night'"
+    imageDesc="I tried to color a drawing on the cover of my notebook I bought long time ago (which I liked it a lot and still now after more than 12 years I still haven't usedit yet)"
+/>
+<DoodleImage
+	imageName={`${doodleImagesPath}/01.png`}
+    imageDate="'Monster'"
+    imageDesc="I was thinking of the City of Ember movie when started drawing this"
+/>
+<DoodleImage
+	imageName={`${doodleImagesPath}/02.png`}
+    imageDate="'Witch house'"
+    imageDesc="Re-draw my 7th day in series 100 days of Doodle. I always night and snow."
+/>
+<DoodleImage
+	imageName={`${doodleImagesPath}/03.jpeg`}
+    imageDate="'Good night'"
+    imageDesc=""
+/>
+<DoodleImage
+	imageName={`${doodleImagesPath}/04.png`}
+    imageDate="'Mini Monsters'"
+    imageDesc="ohh, what we all do in class when we boring"
+/>
+ <div class="flex flex-col gap-8">
+ <div class="flex flex-col gap-2">
+        <p class="font-bold">Firefly</p>
+        <p>Manual keyframe animation for the fireflies took me fews hours, so decided to buy Procreate Dream for the flowers </p>
+    </div>
+<video class="h-full w-full" autoplay loop muted>
+            <source
+              src="/images/draw/06.mov"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+</div>
+</div>
+
+</BaseLayout>

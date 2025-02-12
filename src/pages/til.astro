@@ -1,19 +1,15 @@
 ---
 // Component Imports
-import BaseLayout from "../layouts/BaseLayout.astro";
-import NoteList from "../components/NoteList.astro";
+import ContentList from "../components/ContentList.astro";
 
 ---
 
-<BaseLayout
-    pageName="Today I learn - Trang Bui"
+<ContentList
+    pageName="Today I learned - Trang Bui"
     canonicalLink="https://trangbui.me/til/"
     backTo="Index"
     showBackButton={true}
     pageTitle="Today I learn"
-    pageIntro="Useful knowledge"
->
-<div class="flex flex-col gap-2">
-   
-</div>
-</BaseLayout>
+    pageIntro="space to document my learning"
+    contentFolder="til"
+/>

@@ -85,11 +85,12 @@ const showSortedItems = getAllPlayground(contentFolder);
     pageTitle={pageTitle}
     pageIntro={pageIntro}
 >
-    {
+<div class="flex flex-col gap-6">
+   {
         showSortedItems.map(([year, posts]) => (
-            <div class="relative flex flex-row gap-8 flex-wrap">
+            <div class="relative flex flex-row gap-2 flex-wrap">
                 <div class="md:absolute md:-left-20">{year}</div>
-                <div class="flex flex-col gap-6">
+                <div class="flex flex-col flex-1 gap-4">
                     {posts.map((post) => (
                         <ContentItem
                             title={post.frontmatter.title}
@@ -104,4 +105,5 @@ const showSortedItems = getAllPlayground(contentFolder);
             </div>
         ))
     }
+    </div>
 </BaseLayout>
