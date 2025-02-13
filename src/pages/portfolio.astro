@@ -6,81 +6,83 @@ import CaseStudies from "../components/CaseStudies.astro";
 ---
 
 <BaseLayout
-    pageName="Portfolio - Trang Bui"
-    canonicalLink="https://trangbui.me/portfolio/"
-    backTo="Index"
-    showBackButton={true}
-    pageTitle="Projects"
-    pageIntro="I've been working on"
+  pageName="Portfolio - Trang Bui"
+  canonicalLink="https://trangbui.me/portfolio/"
+  backTo="Index"
+  showBackButton={true}
+  pageTitle="Projects"
+  pageIntro="I've been working on"
 >
+  <!-- case studies -->
+  <div class="flex-1 flex-col flex gap-4">
+    <p>
+      Problems discovery and finding solution for it. Those <span
+        class="text-light-heading dark:text-dark-heading font-semibold"
+        >case studies</span
+      > will give you a better ideas of how I tackle design challenges and deliver
+      solutions.
+    </p>
+    <CaseStudies
+      postTitle="Redesign an Investment application"
+      postDescription="New Investor app with more features for better experience"
+      url="/portfolio/investorapp"
+      targetType="_self"
+    />
+    <CaseStudies
+      postTitle="Simplifying the long onboarding process"
+      postDescription="Less steps for Customer and reduce manual works for Internal Team"
+      url="/portfolio/onboarding"
+      targetType="_self"
+    />
+  </div>
 
-    <!-- projects new design -->
-    <div class="flex flex-row gap-8">
-        <!-- app -->
-        <div class="flex-1 flex-col flex gap-6">
-            <p class="text-ssubtle">App</p>
-            <ProjectCard
-                projectTitle="DHF"
-                prodjectDescription="Farm diary management and inventory tracking"
-                url="https://www.dhfplatforms.com/"
-            />
-            <ProjectCard
-                projectTitle="Investor App"
-                prodjectDescription="Browse live facilities, invest and mange portfolio"
-                url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
-            />
-            <ProjectCard
-                projectTitle="BC Navigator"
-                prodjectDescription="For outdoor adventurers to find way through the wilderness."
-                url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
-            />
-        </div>
+  <div class="text-light-subtle dark:text-dark-subtle">· · ·</div>
 
-        <!-- web-app -->
-        <div class="flex-1 flex-col flex gap-6">
-            <p class="text-ssubtle">Web app</p>
-            <ProjectCard
-                projectTitle="Digital Lending"
-                prodjectDescription="For SMEs to apply, get approved & receive funds."
-                url="https://validus.sg/"
-            />
-            <ProjectCard
-                projectTitle="Ecotruck"
-                prodjectDescription="Eco System for Trucking - Merchant Portal"
-                url="https://ecotruck.vn/"
-            />
-        </div>
-
-        <!-- website -->
-        <div class="flex-1 flex-col flex gap-6">
-            <p class="text-ssubtle">Website</p>
-            <ProjectCard
-                projectTitle="Snafu Records"
-                prodjectDescription="Funding Portal"
-                url="https://www.snafurecords.com/"
-            />
-        </div>
+  <!-- projects new design -->
+  <div class="flex flex-row gap-8">
+    <!-- app -->
+    <div class="flex-1 flex-col flex gap-6">
+      <p class="text-ssubtle">App</p>
+      <ProjectCard
+        projectTitle="DHF"
+        prodjectDescription="Farm diary management and inventory tracking"
+        url="https://www.dhfplatforms.com/"
+      />
+      <ProjectCard
+        projectTitle="Investor App"
+        prodjectDescription="Browse live facilities, invest and mange portfolio"
+        url="https://apps.apple.com/us/app/validus-singapore/id1500364784"
+      />
+      <ProjectCard
+        projectTitle="BC Navigator"
+        prodjectDescription="For outdoor adventurers to find way through the wilderness."
+        url="https://play.google.com/store/apps/details?id=com.crittermap.backcountrynavigator.xe"
+      />
     </div>
 
-    <div class="text-light-subtle dark:text-dark-subtle">· · ·</div>
-
-    <!-- case studies -->
-    <div class="flex-1 flex-col flex gap-4">
-        <p>
-            Problems discovery and finding solution for it. Those <span class="text-light-heading dark:text-dark-heading font-semibold">case studies</span> will give you a
-            better ideas of how I tackle design challenges and deliver solutions.
-        </p>
-        <CaseStudies
-            postTitle="Redesign an Investment application"
-            postDescription="New Investor app with more features for better experience"
-            url="/portfolio/investorapp"
-            targetType="_self"
-        />
-        <CaseStudies
-            postTitle="Simplifying the long onboarding process"
-            postDescription="Less steps for Customer and reduce manual works for Internal Team"
-            url="/portfolio/onboarding"
-            targetType="_self"
-        />
+    <!-- web-app -->
+    <div class="flex-1 flex-col flex gap-6">
+      <p class="text-ssubtle">Web app</p>
+      <ProjectCard
+        projectTitle="Digital Lending"
+        prodjectDescription="For SMEs to apply, get approved & receive funds."
+        url="https://validus.sg/"
+      />
+      <ProjectCard
+        projectTitle="Ecotruck"
+        prodjectDescription="Eco System for Trucking - Merchant Portal"
+        url="https://ecotruck.vn/"
+      />
     </div>
+
+    <!-- website -->
+    <div class="flex-1 flex-col flex gap-6">
+      <p class="text-ssubtle">Website</p>
+      <ProjectCard
+        projectTitle="Snafu Records"
+        prodjectDescription="Funding Portal"
+        url="https://www.snafurecords.com/"
+      />
+    </div>
+  </div>
 </BaseLayout>

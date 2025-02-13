@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         dark: {
           background: colors.neutral[900],
-          heading: colors.gray[200],
+          heading: colors.gray[100],
           body: colors.gray[400],
           subtle: colors.gray[500],
           footnote: colors.gray[500],
