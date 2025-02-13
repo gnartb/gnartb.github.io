@@ -122,14 +122,17 @@ module.exports = {
 
         ".typo-link": {
           fontWeight: theme("fontWeight.medium"),
+          padding: "1px 2px",
           borderBottomWidth: "1px",
           borderColor: colors.gray[200],
           // transition: 'all 0.3s ease',
         },
 
         ".dark .typo-link": {
+          fontWeight: theme("fontWeight.medium"),
+          padding: "1px 2px",
           borderBottomWidth: "1px",
-          borderColor: colors.gray[800],
+          borderColor: colors.neutral[800],
           // transition: 'all 0.3s ease',
         },
 
@@ -142,8 +145,8 @@ module.exports = {
         ".dark .typo-link:hover": {
           borderBottomWidth: "1px",
           "background-color": colors.neutral[800],
-          borderColor: colors.gray[900],
-          // color: theme('colors.dark.selectText'),
+          borderColor: colors.neutral[800],
+          color: theme('colors.dark.heading'),
           borderRadius: "4px",
         },
 
