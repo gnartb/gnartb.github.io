@@ -179,16 +179,16 @@ module.exports = {
           fontFamily: theme("fontFamily.code"),
           backgroundColor: colors.slate[200],
           fontSize: theme("fontSize.subtle"),
-		      fontWeight: theme("fontWeight.semibold"),
+		      fontWeight: theme("fontWeight."),
           padding: "2px 4px", // 2px top & bottom, 4px left & right
           borderRadius: "4px", // Rounded corners
         },
 
         ".dark .typo-code": {
           fontFamily: theme("fontFamily.code"),
-          backgroundColor: colors.slate[800],
+          backgroundColor: colors.neutral[800],
           fontSize: theme("fontSize.subtle"),
-		      fontWeight: theme("fontWeight.semibold"),
+		      fontWeight: theme("fontWeight.normal"),
           padding: "2px 4px", // 2px top & bottom, 4px left & right
           borderRadius: "4px", // Rounded corners
         },
