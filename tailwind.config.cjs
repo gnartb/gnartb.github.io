@@ -16,7 +16,7 @@ module.exports = {
         dark: {
           background: colors.neutral[900],
           heading: colors.gray[100],
-          body: colors.gray[300],
+          body: colors.gray[400],
           subtle: colors.gray[500],
           footnote: colors.gray[500],
           selectText: "#b3fc03",
