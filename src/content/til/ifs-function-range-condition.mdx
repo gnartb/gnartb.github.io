@@ -7,6 +7,7 @@ targetType: "_self"
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Prism } from "@astrojs/prism";
+import { Code } from 'astro:components';
 
 <BaseLayout
     pageName="Google Sheet, IFS function with a range condition - Trang Bui"
@@ -153,9 +154,7 @@ import { Prism } from "@astrojs/prism";
     Then follow <span class="typo-link" href="https://support.google.com/docs/answer/7014145?hl=en">Googlesheet instruction </span>, return the value using:
     
         <div class="py-2 text-[12px]] flex">
-```
-    =IF(B2<50, "Under 50 years", IF(B2>80, "More than 80 years", "50 - 80 years"))
-```
+            <Code code = {`=IF(B2<50, "Under 50 years", IF(B2>80, "More than 80 years", "50 - 80 years"))`} lang="sql" wrap class="p-2"/>
         </div>
     </div>
 
@@ -224,9 +223,7 @@ import { Prism } from "@astrojs/prism";
     <div>
     To ensure it works correctly, wrap <span class="typo-code">LEFT(I2, 2)</span> with <span class="px-1 bg-lime-400 dark:bg-lime-700 dark:text-white">VALUE()</span> to convert it to a number:
         <div class="py-2 text-[12px] flex">
-```
-    =IF(VALUE(B2)<50, "Under 50 years", IF(VALUE(B2)>80, "More than 80 years", "50 - 80 years"))
-```
+            <Code code = {`=IF(VALUE(B2)<50, "Under 50 years", IF(VALUE(B2)>80, "More than 80 years", "50 - 80 years"))`} lang="sql" wrap class="p-2" />
         </div>
     </div>
 
