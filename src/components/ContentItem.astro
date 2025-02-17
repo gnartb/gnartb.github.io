@@ -17,6 +17,13 @@ const { title, description, url, targetType="_self", date, isDisplayDate=true } 
         <div>
             <a href={url} target={targetType} class="typo-link text-light-body dark:text-dark-body">{title}</a>
         </div>
+        <!-- {
+            if description  {
+                <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">
+                    {description}
+                </p>
+            }
+        } -->
         {
             description && (
                 <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">
