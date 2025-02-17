@@ -1,0 +1,289 @@
+---
+title: "Google Sheet, IFS function with a range condition"
+date: "13 Feb, 2025"
+isDisplayDate: true
+targetType: "_self"
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Prism } from "@astrojs/prism";
+import { Code } from 'astro:components';
+
+<BaseLayout
+    pageName="Google Sheet, IFS function with a range condition - Trang Bui"
+    canonicalLink="https://trangbui.me/til/ifs-function-range-condition/"
+    backTo="Today I learned"
+    showBackButton={true}
+    pageTitle="Google Sheet, IFS function with a range condition"
+    pageIntro="13 Feb, 2025"
+    
+> 
+  
+<div class="flex flex-col gap-8 typo-body">
+    <div class="flex flex-col bg-slate-50 dark:bg-neutral-200 text-light-body rounded overflow-hidden typo-subtle border divide-y border-neutral-300 divide-neutral-300">
+        <div class="flex flex-row font-semibold bg-neutral-100 divide-x border-b border-neutral-400 divide-neutral-400">
+            <div class="flex-1 text-center">
+                A
+            </div>
+            <div class="flex-1 text-center">
+                B
+            </div>
+            <div class="flex-1 text-center">
+                C
+            </div>
+        </div>
+        <div class="flex flex-row font-semibold divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                Remaining Lease
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years Lease
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                61 years 04 months
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                21 years 07 months
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                82 years
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+        </div>  
+    </div>
+
+    <div>
+    The conditions are:
+
+    · If the data is less than <span class="typo-code">50</span>, then I need to return the value <span class="typo-code">Under 50 years</span>.
+
+    · If the data is from <span class="typo-code">50 to 80</span>, then return the value <span class="typo-code">50 - 80 years</span>.
+
+    · If the data is greate than <span class="typo-code">80</span>, then return the value <span class="typo-code">More than 80 years</span>.
+    </div>
+
+    <div>
+    First, round down first column using <span class="typo-code">=left(A2, 2)</span>
+    </div>
+
+<div class="flex flex-col bg-slate-50 dark:bg-neutral-200 text-light-body rounded overflow-hidden typo-subtle border divide-y border-neutral-300 divide-neutral-300">
+        <div class="flex flex-row font-semibold bg-neutral-100 divide-x border-b border-neutral-400 divide-neutral-400">
+            <div class="flex-1 text-center">
+                A
+            </div>
+            <div class="flex-1 text-center">
+                B
+            </div>
+            <div class="flex-1 text-center">
+                C
+            </div>
+        </div>
+        <div class="flex flex-row font-semibold divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                Remaining Lease
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years Lease
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                61 years 04 months
+            </div>
+            <div class="flex-1 text-center">
+                61
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                21 years 07 months
+            </div>
+            <div class="flex-1 text-center">
+                21
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                82 years
+            </div>
+            <div class="flex-1 text-center">
+                82
+            </div>
+            <div class="flex-1 text-center">
+                
+            </div>
+        </div>  
+    </div>
+    
+    <div>
+    Then follow <span class="typo-link" href="https://support.google.com/docs/answer/7014145?hl=en">Googlesheet instruction </span>, return the value using:
+    
+        <div class="py-2 text-[12px]] flex">
+            <Code code = {`=IF(B2<50, "Under 50 years", IF(B2>80, "More than 80 years", "50 - 80 years"))`} lang="sql" wrap class="p-2"/>
+        </div>
+    </div>
+
+    <div>
+    The formula is trying to categorize values in B2, but B2 is derived from <span class="typo-code">=LEFT(A2, 2)</span>, which extracts the first two characters from A2. Since <span class="typo-code">LEFT(B2, 2)</span> returns text, the IF statement might not work as expected if A2 contains text values.
+    </div>
+
+    <div class="flex flex-col bg-slate-50 dark:bg-neutral-200 text-light-body rounded overflow-hidden typo-subtle border divide-y border-neutral-300 divide-neutral-300">
+        <div class="flex flex-row font-semibold bg-neutral-100 divide-x border-b border-neutral-400 divide-neutral-400">
+            <div class="flex-1 text-center">
+                A
+            </div>
+            <div class="flex-1 text-center">
+                B
+            </div>
+            <div class="flex-1 text-center">
+                C
+            </div>
+        </div>
+        <div class="flex flex-row font-semibold divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                Remaining Lease
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years Lease
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                61 years 04 months
+            </div>
+            <div class="flex-1 text-center">
+                61
+            </div>
+            <div class="flex-1 text-center text-red-600">
+                More than 80 years
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                21 years 07 months
+            </div>
+            <div class="flex-1 text-center">
+                21
+            </div>
+            <div class="flex-1 text-center text-red-600">
+                More than 80 years
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                82 years
+            </div>
+            <div class="flex-1 text-center">
+                82
+            </div>
+            <div class="flex-1 text-center text-red-600 ">
+                More than 80 years
+            </div>
+        </div>  
+    </div>
+
+    <div>
+    To ensure it works correctly, wrap <span class="typo-code">LEFT(I2, 2)</span> with <span class="px-1 bg-lime-400 dark:bg-lime-700 dark:text-white">VALUE()</span> to convert it to a number:
+        <div class="py-2 text-[12px] flex">
+            <Code code = {`=IF(VALUE(B2)<50, "Under 50 years", IF(VALUE(B2)>80, "More than 80 years", "50 - 80 years"))`} lang="sql" wrap class="p-2" />
+        </div>
+    </div>
+
+    <div class="flex flex-col bg-slate-50 dark:bg-neutral-200 text-light-body rounded overflow-hidden typo-subtle border divide-y border-neutral-300 divide-neutral-300">
+        <div class="flex flex-row font-semibold bg-neutral-100 divide-x border-b border-neutral-400 divide-neutral-400">
+            <div class="flex-1 text-center">
+                A
+            </div>
+            <div class="flex-1 text-center">
+                B
+            </div>
+            <div class="flex-1 text-center">
+                C
+            </div>
+        </div>
+        <div class="flex flex-row font-semibold divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                Remaining Lease
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years
+            </div>
+            <div class="flex-1 text-center">
+                Remain Years Lease
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300 ">
+            <div class="flex-1 text-center">
+                61 years 04 months
+            </div>
+            <div class="flex-1 text-center">
+                61
+            </div>
+            <div class="flex-1 text-center">
+                50 - 80 years
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                21 years 07 months
+            </div>
+            <div class="flex-1 text-center">
+                21
+            </div>
+            <div class="flex-1 text-center">
+                Under 50 years
+            </div>
+        </div>
+        <div class="flex flex-row divide-x divide-neutral-300">
+            <div class="flex-1 text-center">
+                82 years
+            </div>
+            <div class="flex-1 text-center">
+                82
+            </div>
+            <div class="flex-1 text-center ">
+                More than 80 years
+            </div>
+        </div>  
+    </div>
+
+</div>  
+</BaseLayout>

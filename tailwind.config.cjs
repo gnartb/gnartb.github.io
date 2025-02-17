@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         dark: {
           background: colors.neutral[900],
-          heading: colors.gray[200],
+          heading: colors.gray[100],
           body: colors.gray[400],
           subtle: colors.gray[500],
           footnote: colors.gray[500],
@@ -122,14 +122,17 @@ module.exports = {
 
         ".typo-link": {
           fontWeight: theme("fontWeight.medium"),
+          padding: "1px 2px",
           borderBottomWidth: "1px",
           borderColor: colors.gray[200],
           // transition: 'all 0.3s ease',
         },
 
         ".dark .typo-link": {
+          fontWeight: theme("fontWeight.medium"),
+          padding: "1px 2px",
           borderBottomWidth: "1px",
-          borderColor: colors.gray[800],
+          borderColor: colors.neutral[800],
           // transition: 'all 0.3s ease',
         },
 
@@ -142,8 +145,8 @@ module.exports = {
         ".dark .typo-link:hover": {
           borderBottomWidth: "1px",
           "background-color": colors.neutral[800],
-          borderColor: colors.gray[900],
-          // color: theme('colors.dark.selectText'),
+          borderColor: colors.neutral[800],
+          color: theme('colors.dark.heading'),
           borderRadius: "4px",
         },
 
@@ -176,16 +179,16 @@ module.exports = {
           fontFamily: theme("fontFamily.code"),
           backgroundColor: colors.slate[200],
           fontSize: theme("fontSize.subtle"),
-		      fontWeight: theme("fontWeight.semibold"),
+		      fontWeight: theme("fontWeight."),
           padding: "2px 4px", // 2px top & bottom, 4px left & right
           borderRadius: "4px", // Rounded corners
         },
 
         ".dark .typo-code": {
           fontFamily: theme("fontFamily.code"),
-          backgroundColor: colors.slate[800],
+          backgroundColor: colors.neutral[800],
           fontSize: theme("fontSize.subtle"),
-		      fontWeight: theme("fontWeight.semibold"),
+		      fontWeight: theme("fontWeight.normal"),
           padding: "2px 4px", // 2px top & bottom, 4px left & right
           borderRadius: "4px", // Rounded corners
         },
