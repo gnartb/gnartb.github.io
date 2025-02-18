@@ -55,8 +55,8 @@ module.exports = {
         subtle: "13px",
         url: "14px",
 
-        sbody: "15px",
-        ssubtle: "14px",
+        sbody: "16px",
+        ssubtle: "15px",
       },
 
       gap: {
@@ -95,7 +95,7 @@ module.exports = {
           fontFamily: theme("fontFamily.sbody"),
           fontSize: theme("fontSize.sbody"),
           fontWeight: theme("fontWeight.light"),
-          lineHeight: "26px",
+          lineHeight: "28px",
         },
 
         ".typo-body": {
