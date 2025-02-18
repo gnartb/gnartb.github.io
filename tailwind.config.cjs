@@ -55,8 +55,8 @@ module.exports = {
         subtle: "13px",
         url: "14px",
 
-        sbody: "16px",
-        ssubtle: "15px",
+        sbody: "15px",
+        ssubtle: "14px",
       },
 
       gap: {
