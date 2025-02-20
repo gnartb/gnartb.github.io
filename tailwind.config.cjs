@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         dark: {
           background: colors.neutral[900],
-          heading: colors.gray[100],
+          heading: colors.gray[200],
           body: colors.gray[400],
           subtle: colors.gray[500],
           footnote: colors.gray[500],
@@ -121,7 +121,7 @@ module.exports = {
         },
 
         ".typo-link": {
-          fontWeight: theme("fontWeight.medium"),
+          fontWeight: theme("fontWeight.semibold"),
           padding: "1px 2px",
           borderBottomWidth: "1px",
           borderColor: colors.gray[200],
@@ -129,7 +129,7 @@ module.exports = {
         },
 
         ".dark .typo-link": {
-          fontWeight: theme("fontWeight.medium"),
+          fontWeight: theme("fontWeight.semibold"),
           padding: "1px 2px",
           borderBottomWidth: "1px",
           borderColor: colors.neutral[800],
