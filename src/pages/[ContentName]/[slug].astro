@@ -11,7 +11,7 @@ export async function getAllContents(folder: string) {
 }
 
 export const getStaticPaths = (async () => {
-    const contentFolders = ["playground", "notes", "til"]; // List of folders
+    const contentFolders = ["playground", "notes", "til", "links"]; // List of folders
     let paths: { params: { ContentName: string; slug: string }; props: { entry: any } }[] = [];
 
     for (const folder of contentFolders) {
