@@ -22,6 +22,7 @@ interface AllItem {
         targetType?: string;
         slug?: string;
         isDisplayDate?: boolean;
+        externalUrl?: string;
     };
     url?: string;
     compiledContent: () => string;
@@ -95,7 +96,7 @@ const showSortedItems = getAllPlayground(contentFolder);
                         <ContentItem
                             title={post.frontmatter.title}
                             description={post.frontmatter.description}
-                            url={`/${post.url}`}
+                            url={post.frontmatter.externalUrl ? post.frontmatter.externalUrl : `/${post.url}`}
                             targetType={post.frontmatter.targetType}
                             date={post.frontmatter.date}
                             isDisplayDate={post.frontmatter.isDisplayDate}
