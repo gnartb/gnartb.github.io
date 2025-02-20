@@ -4,30 +4,46 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-    pageName="Trang Bui - Product Designer"
-    canonicalLink="https://trangbui.me/"
-    showBackButton={false}
-    pageTitle="Trang Bui"
+  pageName="Trang Bui - Product Designer"
+  canonicalLink="https://trangbui.me/"
+  showBackButton={false}
+  pageTitle="Trang Bui"
 >
-    <div class="flex flex-col gap-4">
-        <p>
-            Crafting seamless <a href="/portfolio/" class="typo-link text-light-heading dark:text-dark-heading">user experiences.</a>
-        </p>
-        <p>
-            Curious about how things work and why they matter. Spending most of <a href="/now/" class="typo-link">my time</a>
-            continuously <a href="/til/" class="typo-link">learning</a> and <a href="/links/" class="typo-link">exploring</a> things.
-        </p>
+  <div class="flex flex-col gap-4">
+    <p>
+      Crafting seamless <a
+        href="/portfolio/"
+        class="typo-link text-light-heading dark:text-dark-heading"
+        >user experiences.</a
+      >
+    </p>
+    <p>
+      Curious about how things work and why they matter. Spending most of my
+      time continuously learning and exploring things.
+    </p>
+  </div>
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-1">
+      <div>
+        <a href="/portfolio/" class="typo-link">Projects</a>
+      </div>
+      <div>
+        <a href="/playground/" class="typo-link">Playground</a>
+      </div>
+      <div>
+        <a href="/notes/" class="typo-link">Notes</a>
+      </div>
     </div>
-    <div class="flex flex-col gap-2">
-        <div>
-            <a href="/portfolio/" class="typo-link">Projects</a>
-        </div>
-        <div>
-            <a href="/playground/" class="typo-link">Playground</a>
-        </div>
-        <div>
-            <a href="/notes/" class="typo-link">Notes</a>
-        </div>
+    <div class="flex flex-col gap-1">
+      <div>
+        <a href="/til/" class="typo-link">Today I learn</a>
+      </div>
+      <div>
+        <a href="/links/" class="typo-link">Links</a>
+      </div>
+      <div>
+        <a href="/now/" class="typo-link">Now</a>
+      </div>
     </div>
+  </div>
 </BaseLayout>
-
