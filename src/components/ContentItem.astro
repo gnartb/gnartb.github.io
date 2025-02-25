@@ -13,13 +13,13 @@ const { title, description, url, targetType="_self", date, isDisplayDate=true } 
 
 <div class="flex flex-row gap-8">
     <!-- row 1: title & description -->
-    <div class="flex flex-1 flex-grow flex-col">
+    <div class="flex flex-1 flex-grow flex-col gap-2">
         <div>
             <a href={url} target={targetType} class="typo-link text-light-body dark:text-dark-body">{title}</a>
         </div>
         {
             description && (
-                <p class="text-ssubtle text-light-subtle dark:text-dark-subtle">
+                <p class="typo-ssubtle text-light-subtle dark:text-dark-subtle">
                     "{description}"
                 </p>
             )

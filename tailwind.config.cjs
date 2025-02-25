@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         dark: {
-          background: colors.neutral[900],
+          background: colors.neutral[950],
           heading: colors.gray[200],
           body: colors.gray[400],
           subtle: colors.gray[500],
@@ -96,6 +96,13 @@ module.exports = {
           fontSize: theme("fontSize.sbody"),
           fontWeight: theme("fontWeight.light"),
           lineHeight: "28px",
+        },
+
+        ".typo-ssubtle": {
+          fontFamily: theme("fontFamily.sbody"),
+          fontSize: theme("fontSize.ssubtle"),
+          fontWeight: theme("fontWeight.light"),
+          lineHeight: "24px",
         },
 
         ".typo-body": {
