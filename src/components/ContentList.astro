@@ -23,6 +23,7 @@ interface AllItem {
         slug?: string;
         isDisplayDate?: boolean;
         externalUrl?: string;
+        extraGap: string;
     };
     url?: string;
     compiledContent: () => string;
@@ -91,7 +92,7 @@ const showSortedItems = getAllPlayground(contentFolder);
         showSortedItems.map(([year, posts]) => (
             <div class="relative flex flex-row gap-2 flex-wrap">
                 <div class="md:absolute md:-left-20">{year}</div>
-                <div class="flex flex-col flex-1 gap-4">
+                <div class="flex flex-col flex-1 gap-3">
                     {posts.map((post) => (
                         <ContentItem
                             title={post.frontmatter.title}
@@ -100,6 +101,7 @@ const showSortedItems = getAllPlayground(contentFolder);
                             targetType={post.frontmatter.targetType}
                             date={post.frontmatter.date}
                             isDisplayDate={post.frontmatter.isDisplayDate}
+                            extraGap={post.frontmatter.extraGap}
                         />
                     ))}
                 </div>

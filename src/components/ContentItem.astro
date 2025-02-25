@@ -6,20 +6,21 @@ interface Props {
     targetType?: string;
     date: string;
     isDisplayDate?: boolean;
+    extraGap?: string;
 
 }
-const { title, description, url, targetType="_self", date, isDisplayDate=true } = Astro.props;
+const { title, description, url, targetType="_self", date, isDisplayDate=true, extraGap } = Astro.props;
 ---
 
 <div class="flex flex-row gap-8">
     <!-- row 1: title & description -->
-    <div class="flex flex-1 flex-grow flex-col gap-2">
+    <div class={`${extraGap} flex flex-1 flex-grow flex-col gap-2`}>
         <div>
             <a href={url} target={targetType} class="typo-link text-light-body dark:text-dark-body">{title}</a>
         </div>
         {
             description && (
-                <p class="typo-ssubtle text-light-subtle dark:text-dark-subtle">
+                <p class="typo-ssubtle text-light-subtle dark:text-dark-subtle mr-3">
                     "{description}"
                 </p>
             )
