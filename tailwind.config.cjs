@@ -28,8 +28,8 @@ module.exports = {
         light: {
           background: colors.gray[50],
           heading: colors.gray[950],
-          body: colors.gray[800],
-          subtle: colors.gray[500],
+          body: colors.gray[900],
+          subtle: colors.gray[700],
           footnote: colors.gray[500],
           test: colors.lime[400],
           warning: colors.rose[500],
