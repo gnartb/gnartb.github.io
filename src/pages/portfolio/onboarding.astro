@@ -29,6 +29,7 @@ const menuItems = [
     id: "final",
     name: "Final design",
     children: [
+    { id: "myinfo", name: "Design: myInfo" },
       { id: "checklist", name: "Design: Checklist" },
       { id: "instruction", name: "Design: Instruction" },
       { id: "modal", name: "Design: Modal" },
@@ -538,9 +539,26 @@ const menuItems = [
         <div id="final" class="flex flex-col gap-heading">
           <p class="typo-heading-medium text-light-heading dark:text-dark-heading">Final design</p>
 
+          <!-- finail UI: myinfo -->
+          <div id="myinfo" class="flex flex-col gap-title py-4">
+            <p class="font-semibold text-light-heading dark:text-dark-heading">
+              Final design 1: Integrate myInfo for fast and secure identification
+            </p>
+            <div class="flex flex-col gap-paragraph">
+              <p>
+                With just few tap, User can now use their Singpass to provide their personal information.
+              </p>
+
+              <ImageCard
+                imagePath="/src/assets/onboarding/myinfo.png"
+                altText="myinfo"
+              />
+            </div>
+          </div>
+
           <!-- finail UI: checklist -->
           <div id="checklist" class="flex flex-col gap-title py-4">
-            <p class="typo-subtle text-light-subtle">
+            <p class="font-semibold text-light-heading dark:text-dark-heading">
               Final design 1: Checklist screen helps user get started easier
             </p>
             <div class="flex flex-col gap-paragraph">
@@ -570,8 +588,8 @@ const menuItems = [
 
           <!-- finail UI: Provide instruction -->
           <div id="instruction" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">
-              Final desig 2: Provide instruction
+            <p class="font-semibold text-light-heading dark:text-dark-heading">
+              Final design 2: Provide instruction
             </p>
             <div class="flex flex-col gap-paragraph">
               <p>
@@ -595,7 +613,7 @@ const menuItems = [
 
           <!-- finail UI: context-switch -->
           <div id="modal" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">
+            <p class="font-semibold text-light-heading dark:text-dark-heading">
               Final design 3: Seamless context-switching with fullscreen modal
             </p>
             <div class="flex flex-col gap-paragraph">
@@ -628,7 +646,7 @@ const menuItems = [
 
           <!-- finail UI: support -->
           <div id="support" class="flex flex-col gap-title">
-            <p class="typo-subtle text-light-subtle">
+            <p class="font-semibold text-light-heading dark:text-dark-heading">
               Final design 4: Support at anytime
             </p>
             <div class="flex flex-col gap-paragraph">
