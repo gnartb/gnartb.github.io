@@ -9,8 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        AritaBuri: ["AritaBuri", ...defaultTheme.fontFamily.sans],
-        heli: ["heli", ...defaultTheme.fontFamily.sans],
+        geist: ["Geist", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         dark: {
@@ -39,11 +38,11 @@ module.exports = {
       },
 
       fontFamily: {
-        body: "Be Vietnam Pro, san-serif",
-        heading: "Suranna",
-        nav: "Newsreader",
-        decor: "Newsreader",
-        sbody: "AritaBuri",
+        body: ["Geist", ...defaultTheme.fontFamily.sans],
+        heading: ["Geist", ...defaultTheme.fontFamily.sans],
+        nav: ["Geist", ...defaultTheme.fontFamily.sans],
+        decor: ["Geist", ...defaultTheme.fontFamily.sans],
+        sbody: ["Geist", ...defaultTheme.fontFamily.sans],
         code: "JetBrains Mono",
       },
 
@@ -128,7 +127,7 @@ module.exports = {
         },
 
         ".typo-link": {
-          fontWeight: theme("fontWeight.semibold"),
+          fontWeight: theme("fontWeight.medium"),
           padding: "1px 2px",
           borderBottomWidth: "1px",
           borderColor: colors.gray[200],
@@ -136,7 +135,7 @@ module.exports = {
         },
 
         ".dark .typo-link": {
-          fontWeight: theme("fontWeight.semibold"),
+          fontWeight: theme("fontWeight.medium"),
           padding: "1px 2px",
           borderBottomWidth: "1px",
           borderColor: colors.neutral[800],
